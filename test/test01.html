@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>화면 설계 test</title>
     <style>
-        /* reset */
+    /* reset */
         @font-face {
             font-family: 'S-CoreDream-8Heavy';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
@@ -13,94 +13,109 @@
             font-style: normal;
         }
         * {
-            margin: 0;
+            margin: 0; 
             padding: 0;
         }
         /* layout */
-        body {
-            background: #fce4ec;
-        }
         #wrap {
-            width: 1200px;
-            height: 1600px; 
-            margin: 0 auto; 
+            width: 100%; 
             font-size: 72px; 
-            color: #fff; 
             text-transform: uppercase; 
             text-align: center; 
+            color: #fff; 
             font-family: 'S-CoreDream-8Heavy';
         }
-        #header {
-            width: 1200px; 
-            height: 150px; 
-            line-height: 150px; 
-            background: #f8bbd0;
+        #header1 {
+            height: 70px;
+            line-height: 70px;
+            background-color: #f0f1f9;
         }
-        #nav {
-            width: 1200px;
-            height: 150px; 
-            line-height: 150px; 
-            background: #f48fb1;
+        #header2 {
+            height: 70px;
+            line-height: 70px; 
+            background-color: #dcdff2;
         }
-        #side {
-            width: 400px; 
-            height: 1100px; 
-            line-height: 1100px; 
-            background: #f06292; 
-            float: left;
+        #banner {
+            height: 400px; 
+            line-height: 400px; 
+            background-color: #bdc3e4;
         }
         #content1 {
-            width: 800px; 
-            height: 370px; 
-            line-height: 370px; 
-            background: #ec407a;
-            float: left;
+            height: 800px; 
+            line-height: 800px; 
+            background-color: #a7afdd;
         }
         #content2 {
-            width: 800px; 
-            height: 360px; 
-            line-height: 360px;
-            background: #e91e63; 
-            float: left;
+            height: 800px;
+            line-height: 800px; 
+            background-color: #8f99d1;
         }
         #content3 {
-            width: 800px; 
-            height: 370px; 
-            line-height: 370px; 
-            background: #d81b60; 
-            float: left;
+            height: 800px;
+            line-height: 800px; 
+            background-color: #818cce;
         }
-        #footer {
-            width: 1200px; 
-            height: 200px; 
-            line-height: 200px; 
-            background: #c2185b; 
-            clear: both;
+        #content4 {
+            height: 800px; 
+            line-height: 800px; 
+            background-color: #7d87c8;
         }
+        #footer1 {
+            height: 100px; 
+            line-height: 100px;
+            background-color: #313a74;
+        }
+        #footer2 {
+            height: 100px; 
+            line-height: 100px;
+            background-color: #2d3670;
+        }
+        /* container */
+        .container {width: 1280px; margin: 0 auto; height: inherit; background-color: rgba(0,0,0,0.3);}
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">header</div>
+        <div id="header">
+            <div id="header1">
+                <div class="container">header1</div>
+            </div>
+            <div id="header2">
+                <div class="container">header2</div>
+            </div>
+        </div>
         <!-- //header -->
 
-        <div id="nav">nav</div>
-        <!-- //nav -->
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <!-- //banner -->
+        
+        <div id="contents">
+            <div id="content1">
+                <div class="container">content1</div>
+            </div>
+            <div id="content2">
+                <div class="container">content2</div>
+            </div>
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>
+            <div id="content4">
+                <div class="container">content4</div>
+            </div>
+        </div>
+        <!-- //contents -->
 
-        <div id="side">side</div>
-        <!-- //side -->
-
-        <div id="content1">content1</div>
-        <!-- //content1 -->
-
-        <div id="content2">content2</div>
-        <!-- //content2 -->
-
-        <div id="content3">content3</div>  
-        <!-- //content3 -->
-
-        <div id="footer">footer</div>
-        <!-- /footer -->
+        <div id="footer">
+            <div id="footer1">
+                <div class="container">footer1</div>
+            </div>
+            <div id="footer2">
+                <div class="container">footer2</div>
+            </div>
+        </div>
+        <!-- //footer -->
     </div>
     <!-- //wrap -->
 </body>

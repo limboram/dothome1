@@ -17,84 +17,90 @@
             padding: 0;
         }
         /* layout */
+        body {
+            background: #fce4ec;
+        }
         #wrap {
-            width: 100%; 
+            width: 1200px;
+            height: 1600px; 
+            margin: 0 auto; 
             font-size: 72px; 
-            text-align: center; 
+            color: #fff; 
             text-transform: uppercase; 
-            color: #fff; font-family: 'S-CoreDream-8Heavy';
+            text-align: center; 
+            font-family: 'S-CoreDream-8Heavy';
         }
-        #header_wrap {
-            width: 100%; 
-            height: 150px; 
-            background-color: #bbdefb;
-        }
-        #baaner_wrap {
-            width: 100%; 
-            height: 450px; 
-            background-color: #90caf9;
-        }
-        #contents_wrap {
-            width: 100%;
-            height: 850px; 
-            background-color: #64b5f6;
-        }
-        #footer_wrap {
-            width: 100%; 
-            height: 150px; 
-            background-color: #42a5f5;
-        }
-        .header {
+        #header {
             width: 1200px; 
             height: 150px; 
             line-height: 150px; 
-            margin: 0 auto; 
-            background-color: #c5cae9;
+            background: #f8bbd0;
         }
-        .baaner {
-            width: 1200px; 
-            height: 450px; 
-            line-height: 450px; 
-            margin: 0 auto; 
-            background-color: #9fa8da;
-        }
-        .contents {
-            width: 1200px; 
-            height: 850px; 
-            line-height: 850px; 
-            margin: 0 auto;
-            background-color: #7986cb;
-        }
-        .footer {
-            width: 1200px; 
+        #nav {
+            width: 1200px;
             height: 150px; 
             line-height: 150px; 
-            margin: 0 auto; 
-            background-color: #5c6bc0;
+            background: #f48fb1;
+        }
+        #side {
+            width: 400px; 
+            height: 1100px; 
+            line-height: 1100px; 
+            background: #f06292; 
+            float: left;
+        }
+        #content1 {
+            width: 800px; 
+            height: 370px; 
+            line-height: 370px; 
+            background: #ec407a;
+            float: left;
+        }
+        #content2 {
+            width: 800px; 
+            height: 360px; 
+            line-height: 360px;
+            background: #e91e63; 
+            float: left;
+        }
+        #content3 {
+            width: 800px; 
+            height: 370px; 
+            line-height: 370px; 
+            background: #d81b60; 
+            float: left;
+        }
+        #footer {
+            width: 1200px; 
+            height: 200px; 
+            line-height: 200px; 
+            background: #c2185b; 
+            clear: both;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header_wrap">
-            <div class="header">header</div>
-        </div>
+        <div id="header">header</div>
         <!-- //header -->
 
-        <div id="baaner_wrap">
-            <div class="baaner">baaner</div>
-        </div>
-        <!-- //baaner -->
+        <div id="nav">nav</div>
+        <!-- //nav -->
 
-        <div id="contents_wrap">
-            <div class="contents">contents</div>
-        </div>
-        <!-- //contents -->
+        <div id="side">side</div>
+        <!-- //side -->
 
-        <div id="footer_wrap">
-            <div class="footer">footer</div>
-        </div>
-        <!-- //footer -->
+        <div id="content1">content1</div>
+        <!-- //content1 -->
+
+        <div id="content2">content2</div>
+        <!-- //content2 -->
+
+        <div id="content3">content3</div>  
+        <!-- //content3 -->
+
+        <div id="footer">footer</div>
+        <!-- /footer -->
     </div>
     <!-- //wrap -->
 </body>
