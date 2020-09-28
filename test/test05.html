@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화면 구현 test03</title>
+    <title>화면 구현 test04</title>
+    <style>
+        /* reset */
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+
+        /* layout */
+        #wrap {
+            width: 100%;
+            font-size: 72px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            font-family: 'S-CoreDream-8Heavy';
+        }
+        #header1 {
+            height: 70px; 
+            line-height: 70px;
+            background-color: #f0f1f9;
+        }
+        #header2 {
+            height: 70px; 
+            line-height: 70px; 
+            background-color: #dcdff2;
+        }
+        #banner {
+            height: 400px; 
+            line-height: 400px; 
+            background-color: #bdc3e4;
+        }
+        #content1 {
+            height: 800px; 
+            line-height: 800px; 
+            background-color: #a7afdd;
+        }
+        #content2 {
+            height: 800px; 
+            line-height: 800px; 
+            background-color: #8f99d1;
+        }
+        #content3 {
+            height: 800px; 
+            line-height: 800px; 
+            background-color: #818cce;
+        }
+        #content4 {
+            height: 800px; 
+            line-height: 800px; 
+            background-color: #7d87c8;
+        }
+        #footer1 {
+            height: 100px; 
+            line-height: 100px; 
+            background-color: #313a74;
+        }
+        #footer2 {
+            height: 100px; 
+            line-height: 100px;
+            background-color: #2d3670;
+        }
+
+        /* container */
+        .container {
+            width: 1280px; 
+            margin: 0 auto; 
+            height: inherit; 
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="wrap">
+        <div id="header">
+            <div id="header1">
+                <div class="container">header1</div>
+            </div>
+            <div id="header2">
+                <div class="container">header2</div>
+            </div>
+        </div>
+        <!-- //header -->
+
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <!-- //banner -->
+        
+        <div id="contents">
+            <div id="content1">
+                <div class="container">content1</div>
+            </div>
+            <div id="content2">
+                <div class="container">content2</div>
+            </div>
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>
+            <div id="content4">
+                <div class="container">content4</div>
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <div id="footer">
+            <div id="footer1">
+                <div class="container">footer1</div>
+            </div>
+            <div id="footer2">
+                <div class="container">footer2</div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
 </body>
 </html>
