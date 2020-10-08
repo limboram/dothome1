@@ -84,9 +84,23 @@
 
 /* 배너 */
 .ban {position: relative; padding: 24px 0;}
-.ban a {position: absolute; top: 60px; width: 43px; height: 43px; background-image: url(../img/icon.png);}
-.ban a.prev {left: -80px; height: 43px; background-position: -150px 0;}
-.ban a.next {right: -80px; height: 43px; background-position: -150px -43px;}
+.ban a {
+    position: absolute; 
+    top: 60px;
+    width: 43px; 
+    height: 43px; 
+    background-image: url(../img/icon.png);
+}
+.ban a.prev {
+    left: -80px; 
+    height: 43px; 
+    background-position: -150px 0;
+}
+.ban a.next {
+    right: -80px; 
+    height: 43px; 
+    background-position: -150px -43px;
+}
 .ban a.prev:hover {background-position: -193px 0;}
 .ban a.next:hover {background-position: -193px -43px;}
 .ban ul {overflow: hidden;}
