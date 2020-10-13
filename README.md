@@ -5,4 +5,4 @@
 
 <br>
 #제이쿼리 예제<br>
-find() : <a hrdf="https://limboram.github.io/dothome1/jquery/jquery04_find.html">바로가기</a>
+find() : <a href="https://limboram.github.io/dothome1/jquery/jquery04_find.html">바로가기</a>
