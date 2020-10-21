@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        a {color: #222; text-decoration: none;}
+        #wrap {width: 100%;}
+        #header {height: 200px; background: #111;}
+        #banner {height: 400px; background: #222;}
+        #content1 {height: 200px; background: #333;}
+        #content2 {height: 200px; background: #444;}
+        #content3 {height: 200px; background: #555;}
+        #content4 {height: 200px; background: #666;}
+        #content5 {background: #fff;}
+        #footer1 {height: 200px; background: #888;}
+        #footer2 {height: 200px; background: #999;}
+        #footer3 {height: 400px; background: #111;}
+
+        .container {width: 1400px; height: inherit; margin: 0 auto; background-color: rgba(255,255,255,0.3);}
+        .cont5 {overflow: hidden; padding: 60px 0;}
+        .cont5 h3 {margin: 30px 0; font-size: 30px; margin-top: -10px;}
+        .cont5 .left {position: relative; float: left; width: 50%; height: 200px;}
+        .cont5 .right {position: relative; float: left; width: 50%; height: 200px;}
+        .cont5 ul {border: 1px solid #ccc; margin-right: 40px;border-bottom: 0;}
+        .cont5 ul.right {margin-right: 0;}
+        .cont5 li {overflow: hidden; border-bottom: 1px solid #ccc; padding: 15px 0;}
+        .cont5 li a {float: left; width: 60%; padding-left: 30px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+        .cont5 li span {float: right; padding-right: 30px;}
+        .cont5 .left a.more {position: absolute; right: 0; top: 10px; padding-right: 40px;}
+        .cont5 .right a.more {position: absolute; right: 0; top: 10px;  padding-right: 40px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <div id="contents">
+            <div id="content1">
+                <div class="container">contents</div>
+            </div>
+            <div id="content2">
+                <div class="container">content2</div>
+            </div>
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>
+            <div id="content4">
+                <div class="container">content4</div>
+            </div>
+            <div id="content5">
+                <div class="container">
+                    <div class="cont5">
+                        <div class="left">
+                            <h3>펀드공시</h3>
+                            <ul>
+                                <li><a href="#">미래에셋코스피200인덱스증권투자신탁1호(주식-파생형)</a><span>2020.10.12</span></li>
+                                <li><a href="#">고유재산 투자펀드의 의무투자기간 종료안내</a><span>2020.10.05</span></li>
+                                <li><a href="#">소규모펀드 공시의 건(2020년 9월)</a><span>2020.10.05</span></li>
+                            </ul>
+                            <a href="#" class="more" title="더보기">더보기</a>
+                        </div>
+                        <div class="right">
+                            <h3>펀드공시</h3>
+                            <ul>
+                                <li><a href="#">미래에셋코스피200인덱스증권투자신탁1호(주식-파생형)</a><span>2020.10.12</span></li>
+                                <li><a href="#">고유재산 투자펀드의 의무투자기간 종료안내</a><span>2020.10.05</span></li>
+                                <li><a href="#">소규모펀드 공시의 건(2020년 9월)</a><span>2020.10.05</span></li>
+                            </ul>
+                            <a href="#" class="more" title="더보기">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer1">
+                <div class="container">footer1</div>
+            </div>
+            <div id="footer2">
+                <div class="container">footer2</div>
+            </div>
+            <div id="footer3">
+                <div class="container">footer3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
