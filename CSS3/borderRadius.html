@@ -89,11 +89,23 @@
                 </div>
                 <!-- //배너 광고 1140 -->
                 
-                <!-- Intro1 -->
+                <!-- Intro -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">border-radius</h2>
+                    <h2 id="intro" class="page-header">border-radius</h2>
                     <p class="bs-callout bs-callout-info">
                         border-radius: border-top-left-raiuds | border-top-right-radius | border-bottom-left-radius | border-bottom-right-radius;
+                    </p>
+                    <p class="bs-callout bs-callout-warring">
+                        border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;<br>
+                        border-radius: 0px 0px 0px / 0px 0px 0px 0px;<br>
+                        border-radius: 0px 0px / 0px 0px 0px 0px;<br>
+                        border-radius: 0px / 0px 0px 0px 0px;<br>
+                        border-radius: 0px 0px 0px 0px;<br>
+                        border-radius: 0px 0px 0px;<br>
+                        border-radius: 0px 0px;<br>
+                        border-radius: 0px;<br>
+                        X축 / Y축<br>
+                        top left / top right/ bottom right / bottom left
                     </p>
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover">
@@ -123,14 +135,20 @@
                             </tbody>
                         </table>
                     </div>
+                    
                 </div>
-                <!-- //Intro1 -->
+                <!-- //Intro -->
 
                 <style>
                     .radiusWrap {}
                     .radiusWrap > div {}
                     .radiusWrap.bg1 > div {background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);}
-                    .radiusWrap > div > span {}
+                    .radiusWrap.bg2 > div {background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);}
+                    .radiusWrap.bg3 > div {background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);}
+                    .radiusWrap.bg4 > div {background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);}
+                    .radiusWrap.bg5 > div {background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);}
+                    .radiusWrap > div {transition: all 0.6s;}
+                    .radiusWrap > div:hover {border-radius: 0;}
                     .radiusWrap .radius01 {border-radius: 0;}
                     .radiusWrap .radius02 {border-radius: 10px;}
                     .radiusWrap .radius03 {border-radius: 20px;}
@@ -141,10 +159,114 @@
                     .radiusWrap .radius08 {border-radius: 70px;}
                     .radiusWrap .radius09 {border-radius: 80px;}
                     .radiusWrap .radius10 {border-radius: 90px;}
+                    .radius10.active {
+                        animation-name: radius10;
+                        animation-duration: 1s;
+                        animation-iteration-count: 100;
+                    }
+                    @keyframes radius10 {
+                        0% {border-radius: 60px 0px;}
+                        25% {border-radius: 70px 0px;}
+                        50% {border-radius: 0px 50px;}
+                        75% {border-radius: 0px 100px;}
+                        100% {border-radius: 40px 0px;}
+                    }
+
+                    .radiusWrap .radius11 {border-radius: 0px 0px;}
+                    .radiusWrap .radius12 {border-radius: 15px 0px;}
+                    .radiusWrap .radius13 {border-radius: 30px 0px;}
+                    .radiusWrap .radius14 {border-radius: 45px 0px;}
+                    .radiusWrap .radius15 {border-radius: 60px 0px;}
+                    .radiusWrap .radius16 {border-radius: 75px 0px;}
+                    .radiusWrap .radius17 {border-radius: 90px 0px;}
+                    .radiusWrap .radius18 {border-radius: 105px 0px;}
+                    .radiusWrap .radius19 {border-radius: 130px 0px;}
+                    .radiusWrap .radius20 {border-radius: 145px 0px;}
+                    .radius20.active {
+                        animation-name: radius20;
+                        animation-duration: 2s;
+                        animation-iteration-count: 100;
+                    }
+                    @keyframes radius20 {
+                        0% {border-radius: 0px 0px;}
+                        25% {border-radius: 150px 0px;}
+                        50% {border-radius: 0px 0px;}
+                        75% {border-radius: 0px 150px;}
+                        100% {border-radius: 0px 0px;}
+                    }
+                    
+                    .radiusWrap .radius21 {border-radius: 0px / 50px;}
+                    .radiusWrap .radius22 {border-radius: 15px / 50px;}
+                    .radiusWrap .radius23 {border-radius: 35px / 50px;}
+                    .radiusWrap .radius24 {border-radius: 50px / 50px;}
+                    .radiusWrap .radius25 {border-radius: 65px / 50px;}
+                    .radiusWrap .radius26 {border-radius: 80px / 50px;}
+                    .radiusWrap .radius27 {border-radius: 95px / 50px;}
+                    .radiusWrap .radius28 {border-radius: 105px / 50px;}
+                    .radiusWrap .radius29 {border-radius: 120px / 50px;}
+                    .radiusWrap .radius30 {border-radius: 135px / 50px;}
+                    .radius30.active {
+                        animation-name: radius30;
+                        animation-duration: 1.5s;
+                        animation-iteration-count: 100;
+                    }
+                    @keyframes radius30 {
+                        0% {border-radius: 240px 0px 8px;}
+                        25% {border-radius: 50px 60px;}
+                        50% {border-radius: 80px 0px 120px;}
+                        75% {border-radius: 700px 150px;}
+                        100% {border-radius: 2px 50px;}
+                    }
+
+                    .radiusWrap .radius31 {border-radius: 0 10px 10px;}
+                    .radiusWrap .radius32 {border-radius: 0 30px 30px;}
+                    .radiusWrap .radius33 {border-radius: 0 50px 50px;}
+                    .radiusWrap .radius34 {border-radius: 0 70px 70px;}
+                    .radiusWrap .radius35 {border-radius: 0 90px 90px;}
+                    .radiusWrap .radius36 {border-radius: 10px 10px 0px;}
+                    .radiusWrap .radius37 {border-radius: 30px 30px 0px;}
+                    .radiusWrap .radius38 {border-radius: 50px 50px 0px;}
+                    .radiusWrap .radius39 {border-radius: 70px 70px 0px;}
+                    .radiusWrap .radius40 {border-radius: 90px 90px 0px;}
+                    .radius40.active {
+                        animation-name: radius40;
+                        animation-duration: 1.5s;
+                        animation-iteration-count: 100;
+                    }
+                    @keyframes radius40 {
+                        0% {border-radius: 0px 150px;}
+                        25% {border-radius: 155px 185px 10px 30px;}
+                        50% {border-radius: 27px 0px;}
+                        75% {border-radius: 20px 170px;}
+                        100% {border-radius: 85px 4px 145px 154px;}
+                    }
+
+                    .radiusWrap .radius41 {border-radius: 0 0 10px 10px;}
+                    .radiusWrap .radius42 {border-radius: 0 0 30px 30px;}
+                    .radiusWrap .radius43 {border-radius: 0 0 50px 50px;}
+                    .radiusWrap .radius44 {border-radius: 0 0 70px 70px;}
+                    .radiusWrap .radius45 {border-radius: 0 0 90px 90px;}
+                    .radiusWrap .radius46 {border-radius: 90px 90px 0 0;}
+                    .radiusWrap .radius47 {border-radius: 70px 70px 0 0;}
+                    .radiusWrap .radius48 {border-radius: 50px 50px 0 0;}
+                    .radiusWrap .radius49 {border-radius: 30px 30px 0 0;}
+                    .radiusWrap .radius50 {border-radius: 10px 10px 0 0;}
+                    .radius50.active {
+                        animation-name: radius50;
+                        animation-duration: 1.5s;
+                        animation-iteration-count: 100;
+                    }
+                    @keyframes radius50 {
+                        0% {border-radius: 358px 5px 0px 0px;}
+                        25% {border-radius: 150px 0px;}
+                        50% {border-radius: 65px 5px;}
+                        75% {border-radius: 324px 150px;}
+                        100% {border-radius: 85px 8px 10px;}
+                    }
                 </style>
-                <!-- Intro2 -->
+                <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">Sample01</h2>
+                    <h2 id="intro1" class="page-header">Sample01</h2>
                     <div class="sample">
                         <h3><span></span><em class="sr-only">border-radius</em></h3>
                         <div class="boxWrap radiusWrap bg1">
@@ -172,7 +294,136 @@
 .radiusWrap .radius10 {border-radius: 90px;}
 </code></pre>
                 </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Sample02</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">border-radius</em></h3>
+                        <div class="boxWrap radiusWrap bg2">
+                            <div class="radius11"><span>radius11</span></div>
+                            <div class="radius12"><span>radius12</span></div>
+                            <div class="radius13"><span>radius13</span></div>
+                            <div class="radius14"><span>radius14</span></div>
+                            <div class="radius15"><span>radius15</span></div>
+                            <div class="radius16"><span>radius16</span></div>
+                            <div class="radius17"><span>radius17</span></div>
+                            <div class="radius18"><span>radius18</span></div>
+                            <div class="radius19"><span>radius19</span></div>
+                            <div class="radius20"><span>radius20</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.radiusWrap .radius11 {border-radius: 0px 0px;}
+.radiusWrap .radius12 {border-radius: 15px 0px;}
+.radiusWrap .radius13 {border-radius: 30px 0px;}
+.radiusWrap .radius14 {border-radius: 45px 0px;}
+.radiusWrap .radius15 {border-radius: 60px 0px;}
+.radiusWrap .radius16 {border-radius: 75px 0px;}
+.radiusWrap .radius17 {border-radius: 90px 0px;}
+.radiusWrap .radius18 {border-radius: 105px 0px;}
+.radiusWrap .radius19 {border-radius: 130px 0px;}
+.radiusWrap .radius20 {border-radius: 145px 0px;}
+</code></pre>
+                </div>
                 <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Sample03</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">border-radius</em></h3>
+                        <div class="boxWrap radiusWrap bg3">
+                            <div class="radius21"><span>radius21</span></div>
+                            <div class="radius22"><span>radius22</span></div>
+                            <div class="radius23"><span>radius23</span></div>
+                            <div class="radius24"><span>radius24</span></div>
+                            <div class="radius25"><span>radius25</span></div>
+                            <div class="radius26"><span>radius26</span></div>
+                            <div class="radius27"><span>radius27</span></div>
+                            <div class="radius28"><span>radius28</span></div>
+                            <div class="radius29"><span>radius29</span></div>
+                            <div class="radius30"><span>radius30</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.radiusWrap .radius21 {border-radius: 0px / 50px;}
+.radiusWrap .radius22 {border-radius: 15px / 50px;}
+.radiusWrap .radius23 {border-radius: 35px / 50px;}
+.radiusWrap .radius24 {border-radius: 50px / 50px;}
+.radiusWrap .radius25 {border-radius: 65px / 50px;}
+.radiusWrap .radius26 {border-radius: 80px / 50px;}
+.radiusWrap .radius27 {border-radius: 95px / 50px;}
+.radiusWrap .radius28 {border-radius: 105px / 50px;}
+.radiusWrap .radius29 {border-radius: 120px / 50px;}
+.radiusWrap .radius30 {border-radius: 135px / 50px;}
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Sample04</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">border-radius</em></h3>
+                        <div class="boxWrap radiusWrap bg4">
+                            <div class="radius31"><span>radius31</span></div>
+                            <div class="radius32"><span>radius32</span></div>
+                            <div class="radius33"><span>radius33</span></div>
+                            <div class="radius34"><span>radius34</span></div>
+                            <div class="radius35"><span>radius35</span></div>
+                            <div class="radius36"><span>radius36</span></div>
+                            <div class="radius37"><span>radius37</span></div>
+                            <div class="radius38"><span>radius38</span></div>
+                            <div class="radius39"><span>radius39</span></div>
+                            <div class="radius40"><span>radius40</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.radiusWrap .radius31 {border-radius: 0 10px 10px;}
+.radiusWrap .radius32 {border-radius: 0 30px 30px;}
+.radiusWrap .radius33 {border-radius: 0 50px 50px;}
+.radiusWrap .radius34 {border-radius: 0 70px 70px;}
+.radiusWrap .radius35 {border-radius: 0 90px 90px;}
+.radiusWrap .radius36 {border-radius: 10px 10px 0px;}
+.radiusWrap .radius37 {border-radius: 30px 30px 0px;}
+.radiusWrap .radius38 {border-radius: 50px 50px 0px;}
+.radiusWrap .radius39 {border-radius: 70px 70px 0px;}
+.radiusWrap .radius40 {border-radius: 90px 90px 0px;}
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Sample05</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">border-radius</em></h3>
+                        <div class="boxWrap radiusWrap bg5">
+                            <div class="radius41"><span>radius41</span></div>
+                            <div class="radius42"><span>radius42</span></div>
+                            <div class="radius43"><span>radius43</span></div>
+                            <div class="radius44"><span>radius44</span></div>
+                            <div class="radius45"><span>radius45</span></div>
+                            <div class="radius46"><span>radius46</span></div>
+                            <div class="radius47"><span>radius47</span></div>
+                            <div class="radius48"><span>radius48</span></div>
+                            <div class="radius49"><span>radius49</span></div>
+                            <div class="radius50"><span>radius50</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.radiusWrap .radius41 {border-radius: 0 0 10px 10px;}
+.radiusWrap .radius42 {border-radius: 0 0 30px 30px;}
+.radiusWrap .radius43 {border-radius: 0 0 50px 50px;}
+.radiusWrap .radius44 {border-radius: 0 0 70px 70px;}
+.radiusWrap .radius45 {border-radius: 0 0 90px 90px;}
+.radiusWrap .radius46 {border-radius: 90px 90px 0 0;}
+.radiusWrap .radius47 {border-radius: 70px 70px 0 0;}
+.radiusWrap .radius48 {border-radius: 50px 50px 0 0;}
+.radiusWrap .radius49 {border-radius: 30px 30px 0 0;}
+.radiusWrap .radius50 {border-radius: 10px 10px 0 0;}
+</code></pre>
+                </div>
+                <!-- //Intro5 -->
+
             </div>
             <!-- //col-md-12 -->
 
@@ -202,6 +453,35 @@
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
+    <script>
+        //radius20번을 클릭하면 글씨색을 파란색으로 변경해주세요
+        // $(".radius20").click(function(){
+        //     $(".radius20").css("color","blue");
+        // });
+        // document.querySelector(".radius20").addEventListener("click",function(){
+        //     document.querySelector(".radius20").style.color = "blue";
+        // });
+
+        //radius20번을 클릭하면 클래스(active)를 추가시켜주세요
+        // $(".radius20").click(function(){
+        //     $(".radius20").addClass("active");
+        // });
+        document.querySelector(".radius10").addEventListener("click",function(){
+            document.querySelector(".radius10").classList.add("active");
+        });
+        document.querySelector(".radius20").addEventListener("click",function(){
+            document.querySelector(".radius20").classList.add("active");
+        });
+        document.querySelector(".radius30").addEventListener("click",function(){
+            document.querySelector(".radius30").classList.add("active");
+        });
+        document.querySelector(".radius40").addEventListener("click",function(){
+            document.querySelector(".radius40").classList.add("active");
+        });
+        document.querySelector(".radius50").addEventListener("click",function(){
+            document.querySelector(".radius50").classList.add("active");
+        });
+    </script>
 </body>
 
 </html>
