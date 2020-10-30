@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test10</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .container {width: 1200px; margin: 0 auto;}
+        #header {width: 100%; height: 100px; background-color: #ffecb3;}
+        #banner {width: 100%; height: 300px; background-color: #ffe082;}
+        #content1 {overflow: hidden;}
+        #content1 .cont1-artcle1 {width: 30%; height: 500px; background-color: #ffd54f; float: left;}
+        #content1 .cont1-artcle2 {width: 70%; height: 250px; background-color: #ffca28; float: left;}
+        #content1 .cont1-artcle2 > article {width: 44%; height: 200px; background-color: #ff6f00; border-radius: 5px; float: left; margin: 3%;}
+        #content1 .cont1-artcle3 {width: 70%; height: 250px; background-color: #ffc107;float: left;}
+        #content2 {overflow: hidden;}
+        #content2 .cont2-artcle1 {width: 33.3333%; height: 200px; background-color: #ffb300; float: left;}
+        #content2 .cont2-artcle2 {width: 33.3333%; height: 200px; background-color: #ffa000; float: left;}
+        #content2 .cont2-artcle3 {width: 33.3333%; height: 200px; background-color: #ff8f00; float: left;}
+        #content3 {overflow: hidden; background-color: #ffe57f; padding: 3%;}
+        #content3 .cont3-artcle1 {width: 23%; height: 170px; background-color: #ff6f00; float: left; border-radius: 5px; margin: 1%;}
+        #content3 .cont3-artcle2 {width: 23%; height: 170px; background-color: #ff6f00; float: left; border-radius: 5px; margin: 1%;}
+        #content3 .cont3-artcle3 {width: 23%; height: 170px; background-color: #ff6f00; float: left; border-radius: 5px; margin: 1%;}
+        #content3 .cont3-artcle4 {width: 23%; height: 170px; background-color: #ff6f00; float: left; border-radius: 5px; margin: 1%;}
+        #footer {width: 100%; height: 100px; background-color: #ffd740;}
+
+        @media (max-width:1210px){
+            .container {width: 100%;}
+            #content1 .cont1-artcle2 > article:nth-child(1) {width: 95%;}
+            #content1 .cont1-artcle2 > article:nth-child(2) {display: none;}
+            #content2 .cont2-artcle1 {width: 50%;}
+            #content2 .cont2-artcle2 {display: none;}
+            #content2 .cont2-artcle3 {width: 50%;}
+            #content3 .cont3-artcle1 {width: 31.33333%;}
+            #content3 .cont3-artcle2 {width: 31.33333%;}
+            #content3 .cont3-artcle3 {width: 31.33333%;}
+            #content3 .cont3-artcle4 {display: none;}
+        }
+        @media (max-width: 900px){
+            #content1 .cont1-artcle2 > article:nth-child(1) {display: none;}
+            #content2 .cont2-artcle1 {width: 100%;}
+            #content2 .cont2-artcle3 {width: 100%;}
+        }
+        @media (max-width: 480px){
+            #content1 .cont1-artcle1 {width: 100%; height: 250px;}
+            #content1 .cont1-artcle2 {width: 100%;}
+            #content1 .cont1-artcle3 {width: 100%;}
+            #content3 .cont3-artcle1 {width: 100%;}
+            #content3 .cont3-artcle2 {width: 100%;}
+            #content3 .cont3-artcle3 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header id="header"></header>
+            <aside id="banner"></aside>
+            <section id="content1">
+                <article class="cont1-artcle1"></article>
+                <article class="cont1-artcle2">
+                    <article></article>
+                    <article></article>
+                </article>
+                <article class="cont1-artcle3"></article>
+            </section>
+            <section id="content2">
+                <article class="cont2-artcle1"></article>
+                <article class="cont2-artcle2"></article>
+                <article class="cont2-artcle3"></article>
+            </section>
+            <section id="content3">
+                <article class="cont3-artcle1"></article>
+                <article class="cont3-artcle2"></article>
+                <article class="cont3-artcle3"></article>
+                <article class="cont3-artcle4"></article>
+            </section>
+            <footer id="footer"></footer>
+        </div>
+    </div>
+</body>
+</html>
