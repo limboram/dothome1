@@ -10,7 +10,7 @@
 .sample h3 span::before {content: ''; width: 15px; height: 15px; background-color: #e5a935; border-radius: 50%; position: absolute; left: 23px; top: 0;}
 .sample h3 span::after {content: ''; width: 15px; height: 15px; background-color: #85c33d; border-radius: 50%; position: absolute; left: 45px; top: 0;}
 .sample .boxWrap {padding: 20px; background-color: #fff; overflow: hidden;}
-.sample .boxWrap > div {margin: 25px; background: #ccc; width: 170px; height: 170px; float: left; text-align: center; line-height: 160px; color: #fff;}
+.sample .boxWrap > div {margin: 25px; background: #ccc; width: 170px; height: 170px; float: left; text-align: center; line-height: 170px; color: #fff;}
 
 /*!
  * Bootstrap v3.1.0 (http://getbootstrap.com)
