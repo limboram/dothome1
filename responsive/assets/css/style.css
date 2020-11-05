@@ -1,10 +1,15 @@
 /* 레이아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
 #nav {background-color: #f6fdff;}
-#cont_tit {background-color: #EAF7FD;}
+#title {background-color: #eaf7fd;}
+#contents .container {border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
+#cont_left {float: left; width: 250px; height: 1000px;}
+#cont_center {border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; overflow: hidden; height: 1000px; margin-right: 250px;}
+#cont_right {position: absolute; right: 0; top: 0; width: 250px; height: 1000px;}
+#footer {border-top: 1px solid #dbdbdb;}
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto;  background: /* rgba(0,0,0,0.3); */}
+.container {position: relative; width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.3); */}
 
 /* 헤더 */
 .header .header_menu {text-align: right;}
@@ -76,21 +81,42 @@
 .nav > div li a::after {content: ''; width: 0; height: 1px; background: #25aad0; position: absolute; bottom: 0; left: 0; transition: all 0.3s ease-in-out;}
 .nav > div li:hover a::after {width: 100%;}
 
-/* 타이틀 메뉴 */
-.tit {position: relative;}
-.tit h2 {
-    text-align: center; 
-    font-size: 40px; 
+/* 타이틀 */
+.title {position: relative; text-align: center;}
+.title h2 {
+    font-size: 39px; 
     padding: 5px 0; 
-    color: #25a2d0; 
+    color: #0093bd; 
     font-family: 'Nanum Brush Script';
 }
-.tit .btn {position: absolute; text-align: center; right: 0; top: 5px; width: 60px; height: 60px; line-height: 60px; background-color: #3192bf; color: #fff; font-size: 35px; border-radius: 50%; transition: all 0.3s ease;}
-.tit .btn:hover {box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset, 0 0 0 100px rgba(0, 0, 0, 0.1) inset;}
+.title .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; line-height: 60px; background-color: #3192bf; border-radius: 50%; font-size: 35px; color: #fff; transition: all 0.3s ease;}
+.title .btn:hover {box-shadow: 0 0 0 3px rgba(71, 154, 191, 0.9) inset, 0 0 0 100px rgba(0, 0, 0, 0.1) inset;}
 
-
+/* 컨텐츠 영역 */
+.column {padding: 15px; border-bottom: 1px solid #dbdbdb;}
+.column .col_tit {font-size: 20px; color: #2f7fa6; padding-bottom: 5px;}
+.column .col_desc {border-bottom: 1px dashed #dbdbdb; padding-bottom: 15px; margin-bottom: 15px; color: #878787; line-height: 18px;}
+.column.col1 {}
+.column.col2 {}
+.column.col3 {border-bottom: 0;}
+.column.col4 {}
+.column.col5 {}
+.column.col6 {border-bottom: 0;}
+.column.col7 {}
+.column.col8 {}
+.column.col9 {border-bottom: 0;}
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%}
+}
+
+@media (max-width: 960px){
+    #cont_center {margin-right: 0;}
+    #cont_right {position: static; width: 100%; height: 400px;}
+}
+
+@media (max-width: 768px){
+    #cont_left {float: none; height: 400px; width: 100%;}
+    #cont_center {height: 400px;}
 }
