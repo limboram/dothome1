@@ -6,7 +6,6 @@
 #github<br>
 <a href="https://limboram.github.io/dothome1/">바로가기</a>
 
-<br>
 #웹표준 사이트 만들기<br>
 <a href="https://limboram.github.io/dothome1/webstandard/index.html">바로가기</a>
 
