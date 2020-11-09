@@ -10,6 +10,8 @@
     <!-- CSS Style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../responsive/assets/css/slick.css">
+    <link rel="stylesheet" href="../responsive/assets/css/lightgallery.css">
 
     <!-- webfonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -124,7 +126,7 @@
                 <div class="container">
                     <div class="ban">
                         <a href="#" class="prev"><span class="ir_pm">이전 이미지</span></a>
-                        <ul>
+                        <ul class="slider">
                             <li class="ban_img1"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></li>
                             <li class="ban_img2"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></li>
                             <li class="ban_img3"><img src="img/banner_link3.jpg" alt="로그인 홈 만들기"></li>
@@ -415,6 +417,8 @@
 
     <!-- script -->
     <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="../responsive/assets/js/slick.min.js"></script>
+    <script src="../responsive/assets/js/lightgallery.min.js"></script>
     <script>
         $(".tit .btn").click(function(event){
             event.preventDefault();  //#의 기본 기능을 차단
@@ -428,6 +432,16 @@
             $("#cont_nav").slideToggle();  //slideDown() + slideUp()
             $(this).toggleClass("on");
         });
+
+        //이미지 슬라이드
+        $("slider").slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+
+        //라이트 박스
+        $(".lightbox").lightGallery(); 
     </script>
 </body>
 </html>
