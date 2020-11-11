@@ -5,7 +5,7 @@ body { background: url(../img/header_bg.jpg) repeat-x center top;}
 #title {background-color: #eaf7fd;}
 #contents .container {border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
 #cont_left {float: left; width: 250px;}
-#cont_center {min-height: 1300px; border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; overflow: hidden; margin-right: 250px;}
+#cont_center {min-height: 1320px; border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; overflow: hidden; margin-right: 250px;}
 #cont_right {position: absolute; right: 0; top: 0; width: 250px;}
 #footer {border-top: 1px solid #dbdbdb;}
 
@@ -163,7 +163,7 @@ body { background: url(../img/header_bg.jpg) repeat-x center top;}
 
 /* 비디오 */
 .video {position: relative; width: 100%; padding-bottom: 56.25%;}
-.video iframe {position: absolute; width: 100%; height: 100%;}
+.video iframe {position: absolute; width: 100%; height: 100%; border: 0;}
 
 /* 푸터 */
 .footer {text-align: center; padding: 30px 50px;}
@@ -190,14 +190,16 @@ body { background: url(../img/header_bg.jpg) repeat-x center top;}
 @media (max-width: 960px){
     #cont_center {margin-right: 0; border-right: 0;}
     #cont_right {position: static; width: 100%;}
-    #cont_right .column {float: left; width: 33.3333%; box-sizing: border-box;}
-    #cont_right .column.col7 {border-right: 1px solid #bdbdbd;}
-    #cont_right .column.col8 {border-right: 1px solid #bdbdbd;}
     .nav > div {float: none; width: 100%;}
     .nav > div:last-child {width: 100%;}
     .nav > div ol {margin-bottom: 10px;}
     .nav > div li {width: 33.3333%;}
     .nav > div:last-child li {width: 33.3333%;}
+
+    #cont_right {overflow: hidden; border-top: 1px solid #dbdbdb;}
+    #cont_right .column {float: left; width: 33.3333%; box-sizing: border-box;}
+    #cont_right .column.col7 {border-right: 1px solid #dbdbdb; border-bottom: 0;}
+    #cont_right .column.col8 {border-right: 1px solid #dbdbdb; border-bottom: 0;}
 }
 
 @media (max-width: 768px){
@@ -223,8 +225,14 @@ body { background: url(../img/header_bg.jpg) repeat-x center top;}
     .column.col2 {background: #fff;}
     .square a {width: 49%;}
     .square a:nth-child(5) {display: none;}
+    #cont_right {overflow: hidden; border-top: 1px solid #dbdbdb;}
+    #cont_right .column {width: 50%;}
+    #cont_right .column.col9 {display: none;}
 }
 
 @media (max-width: 320px){
     .square a {width: 100%; margin: 1% 0;}
+    #cont_right {width: 100%;}
+    #cont_right .column {border-right: 0;}
+    #cont_right .column.col9 {border-right: 0;}
 }
