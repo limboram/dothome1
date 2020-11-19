@@ -72,7 +72,7 @@
     </header>
     <div class="bs-header bgs5" id="content">
         <div class="container">
-            <h1>CSS Animation Reference v1.0 &lt;/doc&gt;</h1>
+            <h1>Gasp Animation Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="https://limboram.github.io/dothome1/" target="_blank">limboram.dothome.co.kr</a></p>
         </div>
     </div>
@@ -114,6 +114,18 @@
                                     <td>gsap.from()</td>
                                     <td>일반적인 유형의 애니메이션의 방향을 반대로 정의합니다.</td>
                                 </tr>
+                                <tr>
+                                    <td>gsap.fromTo()</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>gsap.set()</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>gsap.timeline()</td>
+                                    <td></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -121,7 +133,7 @@
                 <!-- //Intro0 -->
 
                 <style>
-                    .timing {height: 365px; overflow: hidden;}
+                    .timing {height: 330px; overflow: hidden;}
                     .timing > div {
                         width: 80px; height: 80px;
                         border-radius: 50%;
@@ -137,20 +149,40 @@
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
                     <h2 id="intro1" class="page-header">
-                        Animation01 - 이동하기 : gasp.to()
-                        <button type="button" class="btn btn-warning btn1-0">reset</button>
+                        Animation01 - 이동하기 : gsap.to()
+                        <button type="button" class="btn btn-danger btn1-0">reset</button>
                         <button type="button" class="btn btn-warning btn1-1">Start1</button>
-                        <button type="button" class="btn btn-warning btn1-2">Start3</button>
-                        <button type="button" class="btn btn-warning btn1-3">Start4</button>
+                        <button type="button" class="btn btn-warning btn1-2">Start2</button>
+                        <button type="button" class="btn btn-warning btn1-3">Start3</button>
+                        <button type="button" class="btn btn-warning btn1-4">Start4</button>
                     </h2>
+                   
                     <div class="sample">
                         <h3><span></span><em class="sr-only">animation</em></h3>
                         <div class="timing bg1">
                             <div class="animation01"><span>01</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>
-</code></pre>
+<pre class="line-numbers language-js"><code>$(".btn1-0").click(function(){
+    gsap.to(".animation01", {x: 0, borderRadius: "50%", rotation: 0, scale:1,});
+});
+$(".btn1-1").click(function(){
+    gsap.to(".animation01", {x: leftWidth, duration: 2});
+});
+$(".btn1-2").click(function(){
+    gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, duration: 2});
+});
+$(".btn1-3").click(function(){
+    gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, scale:2, duration: 2});
+});
+$(".btn1-4").click(function(){
+    var tl = gsap.timeline();
+    tl.to(".animation01", {x: leftWidth, duration: 1})
+      .to(".animation01", {y: leftHeight, duration: 1})
+      .to(".animation01", {x: 0, duration: 1})
+      .to(".animation01", {y: 0, duration: 1})
+});
+</code></pre>  
                 </div>
                 <!-- //Intro1 -->
 
@@ -160,7 +192,7 @@
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">
-                        Animation02 - 이동하기 : gasp.form()
+                        Animation02 - 이동하기 : gsap.from()
                         <button type="button" class="btn btn-warning btn2-1">Start</button>
                         <button type="button" class="btn btn-warning btn2-2">Start</button>
                         <button type="button" class="btn btn-warning btn2-3">Start</button>
@@ -173,7 +205,15 @@
                             <div class="animation02"><span>02</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>
+<pre class="line-numbers language-js"><code>$(".btn2-1").click(function(){
+    gsap.from(".animation02", {duration: 1, x: leftWidth});
+});
+$(".btn2-2").click(function(){
+    gsap.from(".animation02", {duration: 1, y: 100, opacity: 0});
+});
+$(".btn2-3").click(function(){
+    gsap.from(".animation02", {duration: 1, x: 500, opacity: 0});
+});
 </code></pre>
                 </div>
                 <!-- //Intro2 -->
@@ -184,7 +224,7 @@
                 <!-- Intro3 -->
                 <div class="bs-docs-section">
                     <h2 id="intro3" class="page-header">
-                        Animation03 - 이동하기 : gasp.formTo()
+                        Animation03 - 이동하기 : gsap.fromTo()
                         <button type="button" class="btn btn-warning btn3-1">Start1</button>
                     </h2>
                     <div class="sample">
@@ -193,7 +233,9 @@
                             <div class="animation03"><span>03</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>
+<pre class="line-numbers language-js"><code>$(".btn3-1").click(function(){
+gsap.fromTo(".animation03", {opacity: 0, x: 0, y: 0, borderRadius: 0}, {opacity: 1, x: 500, y: 100, borderRadius: "50%", duration: 1})
+})
 </code></pre>
                 </div>
                 <!-- //Intro3 -->
@@ -219,7 +261,15 @@
                             <div class="animation04-7"><span>04</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>
+<pre class="line-numbers language-js"><code>$(".btn4-1").click(function(){
+gsap.to(".animation04-1",{duration:2, left: leftWidth, rotationY: 360, ease: "power1.out"})
+gsap.to(".animation04-2",{duration:2, left: leftWidth, rotationY: 360, ease: "power2.out"})
+gsap.to(".animation04-3",{duration:2, left: leftWidth, rotationY: 360, ease: "power3.out"})
+gsap.to(".animation04-4",{duration:2, left: leftWidth, rotationY: 360, ease: "power4.out"})
+gsap.to(".animation04-5",{duration:2, left: leftWidth, rotationY: 360, ease: "elastic.out(1, 0.3)"})
+gsap.to(".animation04-6",{duration:2, left: leftWidth, rotationY: 360, ease: "steps(12)"})
+gsap.to(".animation04-7",{duration:2, left: leftWidth, rotationY: 360, ease: "expo.out"})
+});
 </code></pre>
                 </div>
                 <!-- //Intro4 -->
@@ -255,7 +305,7 @@
     <script src="../assets/js/prism.js"></script>
     <script>
         const leftWidth = $(".sample").width() - 120;
-        const leftHeight = $(".sample").height() - 140;
+        const leftHeight = $(".sample").height() - 160;
 
         $(".btn1-0").click(function(){
             gsap.to(".animation01", {x: 0, borderRadius: "50%", rotation: 0, scale: 1});
@@ -264,15 +314,15 @@
             gsap.to(".animation01", {x: leftWidth, duration: 2});
         });
         $(".btn1-2").click(function(){
-            gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, duration: 1});
+            gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, duration: 2});
         });
         $(".btn1-3").click(function(){
             gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, scale: 2, duration: 2});
         });
         $(".btn1-4").click(function(){
-            var tl = gsap.timeline();
+            var tl = gsap.timeline({repeat: -1});
             tl.to(".animation01", {x: leftWidth, duration: 1})
-              .to(".animation01", {y: leftWidth, duration: 1})
+              .to(".animation01", {y: leftHeight, duration: 1})
               .to(".animation01", {x: 0, duration: 1})
               .to(".animation01", {y: 0, duration: 1})
         });
@@ -295,9 +345,9 @@
             gsap.to(".animation04-2",{duration:2, left: leftWidth, rotationY: 360, ease: "power2.out"})
             gsap.to(".animation04-3",{duration:2, left: leftWidth, rotationY: 360, ease: "power3.out"})
             gsap.to(".animation04-4",{duration:2, left: leftWidth, rotationY: 360, ease: "power4.out"})
-            gsap.to(".animation04-5",{duration:2, left: leftWidth, rotationY: 360, ease: "steps(12), y: -500"})
-            gsap.to(".animation04-6",{duration:2, left: leftWidth, rotationY: 360, ease: "bounce.out, y: -500"})
-            gsap.to(".animation04-7",{duration:2, left: leftWidth, rotationY: 360, ease: "slow(0.7, 0.7, false)"})
+            gsap.to(".animation04-5",{duration:2, left: leftWidth, rotationY: 360, ease: "elastic.out(1, 0.3)"})
+            gsap.to(".animation04-6",{duration:2, left: leftWidth, rotationY: 360, ease: "steps(12)"})
+            gsap.to(".animation04-7",{duration:2, left: leftWidth, rotationY: 360, ease: "expo.out"})
         });
     </script>
 </body>
