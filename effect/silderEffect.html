@@ -153,6 +153,41 @@ setInterval(() => {
                 </div>
                 <!-- //Intro1 -->
 
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">Slider Effect02</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect02-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length;  //이미지 갯수
+
+setInterval(function(){
+    // if(currentIndex < sliderCount -1){
+    //     currentIndex++;  //0 1 2 3 4 0
+    // } else {
+    //     currentIndex = 0;
+    // }
+    currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
+
+    let sliderPosition = currentIndex * (-800) + "px";
+                            // 0 * -800px -> 0
+                            // 1 * -800px -> -800px
+                            // 2 * -800px -> -1600px (3번째)
+                            // 3 * -800px -> -2400px (4번째)
+    sliderImg.animate({ left: sliderPosition }, 400);
+}, 3000);
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro1 -->
+
             </div>
             <!-- //col-md-12 -->
 
