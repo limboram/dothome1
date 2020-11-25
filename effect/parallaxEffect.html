@@ -246,66 +246,130 @@ $(window).scroll(function(){
 </code></pre>
                     <h3>JavaScript</h3>
 <pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
-    let pageYOffset = window.pageYOffset;
+    let pageYOffset = window.pageYOffset + screen.height/2;
 
     //출력용
-    document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
-    document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-    document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-    document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-    document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-    document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-    document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-    document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-    document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-    document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+    // document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
+    // document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+    // document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+    // document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+    // document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+    // document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+    // document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+    // document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+    // document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+    // document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
 
     //출력용 글씨 색
-    if(pageYOffset > document.getElementById("section1").offsetTop){
-        document.querySelector(".s1OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s1OffsetTop").style.color = "white";
+//     if(pageYOffset > document.getElementById("section1").offsetTop){
+//         document.querySelector(".s1OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s1OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section2").offsetTop){
+//         document.querySelector(".s2OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s2OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section3").offsetTop){
+//         document.querySelector(".s3OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s3OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section4").offsetTop){
+//         document.querySelector(".s4OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s4OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section5").offsetTop){
+//         document.querySelector(".s5OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s5OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section6").offsetTop){
+//         document.querySelector(".s6OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s6OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section7").offsetTop){
+//         document.querySelector(".s7OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s7OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section8").offsetTop){
+//         document.querySelector(".s8OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s8OffsetTop").style.color = "white";
+//     }
+//     if(pageYOffset > document.getElementById("section9").offsetTop){
+//         document.querySelector(".s9OffsetTop").style.color = "red";
+//     } else {
+//         document.querySelector(".s9OffsetTop").style.color = "white";
+//     }
+
+    //나타나기
+    // if(pageYOffset > document.getElementById("section1").offsetTop){
+    //     document.getElementById("section1").classList.add("Show");
+    // } else {
+    //     document.getElementById("section1").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section2").offsetTop){
+    //     document.getElementById("section2").classList.add("Show");
+    // } else {
+    //     document.getElementById("section2").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section3").offsetTop){
+    //     document.getElementById("section3").classList.add("Show");
+    // } else {
+    //     document.getElementById("section3").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section4").offsetTop){
+    //     document.getElementById("section4").classList.add("Show");
+    // } else {
+    //     document.getElementById("section4").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section5").offsetTop){
+    //     document.getElementById("section5").classList.add("Show");
+    // } else {
+    //     document.getElementById("section5").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section6").offsetTop){
+    //     document.getElementById("section6").classList.add("Show");
+    // } else {
+    //     document.getElementById("section6").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section7").offsetTop){
+    //     document.getElementById("section7").classList.add("Show");
+    // } else {
+    //     document.getElementById("section7").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section8").offsetTop){
+    //     document.getElementById("section8").classList.add("Show");
+    // } else {
+    //     document.getElementById("section8").classList.remove("Show");
+    // }
+    // if(pageYOffset > document.getElementById("section9").offsetTop){
+    //     document.getElementById("section9").classList.add("Show");
+    // } else {
+    //     document.getElementById("section9").classList.remove("Show");
+    // }
+
+    for(let i=1; i<=9; i++){
+        document.querySelector(".s"+i+"OffsetTop").textContent = document.getElementById("section"+i).offsetTop;
+        if(pageYOffset > document.getElementById("section"+i).offsetTop){
+            document.querySelector(".s"+i+"OffsetTop").style.color = "red";
+        } else {
+            document.querySelector(".s"+i+"OffsetTop").style.color = "white";
+        }
     }
-    if(pageYOffset > document.getElementById("section2").offsetTop){
-        document.querySelector(".s2OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s2OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section3").offsetTop){
-        document.querySelector(".s3OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s3OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section4").offsetTop){
-        document.querySelector(".s4OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s4OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section5").offsetTop){
-        document.querySelector(".s5OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s5OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section6").offsetTop){
-        document.querySelector(".s6OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s6OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section7").offsetTop){
-        document.querySelector(".s7OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s7OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section8").offsetTop){
-        document.querySelector(".s8OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s8OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section9").offsetTop){
-        document.querySelector(".s9OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s9OffsetTop").style.color = "white";
-    }
+    
+    document.querySelectorAll(".content-item").forEach(elem => {
+        if(pageYOffset > elem.offsetTop){
+            elem.classList.add("show");
+        } else {
+            elem.classList.remove("show");
+        }
+    });
 });
 </code></pre>
                 </div>
@@ -313,7 +377,7 @@ $(window).scroll(function(){
 
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Parallax02</h2>
+                    <h2 id="intro2" class="page-header">Parallax02</h2>
                     <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 패랠랙스 스크롤링 이팩트입니다.</p>
                     <iframe width="100%" height="600px" src="parallax02-jquery.html" frameborder="0"></iframe>
                     <h3>jQuery</h3>
@@ -393,6 +457,111 @@ $(window).scroll(function(){
 </code></pre>
                 </div>
                 <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Parallax03</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 패랠랙스 스크롤링 이팩트입니다.</p>
+                    <iframe width="100%" height="600px" src="parallax03-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>let scrollTop = $(window).scrollTop();
+
+function scroll(){
+    const newScrollTop = $(window).scrollTop();
+    const different = newScrollTop - scrollTop;
+
+    console.log("scrollTop :" + scrollTop);
+    console.log("newScrollTop :" + newScrollTop);
+    console.log("different :" + different);
+
+    //$(".content-item-imgWrap").css({"transform":"rotate("+ different + "deg)"})
+    gsap.to(".content-item-imgWrap", {duration: .3, skewY: different * 0.2, ease: Power1.ease})
+    gsap.to(".content-item-num", {duration: .6, x: different * 3, ease: Power1.ease})
+    gsap.to(".content-item-desc", {duration: .6, skewX: different * 0.2, ease: Power4.ease})
+
+    scrollTop = newScrollTop
+    requestAnimationFrame(scroll);
+}
+scroll();
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>let pageYOffset = window.pageYOffset;
+
+const scroll = () => {
+    const newPageYOffset = window.pageYOffset;
+    const different = newPageYOffset - pageYOffset;
+
+    console.log("scrollTop :" + pageYOffset);
+    console.log("newScrollTop :" + newPageYOffset);
+    console.log("different :" + different);
+
+    let target = document.querySelectorAll(".content-item-img");
+
+    //target.style.transform = "rotate("+different+"deg)";
+    //forEach
+    // target.forEach(box => {
+    //     box.style.transform = "rotate("+ different +"deg)";
+    // })
+
+    gsap.to(".content-item-imgWrap", {duration: .3, skewY: different * 0.2, ease: Power1.ease})
+    gsap.to(".content-item-num", {duration: .6, x: different * 3, ease: Power1.ease})
+    gsap.to(".content-item-desc", {duration: .6, skewX: different * 0.2, ease: Power4.ease})
+
+    pageYOffset = newPageYOffset
+    requestAnimationFrame(scroll);
+}
+scroll();
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Parallax04</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 패랠랙스 스크롤링 이팩트입니다.</p>
+                    <iframe width="100%" height="600px" src="parallax04-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>//글씨 쪼개기
+$(".content-item-desc").each(function(){
+    let text = $(this).text();
+    let split = text.split("").join("</span><span aria-hidden='true'>");
+    split = "<span aria-hidden='true'>" + split + "</span>";
+    $(this).html(split).attr("aria-label", text);
+});
+
+//나타나기
+$(window).scroll(function(){
+    //한 번에 나오게 하기
+    // $(".content-item").each(function(){
+    // if($(window).scrollTop() > $(this).offset().top){
+    //     $(this).find(".content-item-desc").addClass("show");
+    // } else {
+    //     $(this).find(".content-item-desc").removeClass("show");
+    // }
+    // });
+
+    //한 글자씩 나오게 하기
+    // if($(window).scrollTop() > $("#section1").offset().top){
+    //     $("#section1 .content-item-desc span").each(function(i){
+    //         setTimeout(() => {
+    //             $("#section1 .content-item-desc span").eq(i).addClass("show");
+    //         }, 50 * (i+1));
+    //     });
+    // }
+    
+    //한 글자씩 나오게 하기(한번에)
+    $(".content-item").each(function(){
+        if($(window).scrollTop() > $(this).offset().top){
+            gsap.to($(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
+        }
+    });
+});
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
                 
             </div>
             <!-- //col-md-12 -->

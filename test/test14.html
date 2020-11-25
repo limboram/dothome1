@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOVA</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none; color: #000;}
+        li {list-style: none;}
+        em {font-style: normal;}
+        #header {width: 100%; height: 80px; background: #fff;}
+        #banner {width: 100%; height: 300px;}
+        #footer {background: #000;}
+        .container {position: relative; width: 1300px; margin: 0 auto;}
+
+        /* header */
+        #header {border-bottom: 1px solid rgba(165, 165, 165, 0.2);}
+        .header {text-align: center;}
+        .header .logo {position: absolute; left: 0; top: 20px; background: url(https://static-clova.pstatic.net/static/c9c16b3/img/sprite/sp_svg_icon.svg); width: 150px; height: 30px; margin-top: 9px; background-position: -4px -62px;}
+        .header .nav {padding: 28px;}
+        .header .nav li {display: inline; padding: 0 40px; color: rgb(105, 105, 105); font-weight: bold;}
+        .header .quick {position: absolute; right: 0; top: 4px;}
+        .header .quick li {font-size: 12px; display: inline-block; padding: 8px 16px; border: 1px solid rgb(126, 126, 126); margin-top: 19px; border-radius: 5px; margin-left: 6px;}
+
+        /* banner */
+        .banner {text-align: center; margin-top: 8%; font-size: 45px; font-weight: 300;}
+        .banner p span {color: #01be75;}
+        .banner a {display: inline-block; width: 200px; padding: 19px 0 19px; color: #fff; font-size: 20px; line-height: 22px; font-weight: 400; text-align: center;  border-radius: 4px; background: #05d686; margin-top: 3%;}
+
+        /* content */
+        #content {overflow: hidden; padding: 40px 40px 111px;}
+        .content ul {overflow: hidden; font-size: 0; margin: 0 0 0 3%; border-right: none;}
+        .content ul li {float: left; border-bottom: 1px solid rgb(240,240,240); border-right: 1px solid rgb(240,240,240); border-top: 1px solid rgb(240,240,240); border-left: 1px solid rgb(240,240,240);}
+        .content ul li img {width: 240px; height: 240px;}
+        .content ul li .block {border-right: 1px solid rgb(240,240,240); height: 240px; width: 239px; border-left: none;}
+
+        /* footer */
+        .footer {padding: 50px 0;}
+        .footer-top {height: 30px; overflow: hidden;}
+        .footer-top .footer-logo {float: left; width: 150px; height: 50px; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_svg_icon.svg); background-position: -4px -34px;}
+        .footer-top .footer-icon {margin-right: 4%;}
+        .footer-top .footer-icon ul li{float: right;}
+        .footer-top .footer-icon .img1 {width: 21px; height: 18px; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_svg_icon.svg); background-position: -200px -172px; margin-top: 2px; margin-right: 25px;}
+        .footer-top .footer-icon .img2 {width: 18px; height: 18px; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_svg_icon.svg); background-position: -137px -218px; margin-right: 19px;}
+        .footer-top .footer-icon .img3 {width: 18px; height: 18px; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_svg_icon.svg); background-position: -164px -218px; margin-right: 15px;}
+        .footer-top .footer-icon .img4 {width: 20px; height: 14px; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_svg_icon.svg); background-position: -128px -92px; margin-right: 15px;}
+        .footer-bottom {font-size: 12px; color: rgb(109, 108, 108); font-weight: bold;}
+        .footer-bottom .fb1 {float: left; width: 30%; height: 50px;}
+        .footer-bottom .fb1 li {float: left;}
+        .footer-bottom .fb1 li::after {display: inline-block; content: ''; width: 1px; height: 10px; margin: 0 8px; background: #2c2c2c; vertical-align: -1px;}
+        .footer li:last-child::after {width: 0; height: 0;}
+        .footer-bottom .fb2 {float: left; width: 40%; height: 50px; text-align: center;}
+        .footer-bottom .fb2 li {float: left;}
+        .footer-bottom .fb3 {float: left; width: 30%; height: 50px; text-align: right;}
+        .footer-bottom .fb3 li {float: left;}
+        .footer-bottom .fb3 li::before {display: inline-block; content: ''; width: 1px; height: 10px; margin: 0 8px; background: #2c2c2c; vertical-align: -1px;}
+        .footer li:first-child::before {width: 0; height: 0;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="logo"></h1>
+                    <nav class="nav">
+                        <ul>
+                            <li>기술 · 솔루션</li>
+                            <li>제품</li>
+                            <li>플랫폼</li>
+                            <li>파트너</li>
+                            <li>리서치</li>
+                        </ul>
+                    </nav>
+                    <div class="quick">
+                        <ul>
+                            <li>Biz Start</li>
+                            <li>비즈니스 문의</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <div id="banner">
+            <div class="container">
+                <div class="banner">
+                    <p><span>클로바</span>는 다양한 브랜드,<br>서비스 및 개발사들과 함께 하겠습니다.</p>
+                    <a href="#">제휴 제안 신청</a>
+                </div>
+            </div>
+        </div>
+        <!-- //banner -->
+       <div id="content">
+           <div class="container">
+               <div class="content">
+                   <ul>
+                       <li>
+                           <a href="#">
+                               <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/dy_media.png" alt="">
+                           </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_1.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_2.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_3.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_4.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_5.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_6.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_7.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_8.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_9.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_10.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_11.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_12.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/infomark.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/iscream_edu.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_13.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_14.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_15.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_16.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/markt.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/minibig.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_17.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_18.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_19.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_20.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_30.jpg" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_31.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_21.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_22.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_23.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_32.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_33.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_24.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_25.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_26.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_27.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_28.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_29.png" alt="">
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <div class="block">
+                            </div>
+                        </a>
+                       </li>
+                       <li>
+                        <a href="#">
+                            <div class="block"></div>
+                        </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+       <!-- //content -->
+        <div id="footer">
+            <div class="container">
+                <div class="footer">
+                    <div class="footer-top">
+                        <h5 class="footer-logo"></h5>
+                        <div class="footer-icon">
+                            <ul>
+                                <li class="img1"></li>
+                                <li class="img2"></li>
+                                <li class="img3"></li>
+                                <li class="img4"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <ul class="fb1">
+                            <li>고객센터 1833-5387</li>
+                            <li>09:00 - 18:00 (주말, 공휴일 휴무) </li>
+                        </ul>
+                        <p class="fb2">Powered by NAVER · LINE</p>
+                        <ul class="fb3">
+                            <li>공지사항</li>
+                            <li>이용약관</li>
+                            <li>CLOVA 채용안내</li>
+                            <li>CLOVA JP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

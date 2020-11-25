@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax01 - jQuery</title>
+    <title>Parallax03 - Javascript</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -61,9 +61,10 @@
             --color-title: #fff; 
             --color-sub: #999; 
             --color-link: #000; 
-            --color-bg: #111; 
+            --color-bg: #cecece; 
             --font-cafe: 'InfinitySans-RegularA1';
             --font-lato: 'Lato', sans-serif;
+            --aspect-ratio: 33/17;
 
             background-color: var(--color-bg); 
             color: var(--color-title);
@@ -86,6 +87,7 @@
         .contents {
             margin: 0 auto 35vh;
             width: 100%;
+            overflow: hidden;
         }
         .content-item {
             width: 1200px;
@@ -118,14 +120,20 @@
         }
         .content-item-imgWrap {
             position: relative;
-            width: 100%;
-            padding-bottom: 50%;
+            --width: 100%;
+            width: var(--width);
+            /* padding-bottom: 50%; */
+            padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
+            overflow: hidden;
         }
         .content-item-img {
-            width: 100%;
+            width: var(--width);
+            --overflow: 60px;
             position: absolute;
-            left: 0; top: 0;
-            height: 100%;
+            top: calc(-1 * var(--overflow));
+            height: calc(100% + (3 * var(--overflow)));
+            background-size: cover;
+            background-position: 50% 0;
         }
         .content-item-desc {
             font-size: 5vw;
@@ -151,70 +159,54 @@
             margin-left: -4vw;
          }
         .content-item:nth-child(1) .content-item-img {
-            background: url(img/images01.jpg);
+            background: url(img/images11.jpg);
             background-size: cover;
         }
         .content-item:nth-child(2) .content-item-img {
-            background: url(img/images02.jpg);
+            background: url(img/images12.jpg);
             background-size: cover;
         }
         .content-item:nth-child(3) .content-item-img {
-            background: url(img/images03.jpg);
+            background: url(img/images13.jpg);
             background-size: cover;
         }
         .content-item:nth-child(4) .content-item-img {
-            background: url(img/images04.jpg);
+            background: url(img/images14.jpg);
             background-size: cover;
         }
         .content-item:nth-child(5) .content-item-img {
-            background: url(img/images05.jpg);
+            background: url(img/images15.jpg);
             background-size: cover;
         }
         .content-item:nth-child(6) .content-item-img {
-            background: url(img/images06.jpg);
+            background: url(img/images16.jpg);
             background-size: cover;
         }
         .content-item:nth-child(7) .content-item-img {
-            background: url(img/images07.jpg);
+            background: url(img/images17.jpg);
             background-size: cover;
         }
         .content-item:nth-child(8) .content-item-img {
-            background: url(img/images08.jpg);
+            background: url(img/images18.jpg);
             background-size: cover;
         }
         .content-item:nth-child(9) .content-item-img {
-            background: url(img/images09.jpg);
+            background: url(img/images10.jpg);
             background-size: cover;
         }
-
-        /* 한 번에 나타나기 */
-        /* .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
-        .contents > section.show {opacity: 1; transform: translateY(0);} */
-
-        /* 개별적으로 나타나기 */
-        .contents > section .content-item-num {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
-        .contents > section .content-item-title {opacity: 0; transform: translateX(-200px); transition: all 1s 0.3s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
-        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px); transition: all 1s 0.6s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
-        .contents > section .content-item-desc {opacity: 0; transform: translateX(-200px); transition: all 1s 0.9s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
-
-        .contents > section.show .content-item-num {opacity: 0.5; transform: translateY(0);}
-        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0);}
-        .contents > section.show .content-item-imgWrap {opacity: 1;  transform: translateY(0);}
-        .contents > section.show .content-item-desc {opacity: 1; transform: translateX(0);}
-
     </style>
 </head>
 <body>
     
     <div class="info left">
-        <h1>Parallax Effect01 - jQuery</h1>
-        <p>패랠랙스 스크로링 효과 - 기본</p>
+        <h1>Parallax Effect03 - Javascript</h1>
+        <p>패랠랙스 스크로링 효과 - 이질감 느끼기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="parallax01-jquery.html" class="active">1</a><a href="parallax01-javascript.html">1</a></li>
+            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
             <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
-            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
+            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html" class="active">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
@@ -227,15 +219,6 @@
     <div class="info bottom">
         <ul>
             <li>scrolltop() : <span class="scrollTop">0</span>px</li>
-            <li>#section1 : <span class="s1OffsetTop">0</span>px</li>
-            <li>#section2 : <span class="s2OffsetTop">0</span>px</li>
-            <li>#section3 : <span class="s3OffsetTop">0</span>px</li>
-            <li>#section4 : <span class="s4OffsetTop">0</span>px</li>
-            <li>#section5 : <span class="s5OffsetTop">0</span>px</li>
-            <li>#section6 : <span class="s6OffsetTop">0</span>px</li>
-            <li>#section7 : <span class="s7OffsetTop">0</span>px</li>
-            <li>#section8 : <span class="s8OffsetTop">0</span>px</li>
-            <li>#section9 : <span class="s9OffsetTop">0</span>px</li>
         </ul>
     </div>
 
@@ -322,162 +305,43 @@
     </main>
 
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-        // $(window).scroll(function(){
-        //     const scrollTop = $(window).scrollTop();
+        let pageYOffset = window.pageYOffset;
 
-        //     //출력용
-            // $(".scrollTop").text(parseInt(scrollTop));
-        //     $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
-        //     $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
-        //     $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
-        //     $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
-        //     $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
-        //     $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
-        //     $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
-        //     $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
-        //     $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
+        const scroll = () => {
+            const newPageYOffset = window.pageYOffset;
+            const different = newPageYOffset - pageYOffset;
 
-        //     //출력용 글씨 색
-        //     if(scrollTop > $("#section1").offset().top){
-        //         $(".s1OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s1OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section2").offset().top){
-        //         $(".s2OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s2OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section3").offset().top){
-        //         $(".s3OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s3OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section4").offset().top){
-        //         $(".s4OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s4OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section5").offset().top){
-        //         $(".s5OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s5OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section6").offset().top){
-        //         $(".s6OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s6OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section7").offset().top){
-        //         $(".s7OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s7OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section8").offset().top){
-        //         $(".s8OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s8OffsetTop").css("color","white");
-        //     }
-        //     if(scrollTop > $("#section9").offset().top){
-        //         $(".s9OffsetTop").css("color","red");
-        //     } else {
-        //         $(".s9OffsetTop").css("color","white");
-        //     }
+            console.log("scrollTop :" + pageYOffset);
+            console.log("newScrollTop :" + newPageYOffset);
+            console.log("different :" + different);
 
-        //     //나타나기
-        //     if(scrollTop > $("#section1").offset().top){
-        //         $("#section1").addClass("show");
-        //     } else {
-        //         $("#section1").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section2").offset().top){
-        //         $("#section2").addClass("show");
-        //     } else {
-        //         $("#section2").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section3").offset().top){
-        //         $("#section3").addClass("show");
-        //     } else {
-        //         $("#section3").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section4").offset().top){
-        //         $("#section4").addClass("show");
-        //     } else {
-        //         $("#section4").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section5").offset().top){
-        //         $("#section5").addClass("show");
-        //     } else {
-        //         $("#section5").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section6").offset().top){
-        //         $("#section6").addClass("show");
-        //     } else {
-        //         $("#section6").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section7").offset().top){
-        //         $("#section7").addClass("show");
-        //     } else {
-        //         $("#section7").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section8").offset().top){
-        //         $("#section8").addClass("show");
-        //     } else {
-        //         $("#section8").removeClass("show");
-        //     }
-        //     if(scrollTop > $("#section9").offset().top){
-        //         $("#section9").addClass("show");
-        //     } else {
-        //         $("#section9").removeClass("show");
-        //     }
-        // });
+            let target = document.querySelectorAll(".content-item-img");
 
-        //for문
-        // $(window).scroll(function(){
-        //     const scrollTop = $(window).scrollTop() + $(window).height();
-        //     $(".scrollTop").text(parseInt(scrollTop));
+            //target.style.transform = "rotate("+different+"deg)";
+            //forEach
+            // target.forEach(box => {
+            //     box.style.transform = "rotate("+ different +"deg)";
+            // })
 
-        //     for(let i=1; i<=("content-item").length; i++){
-        //         $(".s"+i+"OffsetTop").text(parseInt($("#section"+i).offset().top));
-        //         if(scrollTop > $("#section"+i).offset().top){
-        //             $(".s"+i+"OffsetTop").css("color","red");
-        //             $("#section"+i).addClass("show");
-        //         } else {
-        //             $(".s"+i+"OffsetTop").css("color","white");
-        //             $("#section"+i).removeClass("show");
-        //         }
-        //     }
-        // });
+            gsap.to(".content-item-imgWrap", {duration: .3, skewY: different * 0.2, ease: Power1.ease})
+            gsap.to(".content-item-num", {duration: .6, x: different * 3, ease: Power1.ease})
+            gsap.to(".content-item-desc", {duration: .6, skewX: different * 0.2, ease: Power4.ease})
 
-        //each()
-        $(window).scroll(function(){
-            const scrollTop = $(window).scrollTop() + $(window).height();;
-            $(".scrollTop").text(parseInt(scrollTop));
+            pageYOffset = newPageYOffset
+            requestAnimationFrame(scroll);
+        }
+        scroll();
 
-            $(".content-item").each(function(num){
-                $(".s"+(num+1)+"OffsetTop").text(parseInt($("#section"+(num+1)).offset().top));
-                if(scrollTop > $(this).offset().top){
-                    $(".s"+(num+1)+"OffsetTop").css("color","red");
-                    $(this).addClass("show");
-                } else {
-                    $(".s"+(num+1)+"OffsetTop").css("color","white");
-                    $(this).removeClass("show");
-                }
-            });
-        });
-
-
-    //     //h1태그를 클릭하면 클릭하면 모든 글씨를 빨간색으로 변경
-    //     $("h1").click(function(){
-    //         $("*").css("color","red");
-    //     });       
-    //     //h1태그를 클릭하면 클릭한 글씨를 alert으로 출력
-    //     $("h1").click(function(){
-    //        const txt = $(this).text();
-    //         alert(txt)
-    //    });
+        //let num = 0;
+        //function render(){
+        //    document.querySelector(".content-item-num").innerHTML = num;
+        //    num++;
+        //    //setInterval(render, 100);
+        //    requestAnimationFrame(render);
+        //}
+        //render();
     </script>
 </body>
 </html>

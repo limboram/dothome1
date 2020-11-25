@@ -153,9 +153,9 @@ setInterval(() => {
                 </div>
                 <!-- //Intro1 -->
 
-                <!-- Intro1 -->
+                <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Slider Effect02</h2>
+                    <h2 id="intro2" class="page-header">Slider Effect02</h2>
                     <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 이미지 슬라이드 효과입니다.</p>
                     <iframe width="100%" height="800px" src="sliderEffect02-jquery.html" frameborder="0"></iframe>
                     <h3>jQuery</h3>
@@ -165,6 +165,7 @@ const slider = $(".slider");
 
 let currentIndex = 0;
 let sliderCount = slider.length;  //이미지 갯수
+let sliderWidth = "-800"
 
 setInterval(function(){
     // if(currentIndex < sliderCount -1){
@@ -174,7 +175,7 @@ setInterval(function(){
     // }
     currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
 
-    let sliderPosition = currentIndex * (-800) + "px";
+    let sliderPosition = currentIndex * (sliderWidth) + "px";
                             // 0 * -800px -> 0
                             // 1 * -800px -> -800px
                             // 2 * -800px -> -1600px (3번째)
@@ -183,10 +184,32 @@ setInterval(function(){
 }, 3000);
 </code></pre>
                     <h3>JavaScript</h3>
-<pre class="line-numbers language-js"><code>
+<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = document.querySelector(".slider-img");
+const slider = document.querySelectorAll(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidh = sliderWrap.scrollWidth / -5;
+
+setInterval(function(){
+    // if(currentIndex < sliderCount -1){
+    //     currentIndex++;
+    // } else {
+    //     currentIndex = 0;
+    // }
+    currentIndex < sliderCount -1 ? currentIndex++ : currentIndex = 0;
+
+    let sliderPosition = currentIndex * (sliderWidh)+"px";
+    // sliderImg.animate({left: sliderPosition}, 400)
+    // sliderImg.style.left = sliderPosition;
+    // sliderImg.style.transition = "all 0.6s";
+
+    gsap.to(sliderImg, {duration: 1, left: sliderPosition, ease: "expo.out"})
+},3000);
 </code></pre>
                 </div>
-                <!-- //Intro1 -->
+                <!-- //Intro2 -->
 
             </div>
             <!-- //col-md-12 -->
