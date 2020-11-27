@@ -541,24 +541,156 @@ $(window).scroll(function(){
     // });
 
     //한 글자씩 나오게 하기
-    // if($(window).scrollTop() > $("#section1").offset().top){
-    //     $("#section1 .content-item-desc span").each(function(i){
-    //         setTimeout(() => {
-    //             $("#section1 .content-item-desc span").eq(i).addClass("show");
-    //         }, 50 * (i+1));
-    //     });
-    // }
+    if($(window).scrollTop() > $("#section1").offset().top){
+        $("#section1 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section1 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section2 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section2 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section3 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section3 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section4 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section4 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section5 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section5 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section6 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section6 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section7 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section7 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section8 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section8 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+        $("#section9 .content-item-desc span").each(function(i){
+            setTimeout(() => {
+                $("#section9 .content-item-desc span").eq(i).addClass("show");
+            }, 50 * (i+1));
+        });
+    }
     
     //한 글자씩 나오게 하기(한번에)
-    $(".content-item").each(function(){
-        if($(window).scrollTop() > $(this).offset().top){
-            gsap.to($(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
-        }
-    });
+    // $(".content-item").each(function(){
+    //     if($(window).scrollTop() > $(this).offset().top){
+    //         gsap.to($(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
+    //     }
+    // });
 });
 </code></pre>
                     <h3>JavaScript</h3>
-<pre class="line-numbers language-js"><code>
+<pre class="line-numbers language-js"><code>// let text = document.querySelector("#section1 .content-item-desc");
+// let splitText = text.innerText;
+// let splitWrap = splitText.split("").join("&lt;/span>&lt;span aria-hidden:'true'>");
+//     splitWrap = "&lt;span> aria-hidden:'true'>" + splitWrap + "</span>";
+
+// text.innerHTML = splitWrap;
+// text.setAttribute("aria-label", splitText);
+
+//글씨 쪼개기(한번에, forEach)
+document.querySelectorAll(".content-item-desc").forEach(elem => {
+    let splitText = elem.innerText;
+    let splitWrap = splitText.split("").join("&lt;/span>&lt;span aria-hidden:'true'>");
+        splitWrap = "&lt;span aria-hidden:'true'>" + splitWrap + "&lt;/span>";
+
+    elem.innerHTML = splitWrap;
+    elem.setAttribute("aria-label", splitText);
+});
+
+// if($(window).scrollTop() > $("#section1").offset().top){
+//     $("#section1 .content-item-desc span").each(function(i){
+//         setTimeout(() => {
+//             $("#section1 .content-item-desc span").eq(i).addClass("show");
+//         }, 50 * (i+1));
+//     });
+// }
+
+window.addEventListener("scroll", () => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+    if(pageYOffset > document.getElementById("section1").offsetTop){
+        document.querySelectorAll("#section1 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section2").offsetTop){
+        document.querySelectorAll("#section2 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section3").offsetTop){
+        document.querySelectorAll("#section3 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section4").offsetTop){
+        document.querySelectorAll("#section4 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section5").offsetTop){
+        document.querySelectorAll("#section5 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section6").offsetTop){
+        document.querySelectorAll("#section6 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section7").offsetTop){
+        document.querySelectorAll("#section7 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section8").offsetTop){
+        document.querySelectorAll("#section8 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+    if(pageYOffset > document.getElementById("section9").offsetTop){
+        document.querySelectorAll("#section9 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));  //딜레이 효과
+        });
+    }
+});
 </code></pre>
                 </div>
                 <!-- //Intro4 -->

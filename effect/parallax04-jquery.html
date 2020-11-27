@@ -213,13 +213,17 @@
             transition: all 0.77s cubic-bezier(0, 0.49, 0, 1);
             min-width: 20px;
         }
+        .content-item-desc span.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     
     <div class="info left">
         <h1>Parallax Effect04 - jQuery</h1>
-        <p>패랠랙스 스크로링 효과 - 이질감 느끼기</p>
+        <p>패랠랙스 스크로링 효과</p>
     </div>
     <div class="info right">
         <ul>
@@ -351,20 +355,60 @@
             // });
 
             //한 글자씩 나오게 하기
-            // if($(window).scrollTop() > $("#section1").offset().top){
-            //     $("#section1 .content-item-desc span").each(function(i){
-            //         setTimeout(() => {
-            //             $("#section1 .content-item-desc span").eq(i).addClass("show");
-            //         }, 50 * (i+1));
-            //     });
-            // }
+            if($(window).scrollTop() > $("#section1").offset().top){
+                $("#section1 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section1 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section2 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section2 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section3 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section3 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section4 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section4 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section5 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section5 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section6 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section6 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section7 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section7 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section8 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section8 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+                $("#section9 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section9 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
             
             //한 글자씩 나오게 하기(한번에)
-            $(".content-item").each(function(){
-                if($(window).scrollTop() > $(this).offset().top){
-                    gsap.to($(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
-                }
-            });
+            // $(".content-item").each(function(){
+            //     if($(window).scrollTop() > $(this).offset().top){
+            //         gsap.to($(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
+            //     }
+            // });
         });
     </script>
 </body>
