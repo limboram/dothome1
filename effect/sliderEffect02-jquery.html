@@ -151,7 +151,6 @@
 
         let currentIndex = 0;
         let sliderCount = slider.length;  //이미지 갯수
-        let sliderWidth = "-800"
 
         setInterval(function(){
             // if(currentIndex < sliderCount -1){
@@ -161,7 +160,7 @@
             // }
             currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
 
-            let sliderPosition = currentIndex * (sliderWidth) + "px";
+            let sliderPosition = currentIndex * (-800) + "px";
                                     // 0 * -800px -> 0
                                     // 1 * -800px -> -800px
                                     // 2 * -800px -> -1600px (3번째)
