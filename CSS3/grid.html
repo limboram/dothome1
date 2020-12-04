@@ -622,12 +622,14 @@
             var attrText = $(this).text();
             $(".grid6").attr("style", attrText);
         });
+
         $(".pmBtn6 .plus").on("click", function(){
             $(".grid6").append("<div class='columns columns6'></div>")
         });
         $(".pmBtn6 .minus").on("click", function(){
             $(".grid6 > div:last-child()").remove();
         });
+        
     </script>
 </body>
 
