@@ -168,12 +168,12 @@ let sliderCount = slider.length;  //이미지 갯수
 let sliderWidth = "-800"
 
 setInterval(function(){
-    // if(currentIndex < sliderCount -1){
+    // if(currentIndex &lt; sliderCount -1){
     //     currentIndex++;  //0 1 2 3 4 0
     // } else {
     //     currentIndex = 0;
     // }
-    currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
+    currentIndex &lt; sliderCount - 1 ? currentIndex++ : currentIndex = 0;
 
     let sliderPosition = currentIndex * (sliderWidth) + "px";
                             // 0 * -800px -> 0
@@ -193,12 +193,12 @@ let sliderCount = slider.length;
 let sliderWidh = sliderWrap.scrollWidth / -5;
 
 setInterval(function(){
-    // if(currentIndex < sliderCount -1){
+    // if(currentIndex &lt; sliderCount -1){
     //     currentIndex++;
     // } else {
     //     currentIndex = 0;
     // }
-    currentIndex < sliderCount -1 ? currentIndex++ : currentIndex = 0;
+    currentIndex &lt; sliderCount -1 ? currentIndex++ : currentIndex = 0;
 
     let sliderPosition = currentIndex * (sliderWidh)+"px";
     // sliderImg.animate({left: sliderPosition}, 400)
@@ -210,6 +210,235 @@ setInterval(function(){
 </code></pre>
                 </div>
                 <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Slider Effect03</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect03-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+setInterval(function(){
+    sliderImg.animate({left: "-800px"},400, function(){
+        $(".slider:first-child").appendTo(sliderImg);
+        sliderImg.css("left", "");
+    });
+}, 3000);
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Slider Effect04</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect04-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length -1;
+let sliderHeight = slider.height();
+let sliderSpeed = 400;
+
+//한 바퀴
+// setInterval(function(){
+//     currentIndex &lt; sliderCount ? currentIndex++ : currentIndex = 0;
+
+//     let sliderPosition = currentIndex * -sliderHeight;
+//     sliderImg.animate({top: sliderPosition}, sliderSpeed);
+// },3000);
+
+//연속적으로
+setInterval(function(){
+    sliderImg.animate({top: -sliderHeight}, sliderSpeed, function(){
+        $(".slider:eq(0)").appendTo(sliderImg);  //슬라이더의 마지막 아이한테
+        sliderImg.css("top", "");  //top값을 0으로 초기화 연속적으로 작업
+    });
+},3000);
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Slider Effect05</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect05-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = slider.width();
+let sliderHeight = slider.height();
+let sliderTotalWidth = sliderWidth * sliderCount;
+
+sliderImg.css({width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth});  //marginLeft를 주어서 미리 여백을 만들어 준 뒤 이미지가 앞에 오게 하기
+$(".slider:last-child").prependTo(sliderImg);  //마지막에 있는 사진이 앞으로 오게 하기 위해서
+
+function moveLeft(){
+    sliderImg.animate({left: + sliderWidth}, 400, function(){
+        $(".slider:last-child").prependTo(sliderImg);
+        sliderImg.css("left", "");
+    });
+    
+}
+
+function moveRight(){
+    sliderImg.animate({left: - sliderWidth}, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg);  //sliderImg에게 appendTo
+        sliderImg.css("left", "");  //left 0으로
+    });
+}
+
+sliderBtn.find(".prev").click(function(){
+    moveLeft();
+});
+sliderBtn.find(".next").click(function(){
+    moveRight();
+});
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Slider Effect06</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect06-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let sliderCount = slider.length;  //슬라이더 갯수
+let sliderWidth = slider.outerWidth();  //패딩값까지 포함 된 값
+let sliderShowNumber = 3;
+let currentIndex = 0;
+
+let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone();  //끊기지 않고 계속 나오게 하기 위해서 복제
+sliderImg.append(sliderCopy);
+
+function moveLeft(){
+    if(currentIndex == 0){  //처음 이미지
+        currentIndex = sliderCount;
+        sliderImg.css("margin-left", sliderWidth * -currentIndex);
+    }
+    currentIndex--;
+    sliderImg.stop().animate({"margin-left": -sliderWidth * currentIndex}, 400);
+}
+function moveRight(){
+    if(currentIndex == sliderCount){  //마지막 이미지
+        currentIndex = 0
+        sliderImg.css("margin-left", currentIndex);
+    }
+    currentIndex++;
+    sliderImg.animate({"margin-left": -sliderWidth * currentIndex}, 400);  //왼쪽으로 감
+}
+console.log(currentIndex);
+
+//버튼 클릭하기
+sliderBtn.on("click","a",function(){
+    if($(this).hasClass("prev")){
+        moveLeft();
+    } else {
+        moveRight();
+    }
+});
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro6 -->
+
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">Slider Effect07</h2>
+                    <p class="bs-callout bs-callout-info">제이쿼리와 자바스크립트를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect07-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+const sliderDot = $(".slider-dot");
+
+let sliderCount = slider.length;
+let sliderWidth = slider.outerWidth();
+let sliderHeight = slider.outerHeight();
+let sliderTotalWidth = sliderWidth * sliderCount;
+let currentIndex = 0;
+let dotIndex = "";
+
+//이미지 움직이기
+sliderImg.css({width: sliderTotalWidth, height: sliderHeight});
+
+function gotoSlider(index){  //매개변수이용해서 전달
+    sliderImg.animate({left: -sliderWidth * index}, 400);
+    currentIndex = index;
+    sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+};
+
+//이미지 갯수만큼 닷 버튼 만들기
+slider.each(function(){
+    //dotIndex += "&lt;a href='#'>&lt;/a>";
+    //dotIndex += "&lt;a href='#'>"+ (index+1) +"&lt;/a>";
+    //let name = $(this).find ("img").attr("alt");
+    //dotIndex += "&lt;a href='#'>" + name +"&lt;/a>";
+    let sliderName = $(this).find("img").attr("alt");
+    let sliderSrc = $(this).find("img").attr("src");
+    dotIndex += "&lt;a href='#' style='background-image:url("+sliderSrc+")'>"+sliderName+"</a>";
+});
+sliderDot.html(dotIndex);
+sliderDot.find("a").eq(0).addClass("active");
+
+//닷 버튼 클릭하기
+sliderDot.on("click","a",function(e){
+    e.preventDefault();
+    gotoSlider($(this).index());
+})
+
+//버튼 클릭하기
+sliderBtn.on("click","a",function(e){
+    e.preventDefault();
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    let prevIndex = (currentIndex - 1) % sliderCount;
+    if(currentIndex == 0) prevIndex = sliderCount -1;  //-가 되면 안 돼서 4번이 나오도록 작업
+
+    if($(this).hasClass("prev")){
+        gotoSlider(prevIndex);
+    } else {
+        gotoSlider(nextIndex);
+    }
+});
+</code></pre>
+                    <h3>JavaScript</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+
+                
 
             </div>
             <!-- //col-md-12 -->
