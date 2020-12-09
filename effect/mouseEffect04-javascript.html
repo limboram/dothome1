@@ -175,8 +175,8 @@
             y = e.pageY;
             
             //mouseX = window.innerWidth/2 - x;
-           
             //mouseY = window.innerHeight/2 - y;
+           
             mouseX = Math.max(-100, Math.min(100, window.innerWidth/2 - x));
             mouseY = Math.max(-100, Math.min(100, window.innerHeight/2 - y));
           
@@ -195,7 +195,7 @@
         });
         
             //출력용
-            document.addEventListener("mousemove", function(){
+        document.addEventListener("mousemove", function(){
             document.querySelector(".pageX").textContent = x;
             document.querySelector(".pageY").textContent = y;
             document.querySelector(".mouseX").textContent = mouseX;
