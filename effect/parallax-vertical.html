@@ -175,16 +175,21 @@
         // const totalWidth =$("#contents").width();
         // $("body").css("height", totalWidth);
 
+        //가로모드 기본 소스
         // $(window).scroll(function(){
         //     const scroll = $(window).scrollTop();
 
         //     $("#contents").css("left", -scroll)
         // })
+
+        //const totalWidth = $("#contents").width();
+        //alert(totalWidth);
         
         let lastScrollTop = 0;
         const totalWidth = $("#contents").width();
         $("body").css("height", totalWidth);
 
+        //스크롤이 됐을 때 얼만큼 앞으로 나갈지를 설정
         $(window).scroll(function(){
             let wScroll = $(window).scrollTop();
             let wWidth = $(window).width();
@@ -196,10 +201,11 @@
             // console.log(goLeft);
             $("#contents").css("left", -goLeft);
 
-            clearTimeout($.data(this, "scrollCheck"));
+            clearTimeout($.data(this, "scrollCheck"));  //움직이지 않을 때는 감지하지 말아라
 
-            $.data(this, "scrollCheck", setTimeout(function(){
+            $.data(this, "scrollCheck", setTimeout(function(){  //현재 데이터를 감지하는 방법
                 $(".character").removeClass("walking");
+                $(".character").removeClass("left");
             },100))
 
             if( wScroll > lastScrollTop){
@@ -207,42 +213,44 @@
                 $(".character").addClass("walking");
             } else {
                 $(".character").addClass("left");
+                $(".character").addClass("walking");
             }
-            lastScrollTop = wScroll;
 
-            if(wScroll > $("#section1").offset().left + $(window).width()) {
+            lastScrollTop = wScroll;  //lastScrollTop이 계속 0에 머무르는 것을 방지 lastScrollTop 값 최신화
+
+            if(wScroll > $("#section1").offset().left + $(window).width()*0.1) {
                 gsap.to("#section1 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section1 .title", {duration: 0.4, opacity: 1, top: "60%", delay:0.4})
                 gsap.to("#section1 .num", {duration: 0.4, opacity: 1, left: "70%", delay:0.8})
             }
-            if(wScroll > $("#section2").offset().left + $(window).width()) {
+            if(wScroll > $("#section2").offset().left + $(window).width()*0.1) {
                 gsap.to("#section2 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section2 .title", {duration: 0.4, opacity: 1, top: "60%", delay:0.4})
                 gsap.to("#section2 .num", {duration: 0.4, opacity: 1, left: "70%", delay:0.8})
             }
-            if(wScroll > $("#section3").offset().left + $(window).width()) {
+            if(wScroll > $("#section3").offset().left + $(window).width()*0.1) {
                 gsap.to("#section3 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section3 .title", {duration: 0.4, opacity: 1, top: "60%", delay:0.4})
                 gsap.to("#section3 .num", {duration: 0.4, opacity: 1, left: "70%", delay:0.8})
             }
-            if(wScroll > $("#section4").offset().left + $(window).width()) {
+            if(wScroll > $("#section4").offset().left + $(window).width()*0.1) {
                 gsap.to("#section4 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section4 .title", {duration: 0.4, opacity: 1, top: "60%", delay:0.4})
                 gsap.to("#section4 .num", {duration: 0.4, opacity: 1, left: "70%", delay:0.8})
             }
-            if(wScroll > $("#section5").offset().left + $(window).width()) {
+            if(wScroll > $("#section5").offset().left + $(window).width()*0.1) {
                 gsap.to("#section5 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section5 .title", {duration: 0.4, opacity: 1, top: "60%", delay:0.4})
                 gsap.to("#section5 .num", {duration: 0.4, opacity: 1, left: "70%", delay:0.8})
             }
-            if(wScroll > $("#section6").offset().left + $(window).width()) {
+            if(wScroll > $("#section6").offset().left + $(window).width()*0.1) {
                 gsap.to("#section6 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section6 .title", {duration: 0.4, opacity: 1, top: "60%", delay:0.4})
                 gsap.to("#section6 .num", {duration: 0.4, opacity: 1, left: "70%", delay:0.8})
             }
         });
 
-        $(document).keydown(function(e){
+        $(document).keydown(function(e){  //문서를 기준으로 하는 scrollTop값
             if(e.which == 39){
                 let scrollTop = $(document).scrollTop();
                 $(window).scrollTop(scrollTop + 50);
