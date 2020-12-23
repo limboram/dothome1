@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax01 - javascript</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        
+        /* reset */
+        @font-face {
+            font-family: 'paybooc-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+             margin: 0; padding: 0;
+            }
+        a {
+            text-decoration: none; 
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%; 
+            vertical-align: top; /* 여백초기화 */
+        }
+        ul {list-style: none;}
+        a {text-decoration: none; transition: all 0.2s;}
+        
+        /* info */
+        .info {position: fixed; z-index: 1000;}
+        .info.left {left: 20px; top: 20px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info li a {
+            color: #222; 
+            width: 25px; height: 25px; 
+            border: 1px dashed #222; 
+            display: inline-block; 
+            border-radius: 50%; 
+            text-align: center; 
+            line-height: 25px; 
+            font-size: 0.8rem; 
+            margin: 3px;
+        }
+        .info li a.active {background: #222; color: #fff;}
+
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        body {
+            --color-h1: #dc6e25; 
+            --color-title: #fff; 
+            --color-sub: #999; 
+            --color-link: #222; 
+            --color-bg: #cecece; 
+            --font-cafe: 'paybooc-Bold';
+            --font-lato: 'Lato', sans-serif;
+
+            background-color: var(--color-bg); 
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+        }
+
+        #parallax-wrap h1 {
+            color: var(--color-h1);
+            font-family: var(--font-lato);
+            font-size: 8vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 10vw 8vw 0 8vw;
+        }
+        #parallax-wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+        .contents {
+            margin: 0 auto 35vh;
+            width: 100%;
+        }
+        .content-item {
+            width: 1200px;
+            max-width: 90vw;
+            margin: 60vh 0 60vh;
+            position: relative;
+        }
+        .content-item:nth-child(even){
+            margin-left: auto;
+        }
+        .content-item-num {
+            font-size: 25vw;
+            font-weight: 100;
+            font-family: var(--font-lato);
+            position: absolute;
+            right: -5vw;
+            top: -20vw;
+            opacity: 0.5;
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto;
+            left: -5vw;
+        }
+        .content-item-title {
+            text-align: right;
+            padding-bottom: 5px;
+        }
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
+        }
+        .content-item-imgWrap {
+            position: relative;
+            width: 100%;
+            padding-bottom: 50%;
+        }
+        .content-item-img {
+            width: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            height: 100%;
+        }
+        .content-item-desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            text-align: right;
+            word-break: keep-all;
+            margin-right: -4vw;
+            margin-top: -6vw;
+            padding-left: 8vw;
+            z-index: 100;
+            position: relative;
+        }
+        /* position: relative;
+            1. position: absolute 기준점 역할
+            2. position: absolute를 사용하지 않고 z-index를 사용할 경우
+            3. position: absolute를 사용하지 않고 left, top을 통해서 위치를 설정할 경우
+         */
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 10vw;
+            margin-left: -4vw;
+         }
+        .content-item:nth-child(1) .content-item-img {
+            background: url(../img/images11.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(2) .content-item-img {
+            background: url(../img/images12.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(3) .content-item-img {
+            background: url(../img/images13.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(4) .content-item-img {
+            background: url(../img/images14.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(5) .content-item-img {
+            background: url(../img/images15.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(6) .content-item-img {
+            background: url(../img/images16.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(7) .content-item-img {
+            background: url(../img/images17.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(8) .content-item-img {
+            background: url(../img/images18.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(9) .content-item-img {
+            background: url(../img/images10.jpg);
+            background-size: cover;
+        }
+
+        /* 한 번에 나타나기 */
+        .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
+        .contents > section.show {opacity: 1; transform: translateY(0);}
+
+        /* 개별적으로 나타나기 */
+        .contents > section .content-item-num {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
+        .contents > section .content-item-title {opacity: 0; transform: translateX(-200px); transition: all 1s 0.3s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
+        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px); transition: all 1s 0.6s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
+        .contents > section .content-item-desc {opacity: 0; transform: translateX(-200px); transition: all 1s 0.9s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
+
+        .contents > section.show .content-item-num {opacity: 0.5; transform: translateY(0);}
+        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0);}
+        .contents > section.show .content-item-imgWrap {opacity: 1;  transform: translateY(0);}
+        .contents > section.show .content-item-desc {opacity: 1; transform: translateX(0);}
+
+    </style>
+</head>
+<body>
+    
+    
+    
+
+    <div class="info bottom">
+        <ul>
+            <li><span class="s1OffsetTop"></li>
+            <li><span class="s2OffsetTop"></span></li>
+            <li><span class="s3OffsetTop"></span></li>
+            <li><span class="s4OffsetTop"></span></li>
+            <li><span class="s5OffsetTop"></span></li>
+            <li><span class="s6OffsetTop"></span></li>
+            <li><span class="s7OffsetTop"></span></li>
+            <li><span class="s8OffsetTop"></span></li>
+            <li><span class="s9OffsetTop"></span></li>
+        </ul>
+    </div>
+
+    <!-- info -->
+
+    <main>
+        <section id="parallax-wrap">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="contents">
+                <section id="section1" class="content-item">
+                    <span class="content-item-num">01</span>
+                    <h2 class="content-item-title">Section1</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+                </section>
+                <section id="section2" class="content-item">
+                    <span class="content-item-num">02</span>
+                    <h2 class="content-item-title">Section2</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">즐거움과 행동만으로도, 시간은 부족하다.</p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자기 신뢰는 성공의 첫 번째 비결이다.</p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">우리가 실패에서 배우면, 실패는 성공이 된다.</p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">때때로 우리는 너무 많이 생각하고, 너무 적게 느낀다.</p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">가시에 찔리지 않고서는 장미를 모을 수 없다.</p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">현재와 미래는 어떻게든 연결되어 있다.</p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">비장의 무기는 아직 손안에 있다. 그것은 희망이다.</p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">휴식은 게으름도, 멈춤도 아니다.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- script -->
+    <script>
+        // $(window).scroll(function(){
+        //     const scrollTop = $(window).scrollTop();
+        // });
+        window.addEventListener("scroll", function(){
+            let pageYOffset = window.pageYOffset + screen.height/2;
+
+            //출력용
+            // document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
+            // document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+            // document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+            // document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+            // document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+            // document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+            // document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+            // document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+            // document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+            // document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+
+            //출력용 글씨 색
+        //     if(pageYOffset > document.getElementById("section1").offsetTop){
+        //         document.querySelector(".s1OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s1OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section2").offsetTop){
+        //         document.querySelector(".s2OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s2OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section3").offsetTop){
+        //         document.querySelector(".s3OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s3OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section4").offsetTop){
+        //         document.querySelector(".s4OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s4OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section5").offsetTop){
+        //         document.querySelector(".s5OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s5OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section6").offsetTop){
+        //         document.querySelector(".s6OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s6OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section7").offsetTop){
+        //         document.querySelector(".s7OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s7OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section8").offsetTop){
+        //         document.querySelector(".s8OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s8OffsetTop").style.color = "white";
+        //     }
+        //     if(pageYOffset > document.getElementById("section9").offsetTop){
+        //         document.querySelector(".s9OffsetTop").style.color = "red";
+        //     } else {
+        //         document.querySelector(".s9OffsetTop").style.color = "white";
+        //     }
+
+            //나타나기
+            // if(pageYOffset > document.getElementById("section1").offsetTop){
+            //     document.getElementById("section1").classList.add("Show");
+            // } else {
+            //     document.getElementById("section1").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section2").offsetTop){
+            //     document.getElementById("section2").classList.add("Show");
+            // } else {
+            //     document.getElementById("section2").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section3").offsetTop){
+            //     document.getElementById("section3").classList.add("Show");
+            // } else {
+            //     document.getElementById("section3").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section4").offsetTop){
+            //     document.getElementById("section4").classList.add("Show");
+            // } else {
+            //     document.getElementById("section4").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section5").offsetTop){
+            //     document.getElementById("section5").classList.add("Show");
+            // } else {
+            //     document.getElementById("section5").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section6").offsetTop){
+            //     document.getElementById("section6").classList.add("Show");
+            // } else {
+            //     document.getElementById("section6").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section7").offsetTop){
+            //     document.getElementById("section7").classList.add("Show");
+            // } else {
+            //     document.getElementById("section7").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section8").offsetTop){
+            //     document.getElementById("section8").classList.add("Show");
+            // } else {
+            //     document.getElementById("section8").classList.remove("Show");
+            // }
+            // if(pageYOffset > document.getElementById("section9").offsetTop){
+            //     document.getElementById("section9").classList.add("Show");
+            // } else {
+            //     document.getElementById("section9").classList.remove("Show");
+            // }
+
+            
+            
+            document.querySelectorAll(".content-item").forEach(elem => {
+                if(pageYOffset > elem.offsetTop){
+                    elem.classList.add("show");
+                } else {
+                    elem.classList.remove("show");
+                }
+            });
+            
+        });
+    //     //h1태그를 클릭하면 클릭하면 모든 글씨를 빨간색으로 변경
+    //     $("h1").click(function(){
+    //         $("*").css("color","red");
+    //     });       
+    //     //h1태그를 클릭하면 클릭한 글씨를 alert으로 출력
+    //     $("h1").click(function(){
+    //        const txt = $(this).text();
+    //         alert(txt)
+    //    });
+    </script>
+</body>
+</html>
