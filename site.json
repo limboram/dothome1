@@ -39,8 +39,16 @@
         },
         {
           "id": 5,
-          "link": "https://webstoryboy.github.io/portfolio/port5/indexs/main.html",
+          "link": "https://limboram.github.io/dothome1/test/test12.html",
           "image": "../img/port05.jpg",
+          "title": "BORAM PORTFOLIO",
+          "category": "NAVERCLOVA",
+          "rating": 4.9
+        },
+        {
+          "id": 6,
+          "link": "https://react999-boram.web.app/#/",
+          "image": "../img/port06.jpg",
           "title": "BORAM PORTFOLIO",
           "category": "REACT",
           "rating": 4.9
