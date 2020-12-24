@@ -19,7 +19,7 @@
           "image": "../img/port02.jpg",
           "title": "BORAM PORTFOLIO",
           "category": "WEBSTANDARD",
-          "rating": 4.9
+          "rating": 5
         },
         {
           "id": 3,
@@ -43,7 +43,7 @@
           "image": "../img/port05.jpg",
           "title": "BORAM PORTFOLIO",
           "category": "NAVERCLOVA",
-          "rating": 4.9
+          "rating": 5
         },
         {
           "id": 6,
@@ -51,7 +51,7 @@
           "image": "../img/port06.jpg",
           "title": "BORAM PORTFOLIO",
           "category": "REACT",
-          "rating": 4.9
+          "rating": 5
         }
       ]
     }
