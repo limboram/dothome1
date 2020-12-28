@@ -5,7 +5,7 @@
 .header a {background-image: linear-gradient(105deg, rgb(193, 33, 47), rgb(241, 104, 53)); border-radius: 2rem; padding: 10px 30px; font-size: 16px;}
 .header h1 {margin-top: 16%; line-height: 0.6; font-size: 8rem; font-family: 'Sulphur Point', sans-serif;}
 .header h1 span {font-weight: 100; font-size: 4.5rem;}
-a.btn {position: absolute; padding: 1rem 1.2rem; left: 45%; top: 77%; font-weight: bold; border-radius: 50%;}
+a.btn {position: absolute; padding: 1rem 1.2rem; left: 50%; top: 77%; font-weight: bold; border-radius: 50%;}
 
 /* contents */
 #contents {background: #fff; padding-top: 10%; font-family: 'Poppins', sans-serif; position: relative;}
