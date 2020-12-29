@@ -1,12 +1,6 @@
 /* 여백 초기화 */
 body, div, ul, li, ol, dl, dd, dt, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, tr, td, textarea, button, form {margin: 0; padding: 0;}
 
-/* 이미지 초기화 */
-img {vertical-align: top; /* 이미지 여백 제거 */}
-
-/* 보더 초기화 */
-img, fieldset {border: 0;}
-
 /* layout */
 .container {position: relative; width: 1280px; height: inherit; margin: 0 auto;}
 * {margin: 0; padding: 0;}
