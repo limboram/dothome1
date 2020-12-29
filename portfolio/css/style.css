@@ -212,7 +212,7 @@ a.btn {position: absolute; padding: 1rem 1.2rem; left: 50%; top: 63%; font-weigh
 .site_footer ul li:first-child {margin-left: 0%;}
 .site_footer ul li:last-child {font-size: 1.1rem; margin-top: 0.4%;}
 
-/*script
+/* script
 /* header */
 .script_header {width: 100%; height: 765px; color: #fff; padding-top: 2%; background: url(../img/header3.png); background-size: cover;}
 .script_header .top {position: relative; display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif;}
@@ -290,3 +290,14 @@ a.btn {position: absolute; padding: 1.5rem 1.6rem; left: 50%; top: 63%; font-wei
 .script_footer ul li {margin-left: 6%;}
 .script_footer ul li:first-child {margin-left: 0%;}
 .script_footer ul li:last-child {font-size: 1.1rem; margin-top: 0.4%;}
+
+/* animation
+/* header */
+.ani_header {width: 100%; height: 765px; color: #fff; padding-top: 2%; background: url(../img/header4.png); background-size: cover;}
+.ani_header .top {position: relative; display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif;}
+.ani_header p {color: white; margin-right: 79%; font-weight: bold; font-size: 22px;}
+.ani_header a {background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); border-radius: 2rem; padding: 10px 30px; font-size: 16px;}
+.ani_header h1 {margin-top: 16%; line-height: 0.7; font-size: 8rem; font-family: 'Sulphur Point', sans-serif;}
+.ani_header h1 span {font-weight: 100; font-size: 6rem;}
+a.btn {position: absolute; padding: 1.5rem 1.6rem; left: 50%; top: 63%; font-weight: bold; border-radius: 50%;}
+.ani_header img {position: absolute; right: 0%; width: 27%; top: 23%;}
