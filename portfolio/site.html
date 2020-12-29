@@ -20,7 +20,7 @@
 
         /* content */
         #content {position: relative;}
-        #content img {position: absolute; margin-top: -20%; right: 0; width: 28%;}
+        #content img {position: absolute; margin-top: -15%; right: 0; width: 28%;}
         .content1 {display: flex;}
         .content1 .cont_left {flex: 1 1 50%;}
         .cont_left img {left: 0; margin-top: 40%; width: 80%;}
@@ -64,7 +64,14 @@
         .content4 .cont_left_tit a {padding: 1.2% 2.5%;}
 
         /* footer */
-        .footer img {background-size: cover; width: 100%; margin-top: 20%;}
+        .footer {position: relative; background-image: url(img/s_footer.png); background-size: cover; height: 750px; margin-top: 10%;}
+        .footer img {position: absolute; left: 0; width: 35%; bottom: 0%;}
+        .footer h1 {color: #fff; text-align: right; font-size: 7.5rem; padding-top: 25%; font-family: 'Sulphur Point', sans-serif; line-height: 1;}
+        .footer a {background-image: linear-gradient(105deg, rgb(193, 33, 47), rgb(241, 104, 53)); position: absolute; padding: 1rem 1.2rem; right: 0%; bottom: 10%; font-weight: bold; border-radius: 50%;}
+        .footer ul {display: flex; color: #fff; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold; margin-top: 10%;}
+        .footer ul li {margin-left: 6%;}
+        .footer ul li:first-child {margin-left: 0%;}
+        .footer ul li:last-child {font-size: 1.1rem; margin-top: 0.4%;}
     </style>
 </head>
 <body>
@@ -111,7 +118,7 @@
                 <div class="cont_left">
                     <h3>RESPONSIVE</h3>
                     <div class="cont_left_tit">
-                        <p>하나의 웹사이트에서 PC, 스마트폰, 태블릿PC 등<br> 접속하는 디스플레이의 종류에 따라 화면의 크기가<br> 자동으로 변하도록 만든 반응형 사이트 입니다.<br> 디바이스의 해상도에 따라 이미지를 다르게 보여질<br> 수 있게 하였고, css로 마우스오버 효과를 추가하였습니다.</p>
+                        <p>하나의 웹사이트에서 PC, 스마트폰, 태블릿PC 등 접속하는 디스<br>플레이의 종류에 따라 화면의 크기가 자동으로 변하도록 만든 반응<br>형 사이트 입니다. 디바이스의 해상도에 따라 이미지를 다르게 보여<br>질 수 있게 하였고, css로 마우스오버 효과를 추가하였습니다.</p>
                         <div class="btn">
                             <a href="#">FIGMA VIEW</a>
                             <a href="#">SITE VIEW</a>
@@ -159,9 +166,15 @@
             </div>
         </div>
         <!-- //contents -->
-        <div id="footer">
-            <div class="footer">
-                <img class="footer" src="img/s_footer.png" alt="">
+        <div class="footer">
+            <img src="img/simg6.png" alt="">
+            <div class="container">
+                <h1>Thank<br>You</h1>
+                <a href="#">←</a>
+                <ul>
+                    <li>PORTFOLIO</li>
+                    <li>SITE</li>
+                </ul>
             </div>
         </div>
         <!-- //footer -->
