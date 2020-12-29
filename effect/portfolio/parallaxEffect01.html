@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax01 - javascript</title>
+    <title>Parallax01</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
         
         /* reset */
         @font-face {
-            font-family: 'paybooc-Bold';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+            font-family: 'InfinitySans-RegularA1';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
@@ -39,9 +39,9 @@
         .info p {font-size: 1rem;}
         .info li {font-size: 1rem; line-height: 1.4;}
         .info li a {
-            color: #222; 
+            color: #fff; 
             width: 25px; height: 25px; 
-            border: 1px dashed #222; 
+            border: 1px dashed #fff; 
             display: inline-block; 
             border-radius: 50%; 
             text-align: center; 
@@ -49,7 +49,7 @@
             font-size: 0.8rem; 
             margin: 3px;
         }
-        .info li a.active {background: #222; color: #fff;}
+        .info li a.active {background: #fff; color: #000;}
 
         @media (max-width: 800px){
             .info h1 {display: none;}
@@ -60,9 +60,9 @@
             --color-h1: #dc6e25; 
             --color-title: #fff; 
             --color-sub: #999; 
-            --color-link: #222; 
-            --color-bg: #cecece; 
-            --font-cafe: 'paybooc-Bold';
+            --color-link: #000; 
+            --color-bg: #111; 
+            --font-cafe: 'InfinitySans-RegularA1';
             --font-lato: 'Lato', sans-serif;
 
             background-color: var(--color-bg); 
@@ -151,45 +151,45 @@
             margin-left: -4vw;
          }
         .content-item:nth-child(1) .content-item-img {
-            background: url(../img/images11.jpg);
+            background: url(../img/images01.jpg);
             background-size: cover;
         }
         .content-item:nth-child(2) .content-item-img {
-            background: url(../img/images12.jpg);
+            background: url(../img/images02.jpg);
             background-size: cover;
         }
         .content-item:nth-child(3) .content-item-img {
-            background: url(../img/images13.jpg);
+            background: url(../img/images03.jpg);
             background-size: cover;
         }
         .content-item:nth-child(4) .content-item-img {
-            background: url(../img/images14.jpg);
+            background: url(../img/images04.jpg);
             background-size: cover;
         }
         .content-item:nth-child(5) .content-item-img {
-            background: url(../img/images15.jpg);
+            background: url(../img/images05.jpg);
             background-size: cover;
         }
         .content-item:nth-child(6) .content-item-img {
-            background: url(../img/images16.jpg);
+            background: url(../img/images06.jpg);
             background-size: cover;
         }
         .content-item:nth-child(7) .content-item-img {
-            background: url(../img/images17.jpg);
+            background: url(../img/images07.jpg);
             background-size: cover;
         }
         .content-item:nth-child(8) .content-item-img {
-            background: url(../img/images18.jpg);
+            background: url(../img/images08.jpg);
             background-size: cover;
         }
         .content-item:nth-child(9) .content-item-img {
-            background: url(../img/images10.jpg);
+            background: url(../img/images09.jpg);
             background-size: cover;
         }
 
         /* 한 번에 나타나기 */
-        .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
-        .contents > section.show {opacity: 1; transform: translateY(0);}
+        /* .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
+        .contents > section.show {opacity: 1; transform: translateY(0);} */
 
         /* 개별적으로 나타나기 */
         .contents > section .content-item-num {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0.09, 0.79, 0.34, 0.99);}
@@ -205,26 +205,6 @@
     </style>
 </head>
 <body>
-    
-    
-    
-
-    <div class="info bottom">
-        <ul>
-            <li><span class="s1OffsetTop"></li>
-            <li><span class="s2OffsetTop"></span></li>
-            <li><span class="s3OffsetTop"></span></li>
-            <li><span class="s4OffsetTop"></span></li>
-            <li><span class="s5OffsetTop"></span></li>
-            <li><span class="s6OffsetTop"></span></li>
-            <li><span class="s7OffsetTop"></span></li>
-            <li><span class="s8OffsetTop"></span></li>
-            <li><span class="s9OffsetTop"></span></li>
-        </ul>
-    </div>
-
-    <!-- info -->
-
     <main>
         <section id="parallax-wrap">
             <h1>Parallax <em>Scrolling</em></h1>
@@ -306,130 +286,152 @@
     </main>
 
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         // $(window).scroll(function(){
         //     const scrollTop = $(window).scrollTop();
+
+        //     //출력용
+            // $(".scrollTop").text(parseInt(scrollTop));
+        //     $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
+        //     $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
+        //     $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
+        //     $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
+        //     $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
+        //     $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
+        //     $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
+        //     $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
+        //     $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
+
+        //     //출력용 글씨 색
+        //     if(scrollTop > $("#section1").offset().top){
+        //         $(".s1OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s1OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section2").offset().top){
+        //         $(".s2OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s2OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section3").offset().top){
+        //         $(".s3OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s3OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section4").offset().top){
+        //         $(".s4OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s4OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section5").offset().top){
+        //         $(".s5OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s5OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section6").offset().top){
+        //         $(".s6OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s6OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section7").offset().top){
+        //         $(".s7OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s7OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section8").offset().top){
+        //         $(".s8OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s8OffsetTop").css("color","white");
+        //     }
+        //     if(scrollTop > $("#section9").offset().top){
+        //         $(".s9OffsetTop").css("color","red");
+        //     } else {
+        //         $(".s9OffsetTop").css("color","white");
+        //     }
+
+        //     //나타나기
+        //     if(scrollTop > $("#section1").offset().top){
+        //         $("#section1").addClass("show");
+        //     } else {
+        //         $("#section1").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section2").offset().top){
+        //         $("#section2").addClass("show");
+        //     } else {
+        //         $("#section2").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section3").offset().top){
+        //         $("#section3").addClass("show");
+        //     } else {
+        //         $("#section3").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section4").offset().top){
+        //         $("#section4").addClass("show");
+        //     } else {
+        //         $("#section4").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section5").offset().top){
+        //         $("#section5").addClass("show");
+        //     } else {
+        //         $("#section5").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section6").offset().top){
+        //         $("#section6").addClass("show");
+        //     } else {
+        //         $("#section6").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section7").offset().top){
+        //         $("#section7").addClass("show");
+        //     } else {
+        //         $("#section7").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section8").offset().top){
+        //         $("#section8").addClass("show");
+        //     } else {
+        //         $("#section8").removeClass("show");
+        //     }
+        //     if(scrollTop > $("#section9").offset().top){
+        //         $("#section9").addClass("show");
+        //     } else {
+        //         $("#section9").removeClass("show");
+        //     }
         // });
-        window.addEventListener("scroll", function(){
-            let pageYOffset = window.pageYOffset + screen.height/2;
 
-            //출력용
-            // document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
-            // document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-            // document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-            // document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-            // document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-            // document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-            // document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-            // document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-            // document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-            // document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+        //for문
+        // $(window).scroll(function(){
+        //     const scrollTop = $(window).scrollTop() + $(window).height();
+        //     $(".scrollTop").text(parseInt(scrollTop));
 
-            //출력용 글씨 색
-        //     if(pageYOffset > document.getElementById("section1").offsetTop){
-        //         document.querySelector(".s1OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s1OffsetTop").style.color = "white";
+        //     for(let i=1; i<=("content-item").length; i++){
+        //         $(".s"+i+"OffsetTop").text(parseInt($("#section"+i).offset().top));
+        //         if(scrollTop > $("#section"+i).offset().top){
+        //             $(".s"+i+"OffsetTop").css("color","red");
+        //             $("#section"+i).addClass("show");
+        //         } else {
+        //             $(".s"+i+"OffsetTop").css("color","white");
+        //             $("#section"+i).removeClass("show");
+        //         }
         //     }
-        //     if(pageYOffset > document.getElementById("section2").offsetTop){
-        //         document.querySelector(".s2OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s2OffsetTop").style.color = "white";
-        //     }
-        //     if(pageYOffset > document.getElementById("section3").offsetTop){
-        //         document.querySelector(".s3OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s3OffsetTop").style.color = "white";
-        //     }
-        //     if(pageYOffset > document.getElementById("section4").offsetTop){
-        //         document.querySelector(".s4OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s4OffsetTop").style.color = "white";
-        //     }
-        //     if(pageYOffset > document.getElementById("section5").offsetTop){
-        //         document.querySelector(".s5OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s5OffsetTop").style.color = "white";
-        //     }
-        //     if(pageYOffset > document.getElementById("section6").offsetTop){
-        //         document.querySelector(".s6OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s6OffsetTop").style.color = "white";
-        //     }
-        //     if(pageYOffset > document.getElementById("section7").offsetTop){
-        //         document.querySelector(".s7OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s7OffsetTop").style.color = "white";
-        //     }
-        //     if(pageYOffset > document.getElementById("section8").offsetTop){
-        //         document.querySelector(".s8OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s8OffsetTop").style.color = "white";
-        //     }
-        //     if(pageYOffset > document.getElementById("section9").offsetTop){
-        //         document.querySelector(".s9OffsetTop").style.color = "red";
-        //     } else {
-        //         document.querySelector(".s9OffsetTop").style.color = "white";
-        //     }
+        // });
 
-            //나타나기
-            // if(pageYOffset > document.getElementById("section1").offsetTop){
-            //     document.getElementById("section1").classList.add("Show");
-            // } else {
-            //     document.getElementById("section1").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section2").offsetTop){
-            //     document.getElementById("section2").classList.add("Show");
-            // } else {
-            //     document.getElementById("section2").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section3").offsetTop){
-            //     document.getElementById("section3").classList.add("Show");
-            // } else {
-            //     document.getElementById("section3").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section4").offsetTop){
-            //     document.getElementById("section4").classList.add("Show");
-            // } else {
-            //     document.getElementById("section4").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section5").offsetTop){
-            //     document.getElementById("section5").classList.add("Show");
-            // } else {
-            //     document.getElementById("section5").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section6").offsetTop){
-            //     document.getElementById("section6").classList.add("Show");
-            // } else {
-            //     document.getElementById("section6").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section7").offsetTop){
-            //     document.getElementById("section7").classList.add("Show");
-            // } else {
-            //     document.getElementById("section7").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section8").offsetTop){
-            //     document.getElementById("section8").classList.add("Show");
-            // } else {
-            //     document.getElementById("section8").classList.remove("Show");
-            // }
-            // if(pageYOffset > document.getElementById("section9").offsetTop){
-            //     document.getElementById("section9").classList.add("Show");
-            // } else {
-            //     document.getElementById("section9").classList.remove("Show");
-            // }
+        //each()
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop() + $(window).height();;
 
-            
-            
-            document.querySelectorAll(".content-item").forEach(elem => {
-                if(pageYOffset > elem.offsetTop){
-                    elem.classList.add("show");
+            $(".content-item").each(function(num){
+                $(".s"+(num+1)+"OffsetTop").text(parseInt($("#section"+(num+1)).offset().top));
+                if(scrollTop > $(this).offset().top){
+                    $(".s"+(num+1)+"OffsetTop").css("color","red");
+                    $(this).addClass("show");
                 } else {
-                    elem.classList.remove("show");
+                    $(".s"+(num+1)+"OffsetTop").css("color","white");
+                    $(this).removeClass("show");
                 }
             });
-            
         });
+
+
     //     //h1태그를 클릭하면 클릭하면 모든 글씨를 빨간색으로 변경
     //     $("h1").click(function(){
     //         $("*").css("color","red");

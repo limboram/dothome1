@@ -1,3 +1,19 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* index
 /* header */
 .index_header {width: 100%; height: 765px; color: #fff; padding-top: 2%; background: url(../img/header.png); background-size: cover;}
@@ -148,18 +164,18 @@ a.btn {position: absolute; padding: 1rem 1.2rem; left: 50%; top: 63%; font-weigh
 .content1 .cont_left {flex: 1 1 50%;}
 .cont_left img {left: 0; margin-top: 60%; width: 90%;}
 .content1 .cont_right {flex: 1 1 50%;}
-.cont_right h3 {font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; text-align: right; padding-top: 12%;}
+.cont_right h3 {font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; text-align: right; padding-top: 12%; color:#0F2622;}
 .cont_right_tit {margin-left: 9%;}
 .cont_right_tit p {font-family: 'GmarketSansLight'; padding-top: 58.5%; font-size: 1.3rem;}
 .btn {margin-top: 8%;}
-.btn a {border: 1px solid #0F2622; background-color: #0F2622; border-radius: 5px; padding: 2% 5.5%; margin-top: 2%; margin-left: 3%; font-size: 1.3rem;}
+.content1 .btn a {border: 1px solid #0F2622; background-color: #0F2622; border-radius: 5px; padding: 2% 5.5%; margin-top: 2%; margin-left: 3%; font-size: 1.3rem;}
 .btn a:nth-child(1) {margin-left: 0;}
 
 .content2 {display: flex; position: relative;}
 .content2 .cont_right {flex: 1 1 50%;}
 .content2 .cont_left {flex: 1 1 50%; margin-left: -100%;}
 .content2 .cont_right img {position: absolute; right: 0; top: 55%; width: 45%;}
-.content2 .cont_left h3 {margin-top: 20%; font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold;}
+.content2 .cont_left h3 {margin-top: 20%; font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; color:#0F2622;}
 .content2 .cont_left_tit {margin-top: 12%;}
 .content2 .cont_left_tit p {font-family: 'GmarketSansLight'; font-size: 1.3rem;}
 .content2 .cont_left_tit .btn {margin-top: 5%;}
@@ -169,7 +185,7 @@ a.btn {position: absolute; padding: 1rem 1.2rem; left: 50%; top: 63%; font-weigh
 .content3 .cont_left {flex: 1 1 50%;}
 .content3 .cont_left img {left: 0; margin-top: 65%; width: 80%;}
 .content3  .cont_right {flex: 1 1 50%;}
-.content3 .cont_right h3 {font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; text-align: right; padding-top: 30%;}
+.content3 .cont_right h3 {font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; text-align: right; padding-top: 30%; color:#0F2622;}
 .content3 .cont_right_tit {margin-left: 9%;}
 .content3 .cont_right_tit p {font-family: 'GmarketSansLight'; padding-top: 46.5%; font-size: 1.3rem;}
 .content3 .btn {margin-top: 8%;}
@@ -180,7 +196,7 @@ a.btn {position: absolute; padding: 1rem 1.2rem; left: 50%; top: 63%; font-weigh
 .content4 .cont_right {flex: 1 1 50%;}
 .content4 .cont_left {flex: 1 1 50%; margin-left: -100%;}
 .content4 .cont_right img {position: absolute; right: 0; top: 50%; width: 45%;}
-.content4 .cont_left h3 {margin-top: 20%; font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold;}
+.content4 .cont_left h3 {margin-top: 20%; font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; color:#0F2622;}
 .content4 .cont_left_tit {margin-top: 31%;}
 .content4 .cont_left_tit p {font-family: 'GmarketSansLight'; font-size: 1.3rem;}
 .content4 .cont_left_tit .btn {margin-top: 5%;}
@@ -198,4 +214,77 @@ a.btn {position: absolute; padding: 1rem 1.2rem; left: 50%; top: 63%; font-weigh
 
 /*script
 /* header */
-.script_header {background-image: url();}
+.script_header {width: 100%; height: 765px; color: #fff; padding-top: 2%; background: url(../img/header3.png); background-size: cover;}
+.script_header .top {position: relative; display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif;}
+.script_header p {color: white; margin-right: 79%; font-weight: bold; font-size: 22px;}
+.script_header a {background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); border-radius: 2rem; padding: 10px 30px; font-size: 16px;}
+.script_header h1 {margin-top: 16%; line-height: 0.7; font-size: 8rem; font-family: 'Sulphur Point', sans-serif;}
+.script_header h1 span {font-weight: 100; font-size: 6rem;}
+a.btn {position: absolute; padding: 1.5rem 1.6rem; left: 50%; top: 63%; font-weight: bold; border-radius: 50%;}
+.script_header img {position: absolute; right: 3%; width: 40%; top: 20%;}
+
+/* cont1 */
+.script_cont1 {display: flex; justify-content: space-between;}
+.script_cont1 .left {flex: 1 1 35%;}
+.script_cont1 .left h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183;}
+.script_cont1 .left p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 36%;}
+.script_cont1 .left a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;}
+.script_cont1 .left .btn {margin-top: 12%; display: flex; justify-content: space-between;}
+.script_cont1 .right {flex: 1 1 60%; margin-left: 10%;}
+.script_cont1 .right iframe {border-radius: 1rem; margin-top: 4%;}
+.script_cont1 .right ul {margin-top: 2%;}
+.script_cont1 .right ul li {float: left; margin-left: 2%; border: 1px solid #000; border-radius: 50%; padding: .2% 1.5%; font-family: 'Sulphur Point', sans-serif; font-size: 1.3rem; font-weight: bold;}
+.script_cont1 .right ul li:first-child {margin-left: 0;}
+.script_cont1 .right ul li.active {background-color: #323183; color: #fff;}
+
+/* cont2 */
+.script_cont2 {display: flex; justify-content: space-between; margin-top: 20%;}
+.script_cont2 .left {flex: 1 1 60%;}
+.script_cont2 .left iframe {border-radius: 1rem; margin-top: 4%;}
+.script_cont2 .left ul {margin-top: 2%;}
+.script_cont2 .left ul li {float: left; margin-left: 2%; border: 1px solid #000; border-radius: 50%; padding: .2% 1.5%; font-family: 'Sulphur Point', sans-serif; font-size: 1.3rem; font-weight: bold;}
+.script_cont2 .left ul li:first-child {margin-left: 41%;}
+.script_cont2 .left ul li.active {background-color: #323183; color: #fff;}
+.script_cont2 .right {flex: 1 1 35%; margin-left: 4%;}
+.script_cont2 .right h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183; text-align: right;}
+.script_cont2 .right p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 43%;}
+.script_cont2 .right .btn {margin-top: 12%; display: flex; justify-content: space-between;}
+.script_cont2 .right .btn a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;}
+
+/* cont3 */
+.script_cont3 {display: flex; justify-content: space-between; margin-top: 20%;}
+.script_cont3 .left {flex: 1 1 35%;}
+.script_cont3 .left h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183;}
+.script_cont3 .left p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 40%;}
+.script_cont3 .left a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;}
+.script_cont3 .left .btn {margin-top: 12%; display: flex; justify-content: space-between;}
+.script_cont3 .right {flex: 1 1 60%; margin-left: 10%;}
+.script_cont3 .right iframe {border-radius: 1rem; margin-top: 4%;}
+.script_cont3 .right ul {margin-top: 2%;}
+.script_cont3 .right ul li {float: left; margin-left: 2%; border: 1px solid #000; border-radius: 50%; padding: .2% 1.5%; font-family: 'Sulphur Point', sans-serif; font-size: 1.3rem; font-weight: bold;}
+.script_cont3 .right ul li:first-child {margin-left: 0;}
+.script_cont3 .right ul li.active {background-color: #323183; color: #fff;}
+
+/* cont4 */
+.script_cont4 {display: flex; justify-content: space-between; margin-top: 20%;}
+.script_cont4 .left {flex: 1 1 60%;}
+.script_cont4 .left iframe {border-radius: 1rem; margin-top: 4%;}
+.script_cont4 .left ul {margin-top: 2%;}
+.script_cont4 .left ul li {float: left; margin-left: 2%; border: 1px solid #000; border-radius: 50%; padding: .2% 1.5%; font-family: 'Sulphur Point', sans-serif; font-size: 1.3rem; font-weight: bold;}
+.script_cont4 .left ul li:first-child {margin-left: 41%;}
+.script_cont4 .left ul li.active {background-color: #323183; color: #fff;}
+.script_cont4 .right {flex: 1 1 35%; margin-left: 4%;}
+.script_cont4 .right h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183; text-align: right;}
+.script_cont4 .right p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 38%;}
+.script_cont4 .right .btn {margin-top: 12%; display: flex; justify-content: space-between;}
+.script_cont4 .right .btn a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;}
+
+/* footer */
+.script_footer {position: relative; background-image: url(../img/c_footer.png); background-size: cover; height: 750px; margin-top: 30%;}
+.script_footer img {position: absolute; left: 0; width: 35%; bottom: 0%;}
+.script_footer h1 {color: #fff; text-align: right; font-size: 7.5rem; padding-top: 25%; font-family: 'Sulphur Point', sans-serif; line-height: 1;}
+.script_footer a {background-image: linear-gradient(105deg, rgb(193, 33, 47), rgb(241, 104, 53)); position: absolute; padding: 1rem 1.2rem; right: 0%; bottom: 10%; font-weight: bold; border-radius: 50%;}
+.script_footer ul {display: flex; color: #fff; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold; margin-top: 10%;}
+.script_footer ul li {margin-left: 6%;}
+.script_footer ul li:first-child {margin-left: 0%;}
+.script_footer ul li:last-child {font-size: 1.1rem; margin-top: 0.4%;}
