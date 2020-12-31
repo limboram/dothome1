@@ -301,3 +301,36 @@ a.btn {position: absolute; padding: 1.5rem 1.6rem; left: 50%; top: 63%; font-wei
 .ani_header h1 span {font-weight: 100; font-size: 6rem;}
 a.btn {position: absolute; padding: 1.5rem 1.6rem; left: 50%; top: 63%; font-weight: bold; border-radius: 50%;}
 .ani_header img {position: absolute; right: 0%; width: 27%; top: 23%;}
+
+/* content */
+.ani_content h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #FFB720; margin-top: 15%; margin-bottom: 5%;}
+#ani1 {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.ani1 {flex: 0 0 32%}
+.ani1 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani1 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+.ani2 {flex: 0 0 32%; margin-top: 5%;}
+.ani2 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani2 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+.ani3 {flex: 0 0 32%; margin-top: 10%;}
+.ani3 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani3 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+#ani2 {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: -5%;}
+.ani1 {flex: 0 0 32%}
+.ani1 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani1 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+.ani2 {flex: 0 0 32%; margin-top: 5%;}
+.ani2 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani2 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+.ani3 {flex: 0 0 32%; margin-top: 10%;}
+.ani3 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani3 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+#ani3 {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: -5%;}
+.ani1 {flex: 0 0 32%}
+.ani1 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani1 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+.ani2 {flex: 0 0 32%; margin-top: 5%;}
+.ani2 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani2 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
+.ani3 {flex: 0 0 32%; margin-top: 10%;}
+.ani3 a {color: #000; background-color: #ffb82092; border-radius: 2rem; padding: 3% 4%; font-size: 1.3rem; margin-left: 62%;}
+.ani3 iframe {flex: 0 0 32%; border-radius: 2rem; margin-top: 6%;}
