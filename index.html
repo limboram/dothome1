@@ -1,235 +1,926 @@
+
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIMBORAM PORTFOLIO</title>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Limboram">
+  <meta name="description" content="포트폴리오 사이트입니다.">
+  <meta name="keywords"
+    content="limboram, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy, qhkfa8773">
+  <title>LIMBORAM</title>
+
+  <!-- css -->
+  <link href="assets/css/bootstrapTheme.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/isotope.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="assets/ico/favicon.svg">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/favicon-152.png">
+  <link rel="icon" href="assets/ico/favicon.png">
+  <link rel="icon" href="assets/ico/favicon-16.png" sizes="16x16">
+  <link rel="icon" href="assets/ico/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="assets/ico/favicon-48.png" sizes="48x48">
+  <link rel="icon" href="assets/ico/favicon-64.png" sizes="64x64">
+  <link rel="icon" href="assets/ico/favicon-128.png" sizes="128x128">
+
+  <!-- Facebook meta tags -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="LIMBORAM PORTFOLIO" />
+  <meta property="og:url" content="http://qhfka8773.dothome.co.kr/" />
+  <meta property="og:image" content="http://qhfka8773.dothome.co.kr/assets/ico/icon_114.png" />
+  <meta property="og:site_name" content="LIMBORAM PORTFOLIO" />
+  <meta property="og:description" content="포트폴리오 사이트입니다." />
+
+  <!-- twitter meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@limboram" />
+  <meta name="twitter:title" content="LIMBORAM PORTFOLIO" />
+  <meta name="twitter:description" content="포트폴리오 사이트입니다." />
+  <meta property="twitter:image" content="http://qhfka8773.dothome.co.kr/assets/ico/icon_114.png" />
+
+  <!-- 웹 폰트 -->
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    #clock {
+        display: block;
+    }
+    .link1 {background: #fff; left: 50%; transform: translatex(-50%); color: #000; display: inline-block; border-radius: 5px; font-weight: bold; padding: 10px 30px!important; height: auto !important; box-sizing: border-box; width: auto !important; font-size: 20px !important; margin-top: 36px !important;}
+    .link2 {background: #fff; left: 50%; transform: translatex(-50%); color: #000; display: inline-block; border-radius: 5px; font-weight: bold; padding: 10px 30px!important; height: auto !important; box-sizing: border-box; width: auto !important; font-size: 20px !important; margin-top: 86px !important;}
+    .disqus {margin-right: 20px;  margin-top: 20px;}
+</style>
 </head>
+
 <body>
-    <div id="wrap">
-            <div class="index_header">
-                <div class="container">
-                    <div class="top">
-                        <p>PORTFOLIO</p>
-                        <a href="#" >Contact</a>
-                    </div>
-                    <h1>FRONTEND<br><span>PORTFOLIO</span></h1>
-                    <a class="btn" href="#">↓</a>
-                </div>
-            </div>
-            <!-- //header -->
-            <div id="contents">
-                <div id="cont1_1">
-                    <img src="img/ani1.png" alt="">
-                </div>
-                <div id="cont1_2">
-                    <img src="img/ani2.png" alt="">
-                </div>
-                <div id="cont1_3">
-                    <img src="img/ani3.png" alt="">
-                </div>
-                <div class="container">
-                    <div class="cont1">
-                        <div class="left">
-                            <ul>
-                                <li><span>LIM BO RAM</span></li>
-                                <li class="desc">PORTFOLIO</li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <p>컴퓨터에 관심이 없던 제가 대학교 졸업을 한 뒤 무엇을<br> 할까 찾아보다가 컴퓨터 쪽에 관심이 생겨 컴퓨터학원에<br> 등록하기 위해서 우선 상담을 받았습니다. 상담을 받던<br> 도중 웹 퍼블리셔라는 직업을 알게 되었고 웹 퍼블리셔라는<br> 직업에 빠지게 되었으며 프론트엔드 개발자라는 직업도<br> 알게 되었습니다.</p>
-                        </div>
-                        <div class="bottom">
-                            <img src="img/img1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="cont2">
-                        <div class="left">
-                            <p class="title">LIM BO RAM</p>
-                            <p class="desc">SKILL</p>
-                        </div>
-                        <div class="right">
-                            <ul>
-                                <li>
-                                    <img src="img/icon1.png" alt="">
-                                </li>
-                                <li class="m">
-                                    <img src="img/icon2.png" alt="">
-                                </li>
-                                <li class="m">
-                                    <img src="img/icon3.png" alt="">
-                                </li>
-                                <li>
-                                    <img src="img/icon4.png" alt="">
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <img src="img/icon5.png" alt="">
-                                </li>
-                                <li>
-                                    <img src="img/icon6.png" alt="">
-                                </li>
-                                <li>
-                                    <img src="img/icon7.png" alt="">
-                                </li>
-                                <li class="g">
-                                    <img src="img/icon8.png" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="cont3">
-                    <h2>My Work</h2>
-                    <div class="cont3_1">
-                        <div class="left">
-                            <div class="tit_left">
-                                <h3>SITE<br>CODING</h3>
-                                <p>Contents</p>
-                                <ul>
-                                    <li>WEBSTANDARD</li>
-                                    <li>PESPONSIVE</li>
-                                    <li>MEGABOX</li>
-                                    <li>NAVER CLOVA</li>
-                                </ul>
-                                <a href="site.html">→</a>
-                            </div>
-                            <div class="tit_right">
-                                <img src="img/mimg1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="tit_left">
-                                <h3>SCRIPT<br>EFFECT</h3>
-                                <p>Contents</p>
-                                <ul>
-                                    <li>PARALLAX</li>
-                                    <li>SLIDER</li>
-                                    <li>MOUSE</li>
-                                    <li>QUIZ</li>
-                                </ul>
-                                <a href="script.html">→</a>
-                            </div>
-                            <div class="tit_right">
-                                <img src="img/mimg2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cont3_2">
-                        <div class="left">
-                            <div class="tit_left">
-                                <h3>ANIMATION<br>EFFECT</h3>
-                                <p>Contents</p>
-                                <ul>
-                                    <li>CSS ANIMATION</li>
-                                    <li>SVG ANIMATION</li>
-                                </ul>
-                                <a href="animation.html">→</a>
-                            </div>
-                            <div class="tit_right">
-                                <img src="img/mimg3.png" alt="">
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="tit_left">
-                                <h3>DESIGN<br>EFFECT</h3>
-                                <p>Contents</p>
-                                <ul>
-                                    <li>PHOTOSHOP</li>
-                                    <li>ILLUSTRATOR</li>
-                                </ul>
-                                <a href="design.html">→</a>
-                            </div>
-                            <div class="tit_right">
-                                <img src="img/mimg4.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cont3_3">
-                        <div class="left">
-                            <div class="tit_left">
-                                <h3>REACT<br>CODING</h3>
-                                <p>Contents</p>
-                                <ul>
-                                    <li>PORTFOLIO</li>
-                                </ul>
-                                <a href="react.html">→</a>
-                            </div>
-                            <div class="tit_right">
-                                <img src="img/mimg5.png" alt="">
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="tit_left">
-                                <h3>VUE<br>CODING</h3>
-                                <p>Contents</p>
-                                <ul>
-                                    <li>PORTFOLIO</li>
-                                </ul>
-                                <a href="vue.html">→</a>
-                            </div>
-                            <div class="tit_right">
-                                <img src="img/mimg6.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="ani">
-                        <img src="img/ani4.png" alt="">
-                    </div>
-                </div>
-                <div class="container">
-                    <div id="cont4">
-                        <h2>About Me</h2>
-                    </div>   
-                    <div class="cont4">
-                        <div class="left">
-                            <ul>
-                                <li><span>LIM BO RAM</span></li>
-                                <li class="desc">ABOUT ME</li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <p>전공과는 다른 직업을 선택했고, 주변에서 많이 힘들<br> 텐데 괜찮겠냐는 말을 들었음에도 포기하지 않고<br> 그만큼 열심히 배웠습니다. 비록 남들보다 조금 부족할<br> 수 있지만, 그 부족함이 겉으로 드러나지 않아 남들은<br> 내가 부족하다는 걸 느끼지 못하도록 열심히하는<br> 프론트엔드 개발자가 되겠습니다.</p>
-                        </div>
-                        <div class="bottom">
-                            <img src="img/img2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="cont5">
-                    <img src="img/ani5.png" alt="">
-                    <h3>“신입 프론트엔드 개발자 임보람 입니다.”</h3>
-                </div>
-                <div class="container">
-                    <div class="cont6">
-                        <h2>Instantly Reach Us!</h2>
-                        <form>
-                            Email:<br><input class="email" type="email" name="email" placeholder="Your email" size="110%">
-                            Message:<br><input name="message" placeholder="Message" size="110%">
-                            <button type="submit">submit</button>
-                        </form>
-                    </div>
-                </div>
-                
-            </div>
-            <!-- //contents -->
-                <div id="footer">
-                    <div class="container">
-                        <div class="footer">
-                        <a href="http://qhfka8773.dothome.co.kr/">Dothome</a>
-                        <a href="https://github.com/limboram/dothome1">github</a>
-                        <a href="https://qhfka8773.tistory.com/">tistory</a>
-                        <a href="https://codepen.io/limboram">codepen</a>
-                    </div>
-                </div>
-            </div>
-            <!-- //footer -->
+  <!-- nav -->
+  <div id="top-nav" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="http://webstoryboy.co.kr">LIMBORAM</a>
+        <div class="nav-collapse collapse pull-right">
+          <ul class="nav">
+            <li><a href="https://qhfka8773.tistory.com/">Tistory</a></li>
+            <li><a href="https://codepen.io/limboram/">Codepen</a></li>
+            <li><a href="https://github.com/limboram/dothome1/">Github</a></li>
+            <li><a href="https://react999-boram.web.app/#/">React</a></li>
+            <li><a href="https://vue99-boram.web.app/">Vue</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+  <!-- //nav -->
+
+  <!-- header -->
+  <div id="header">
+    <div class="container">
+      <div class="row">
+        <div class="span12" style="text-align:center;">
+          <div class="header_tit">
+            <a href="http://webstoryboy.co.kr"><img src="assets/img/ducks.svg" alt="main"></a>
+            <h1>Professional web publishers</h1>
+          </div>
+          <div class="header_icon">
+            <ul>
+              <li><a href="https://twitter.com/webstoryboy" target="_blank"><i class="fa fa-twitter"
+                    aria-hidden="true"></i><span>twitter</span></a></li>
+              <li><a href="https://codepen.io/limboram/" target="_blank"><i class="fa fa-codepen"
+                    aria-hidden="true"></i><span>codepen</span></a></li>
+              <li><a href="https://github.com/limboram/dothome1/" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i><span>github</span></a></li>
+              <li><a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw" target="_blank"><i
+                    class="fa fa-youtube-play" aria-hidden="true"></i><span>youtube</span></a></li>
+              <li><a href="https://dribbble.com/webstoryboy" target="_blank"><i class="fa fa-dribbble"
+                    aria-hidden="true"></i><span>dribbble</span></a></li>
+              <li><a href="https://www.instagram.com/boram__99/" target="_blank"><i class="fa fa-instagram"
+                    aria-hidden="true"></i><span>instagram</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //header -->
+
+
+  <!-- contents_tit -->
+  <div id="contents_tit">
+    <div class="titt">
+      <p><a href="#" class="tit_btn">&quot;BORAM PORTFOLIO&quot;</a></p>
+    </div>
+  </div>
+  <!-- //contents_tit -->
+
+
+  <!-- contents -->
+  <div id="customizing">
+    <div class="container">
+
+      <div class="row">
+        <div id="options" class="gridly">
+          <ul class="filter option-set" data-filter-group="color">
+            <li><a href="#filter-color-any" data-filter-value="" class="selected">ALL</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".class">CLASS</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".script">SCRIPT</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".layout">LAYOUT</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".animation">ANIMATION</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".css3">CSS3</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".site">SITE</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".design">DESIGN</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="row" id="middle" style="margin-left:16px;">
+        <div id="container" class="clearfix">
+
+          <!-- box -->
+          <section class="color-shape class">
+            <a href="class/index.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">CLASS</span>
+                  <span class="overlay-text-thumb-donut">클래스</span>
+                  <span class="overlay-text-thumb1-donut">클래스</span>
+                  <span class="overlay-text-thumb2-donut">CLASS</span>
+                </div>
+                <img src="assets/img/koala.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>CLASS</h5>
+                  <p>클래스</p>
+                  <span>CLASS</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+
+          <!-- box -->
+          <section class="color-shape script">
+            <div class="image-wrap">
+              <div class="hover-wrap">
+                <span class="overlay-img-donut">JAVASCRIPT</span>
+                <span class="overlay-text-thumb-donut">자바스크립트</span>
+                <span class="overlay-text-thumb1-donut link1"><a href="https://www.figma.com/proto/6wLZX1A7zT1fUK6a5oN7CN/JAVASCRIPT?node-id=17%3A8&viewport=169%2C83%2C0.10852090269327164&scaling=min-zoom">FIGMA</a></span>
+                <span class="overlay-text-thumb2-donut link2"><a href="https://qhfka8773.gitbook.io/javascript-jquery/">GITBOOK</a></span>
+              </div>
+              <img src="assets/img/llama.svg" alt="portfolio">
+              <div class="img-text donutImg">
+                <h5>JAVASCRIPT</h5>
+                <p>자바스크립트</p>
+                <span>JAVASCRIPT</span>
+              </div>
+            </div>
+          </section>
+          <!-- //box -->
+
+
+          <!-- box -->
+          <section class="color-shape script">
+            <div class="image-wrap">
+              <div class="hover-wrap">
+                <span class="overlay-img-donut">JQUERY</span>
+                <span class="overlay-text-thumb-donut">제이쿼리</span>
+                <span class="overlay-text-thumb1-donut link1"><a href="https://www.figma.com/proto/8T19pWnDS4Uw64jIp4dkqM/%EC%88%98%EC%97%85-%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC?node-id=19%3A35&viewport=347%2C207%2C0.13733075559139252&scaling=min-zoom">FIGMA</a></span>
+                <span class="overlay-text-thumb2-donut link2"><a href="https://qhfka8773.gitbook.io/jquery/">GITBOOK</a></span>
+              </div>
+              <img src="assets/img/owl.svg" alt="portfolio">
+              <div class="img-text donutImg">
+                <h5>JQUERY</h5>
+                <p>제이쿼리</p>
+                <span>JQUERY</span>
+              </div>
+            </div>
+          </section>
+          <!-- //box -->
+
+
+          <!-- box -->
+          <section class="color-shape class">
+            <a href="https://www.figma.com/proto/5G91bHsynD5ayWm2nT5R8Y/%EC%88%98%EC%97%85-HTML?node-id=97%3A2&scaling=min-zoom" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">HTML</span>
+                  <span class="overlay-text-thumb-donut">HTML</span>
+                  <span class="overlay-text-thumb1-donut">HTML</span>
+                  <span class="overlay-text-thumb2-donut">HTML</span>
+                </div>
+                <img src="assets/img/rabbit.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>HTML</h5>
+                  <p>HTML</p>
+                  <span>HTML</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+
+          <!-- box -->
+          <section class="color-shape class">
+            <a href="https://www.figma.com/proto/Xts39bx3pTc25EqYfDRqxG/%EC%88%98%EC%97%85-CSS?scaling=min-zoom&node-id=6%3A2" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">CSS</span>
+                  <span class="overlay-text-thumb-donut">CSS</span>
+                  <span class="overlay-text-thumb1-donut">CSS</span>
+                  <span class="overlay-text-thumb2-donut">CSS</span>
+                </div>
+                <img src="assets/img/penguin.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>CSS</h5>
+                  <p>CSS</p>
+                  <span>CSS</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape layout">
+            <a href="layout/index.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">LAYOUT</span>
+                  <span class="overlay-text-thumb-donut">LAYOUT</span>
+                  <span class="overlay-text-thumb1-donut">LAYOUT</span>
+                  <span class="overlay-text-thumb2-donut">LAYOUT</span>
+                </div>
+                <img src="assets/img/hedgehog.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>LAYOUT</h5>
+                  <p>LAYOUT</p>
+                  <span>LAYOUT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape layout">
+            <a href="CSS3/flex.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">FLEX</span>
+                  <span class="overlay-text-thumb-donut">FLEX</span>
+                  <span class="overlay-text-thumb1-donut">CSS3</span>
+                  <span class="overlay-text-thumb2-donut">FLEX</span>
+                </div>
+                <img src="assets/img/pig.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>FLEX</h5>
+                  <p>CSS3</p>
+                  <span>FLEX</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape layout">
+            <a href="CSS3/grid.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">GRID</span>
+                  <span class="overlay-text-thumb-donut">GRID</span>
+                  <span class="overlay-text-thumb1-donut">CSS3</span>
+                  <span class="overlay-text-thumb2-donut">GRID</span>
+                </div>
+                <img src="assets/img/anaconda.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>GRID</h5>
+                  <p>CSS3</p>
+                  <span>GRID</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape design">
+            <a href="photoshop/index.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">PHOTOSHOP</span>
+                  <span class="overlay-text-thumb-donut">PHOTOSHOP</span>
+                  <span class="overlay-text-thumb1-donut">PHOTOSHOP</span>
+                  <span class="overlay-text-thumb2-donut">PHOTOSHOP</span>
+                </div>
+                <img src="assets/img/elephant.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>PHOTOSHOP</h5>
+                  <p>PHOTOSHOP</p>
+                  <span>PHOTOSHOP</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+
+          <!-- box -->
+          <section class="color-shape design">
+            <a href="illustrator/index.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">ILLUSTRATOR</span>
+                  <span class="overlay-text-thumb-donut">ILLUSTRATOR</span>
+                  <span class="overlay-text-thumb1-donut">ILLUSTRATOR</span>
+                  <span class="overlay-text-thumb2-donut">ILLUSTRATOR</span>
+                </div>
+                <img src="assets/img/sloth.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>ILLUSTRATOR</h5>
+                  <p>ILLUSTRATOR</p>
+                  <span>ILLUSTRATOR</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box 광고 -->
+          <section class="color-shape">
+            <script src="https://ads-partners.coupang.com/g.js"></script>
+            <script>
+              new PartnersCoupang.G({ id:347571 });
+            </script>
+          </section>
+          <!-- //box 광고 -->
+
+          <!-- box -->
+          <section class="color-shape site">
+            <div class="image-wrap">
+              <div class="hover-wrap">
+                <span class="overlay-img-donut">WEBSTANDARD</span>
+                <span class="overlay-text-thumb-donut">WEBSTANDARD</span>
+                <span class="overlay-text-thumb1-donut link1"><a href="https://www.figma.com/proto/5yWjocFwOkUlsSSf5ndAyx/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=15%3A394&scaling=min-zoom">FIGMA</a></span>
+                <span class="overlay-text-thumb2-donut link2"><a href="webstandard/index.html">SITE</a></span>
+              </div>
+              <img src="assets/img/lion.svg" alt="portfolio">
+              <div class="img-text donutImg">
+                <h5>WEBSTANDARD</h5>
+                <p>WEBSTANDARD</p>
+                <span>SITE</span>
+              </div>
+            </div>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape site">
+            <div class="image-wrap">
+              <div class="hover-wrap">
+                <span class="overlay-img-donut">RESPONSIVE</span>
+                <span class="overlay-text-thumb-donut">RESPONSIVE</span>
+                <span class="overlay-text-thumb1-donut link1"><a href="https://www.figma.com/proto/SVqguJ0s3X2Opgx1iSmU9a/%EB%B0%98%EC%9D%91%ED%98%95-%EC%82%AC%EC%9D%B4%ED%8A%B8?node-id=3%3A588&viewport=632%2C505%2C0.39791184663772583&scaling=min-zoom">FIGMA</a></span>
+                <span class="overlay-text-thumb2-donut link2"><a href="responsive/inedx.html">SITE</a></span>
+              </div>
+              <img src="assets/img/tiger.svg" alt="portfolio">
+              <div class="img-text donutImg">
+                <h5>RESPONSIVE</h5>
+                <p>RESPONSIVE</p>
+                <span>SITE</span>
+              </div>
+            </div>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape site">
+            <div class="image-wrap">
+              <div class="hover-wrap">
+                <span class="overlay-img-donut">MEGABOX</span>
+                <span class="overlay-text-thumb-donut">MEGABOX</span>
+                <span class="overlay-text-thumb1-donut">MEGABOX</span>
+                <span class="overlay-text-thumb2-donut link2"><a href="megabox/index.html">SITE</a></span>
+              </div>
+              <img src="assets/img/bird.svg" alt="portfolio">
+              <div class="img-text donutImg">
+                <h5>MEGABOX</h5>
+                <p>MEGABOX</p>
+                <span>SITE</span>
+              </div>
+            </div>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape site">
+            <div class="image-wrap">
+              <div class="hover-wrap">
+                <span class="overlay-img-donut">PORTFOLIO</span>
+                <span class="overlay-text-thumb-donut">PORTFOLIO</span>
+                <span class="overlay-text-thumb1-donut">PORTFOLIO</span>
+                <span class="overlay-text-thumb2-donut link2"><a href="portfolio/index2.html">SITE</a></span>
+              </div>
+              <img src="assets/img/pet.svg" alt="portfolio">
+              <div class="img-text donutImg">
+                <h5>PORTFOLIO</h5>
+                <p>PORTFOLIO</p>
+                <span>SITE</span>
+              </div>
+            </div>
+          </section>
+          <!-- //box -->
+          <!-- box -->
+          <section class="color-shape site">
+            <a href="class/portfolio.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">PORTFOLIO2</span>
+                  <span class="overlay-text-thumb-donut">PORTFOLIO2</span>
+                  <span class="overlay-text-thumb1-donut">PORTFOLIO2</span>
+                  <span class="overlay-text-thumb2-donut">PORTFOLIO</span>
+                </div>
+                <img src="assets/img/cat.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>PORTFOLIO2</h5>
+                  <p>PORTFOLIO2</p>
+                  <span>PORTFOLIO</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape animation">
+            <a href="animation/cssAnimation.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">ANIMATION</span>
+                  <span class="overlay-text-thumb-donut">CSS ANIMATION</span>
+                  <span class="overlay-text-thumb1-donut">CSS</span>
+                  <span class="overlay-text-thumb2-donut">CSS3</span>
+                </div>
+                <img src="assets/img/chick.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>CSS ANIMATION</h5>
+                  <p>CSS</p>
+                  <span>ANIMATION</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape animation">
+            <a href="animation/jqueryAnimation.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">ANIMATION</span>
+                  <span class="overlay-text-thumb-donut">JQUERY ANIMATION</span>
+                  <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb2-donut">ANIMATION</span>
+                </div>
+                <img src="assets/img/hen.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>JQUERY ANIMATION</h5>
+                  <p>SCRIPT</p>
+                  <span>ANIMATION</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape animation">
+            <a href="animation/gsapAnimation.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">ANIMATION</span>
+                  <span class="overlay-text-thumb-donut">GSAP ANIMATION</span>
+                  <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb2-donut">ANIMATION</span>
+                </div>
+                <img src="assets/img/bee.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>GSAP ANIMATION</h5>
+                  <p>SCRIPT</p>
+                  <span>ANIMATION</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape animation">
+            <a href="animation/svgAnimation.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">ANIMATION</span>
+                  <span class="overlay-text-thumb-donut">SVG ANIMATION</span>
+                  <span class="overlay-text-thumb1-donut">CSS</span>
+                  <span class="overlay-text-thumb2-donut">ANIMATION</span>
+                </div>
+                <img src="assets/img/dolphin.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>SVG ANIMATION</h5>
+                  <p>CSS</p>
+                  <span>ANIMATION</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape animation">
+            <a href="animation/effectAnimation.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">ANIMATION</span>
+                  <span class="overlay-text-thumb-donut">EFFECT</span>
+                  <span class="overlay-text-thumb1-donut">CSS</span>
+                  <span class="overlay-text-thumb2-donut">EFFECT</span>
+                </div>
+                <img src="assets/img/sheep.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>ANIMATION</h5>
+                  <p>EFFECT</p>
+                  <span>ANIMATION</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape css3">
+            <a href="CSS3/borderRadius.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">BORDER-RASIUS</span>
+                  <span class="overlay-text-thumb-donut">BORDER-RASIUS</span>
+                  <span class="overlay-text-thumb1-donut">CSS</span>
+                  <span class="overlay-text-thumb2-donut">BORDER-RASIUS</span>
+                </div>
+                <img src="assets/img/camel.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>BORDER-RASIUS</h5>
+                  <p>CSS3</p>
+                  <span>BORDER-RASIUS</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape css3">
+            <a href="CSS3/boxShadow.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">BOX-SHADOW</span>
+                  <span class="overlay-text-thumb-donut">BOX-SHADOW</span>
+                  <span class="overlay-text-thumb1-donut">CSS3</span>
+                  <span class="overlay-text-thumb2-donut">BOX-SHADOW</span>
+                </div>
+                <img src="assets/img/milkcow.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>BOX-SHADOW</h5>
+                  <p>CSS3</p>
+                  <span>BOX-SHADOW</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape css3">
+            <a href="CSS3/transform.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">TRANSFORM</span>
+                  <span class="overlay-text-thumb-donut">TRANSFORM</span>
+                  <span class="overlay-text-thumb1-donut">CSS3</span>
+                  <span class="overlay-text-thumb2-donut">TRANSFORM</span>
+                </div>
+                <img src="assets/img/bear.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>TRANSFORM</h5>
+                  <p>CSS3</p>
+                  <span>TRANSFORM</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape css3">
+            <a href="CSS3/background.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">BACKGROUND</span>
+                  <span class="overlay-text-thumb-donut">BACKGROUND</span>
+                  <span class="overlay-text-thumb1-donut">CSS3</span>
+                  <span class="overlay-text-thumb2-donut">BACKGROUND</span>
+                </div>
+                <img src="assets/img/duck.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>BACKGROUND</h5>
+                  <p>CSS3</p>
+                  <span>BACKGROUND</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape css3">
+            <a href="CSS3/blend-mode.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">BLEND MODE</span>
+                  <span class="overlay-text-thumb-donut">BLEND MODE</span>
+                  <span class="overlay-text-thumb1-donut">CSS3</span>
+                  <span class="overlay-text-thumb2-donut">BLEND MODE</span>
+                </div>
+                <img src="assets/img/animals.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>BLEND MODE</h5>
+                  <p>CSS3</p>
+                  <span>BLEND MODE</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="effect/menuEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">MENU EFFECT</span>
+                  <span class="overlay-text-thumb-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/monkey.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>MENU EFFECT</h5>
+                  <p>SCRIPT</p>
+                  <span>EFFECT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="effect/mouseEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">MOUSE EFFECT</span>
+                  <span class="overlay-text-thumb-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/chinchilla.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>MOUSE EFFECT</h5>
+                  <p>SCRIPT</p>
+                  <span>EFFECT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->          
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="effect/parallaxEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">PARALLAX EFFECT</span>
+                  <span class="overlay-text-thumb-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/hippo.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>PARALLAX EFFECT</h5>
+                  <p>SCRIPT</p>
+                  <span>EFFECT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box 광고 -->
+          <section class="color-shape">
+            <script src="https://ads-partners.coupang.com/g.js"></script>
+            <script>
+              new PartnersCoupang.G({ id:347654 });
+            </script>
+          </section>
+          <!-- //box 광고 -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="effect/silderEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">SLIDER EFFECT</span>
+                  <span class="overlay-text-thumb-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/lemur.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>SLIDER EFFECT</h5>
+                  <p>SCRIPT</p>
+                  <span>EFFECT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="effect/gameEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">QUIZ EFFECT</span>
+                  <span class="overlay-text-thumb-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/beaver.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>QUIZ EFFECT</h5>
+                  <p>SCRIPT</p>
+                  <span>EFFECT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          
+        
+
+        </div>
+        <!-- //container-->
+        <div class="disqus">
+          <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://limboram.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+      <!-- //row -->
+    </div>
+    <!-- //container-->
+  </div>
+  <!-- //contents -->
+
+
+  <!-- footer -->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h5>
+            <a href="http://qhfka8773.dothome.co.kr/" target="_blank">LIMBORAM</a>
+            <span id="clock"></span>
+            <span id="infor"></span>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //footer -->
+
+
+  <!-- script -->
+  <script src="assets/js/jquery-1.9.1.min.js"></script>
+  <script src="assets/js/bootstrap-collapse.js"></script>
+  <script src="assets/js/bootstrap-transition.js"></script>
+  <script src="assets/js/jquery.isotope.min.js"></script>
+  <script>
+    //운영체제 정보 알아내기
+    let os = navigator.userAgent.toLowerCase();
+    let sw = screen.width;
+    let sh = screen.height;
+    let infor = document.getElementById("infor");
+    if (os.indexOf("windows") >= 0) {
+      infor.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    } else if (os.indexOf("macintosh") >= 0) {
+      infor.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    } else if (os.indexOf("iphone") >= 0) {
+      infor.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    } else if (os.indexOf("android") >= 0) {
+      infor.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    }
+    //시간 표현
+    let clock = document.getElementById("clock");
+    setInterval(function () {
+      clock.innerHTML = new Date().toLocaleTimeString();
+    }, 1000);
+    $(function () {
+      var $container = $('#container'),
+        filters = {};
+      $container.isotope({
+        itemSelector: '.color-shape',
+        masonry: {
+          columnWidth: 57
+        }
+      });
+      // filter buttons
+      $('.filter a').click(function () {
+        var $this = $(this);
+        // don't proceed if already selected
+        if ($this.hasClass('selected')) {
+          return;
+        }
+        var $optionSet = $this.parents('.option-set');
+        // change selected class
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+        // store filter value in object
+        // i.e. filters.color = 'red'
+        var group = $optionSet.attr('data-filter-group');
+        filters[group] = $this.attr('data-filter-value');
+        // convert object into array
+        var isoFilters = [];
+        for (var prop in filters) {
+          isoFilters.push(filters[prop])
+        }
+        var selector = isoFilters.join('');
+        $container.isotope({
+          filter: selector
+        });
+        return false;
+      });
+      $('.tit_btn').on('click', function (e) {
+        e.preventDefault();
+        $('.nav_container').toggleClass('on');
+      });
+      $(".click").click(function () {
+        $(".view").fadeToggle();
+      });
+    });
+  </script>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f8fa88fa08ab751"></script>
+
 </body>
+
 </html>
+<!-- webstoryboy.co.kr -->
