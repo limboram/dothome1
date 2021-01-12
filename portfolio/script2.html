@@ -10,6 +10,8 @@
 
 </head>
 <body>
+    <div class="scroll">0</div>
+
     <div id="wrap">
         <div class="script_header">
             <img src="img/cimg1.png" alt="">
@@ -137,5 +139,13 @@
         </div>
         <!-- //footer -->
     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop() + $(window).height();
+            $(".scroll").text(scrollTop);
+        });
+    </script>
 </body>
 </html>

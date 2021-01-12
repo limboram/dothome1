@@ -15,6 +15,21 @@
 }
 
 body {background-color: #fff;}
+.scroll {
+    position: fixed; right: 10px; top: 10px;
+    width: 50px; height: 50px; line-height: 50px;
+    text-align: center; color: #fff;
+    background: rgba(0,0,0,0.5);
+    z-index: 10000000;
+}
+.index_header .top {
+    opacity: 0; 
+    transition: all 1s cubic-bezier(0.09, 0.79, 0.34, 0.99);
+}
+.index_header .top {
+    opacity: 1; 
+    transition: all 1s cubic-bezier(0.09, 0.79, 0.34, 0.99);
+}
 
 /* indx header */
 .index_header {
@@ -33,33 +48,34 @@ body {background-color: #fff;}
     color: white; 
     font-weight: bold;
     font-size: 1.5vw;
-    animation: one 3s linear;
+    transform: scaleX(0);
+    animation: viewP 0.7s ease forwards;
 }
-@keyframes one {
-    0% {opacity: 0;}
-    30%, 100% {opacity: 1;}
+@keyframes viewP {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .index_header .top a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     border-radius: 10vw; padding: 0.8vw 2vw; 
-    opacity: 0;
-    animation: two 3s 0.3s linear;
+    transform: scaleX(0);
+    animation: viewA 0.7s 0.3s ease forwards;
 }
-@keyframes two {
-    0% {opacity: 0;}
-    30%, 100% {opacity: 1;}
+@keyframes viewA {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .index_header h1 {
     margin-top: 25vh; line-height: 0.8;
     margin-left: 8vw;
     font-size: 9vw; 
     font-family: 'Sulphur Point', sans-serif;
-    opacity: 0;
-    animation: three 3s 0.6s linear;
+    transform: scaleX(0);
+    animation: viewText 0.7s 0.5s ease forwards;
 }
-@keyframes three {
-    0% {opacity: 0;}
-    30%, 100% {opacity: 1;}
+@keyframes viewText {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .index_header h1 span {
     font-weight: 100; font-size: 7.5vw;
@@ -68,7 +84,7 @@ a.btn {
     position: absolute; 
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     padding: 1.3vw 1.5vw; 
-    left: 50%; top: 30%; 
+    left: 50%; top: 87%; 
     font-weight: bold; 
     border-radius: 50%;
 }
@@ -113,33 +129,38 @@ a.btn {
     position: absolute;
     top: -60vh; right: 0; 
     width: 25vw;
-    animation: ani1 1s linear;
+    transition: all 2s cubic-bezier(0,0,0,1);
 }
-@keyframes ani1 {
-    0% {top: -60vh; width: 25vw;}
-    100% {top: -70vh; width: 30vw;}
+#cont1_1 img:hover {
+    width: 30vw;
+    transition: all 2s cubic-bezier(0,0,0,1);
 }
 #cont1_2 img {
     position: absolute; 
-    top: 5vh; left: 0; 
-    width: 20vw;
-    animation: ani2 1s 1.5s linear;
+    top: 5vh; left: -4vw; 
+    opacity: 1; 
+    transition: all 1s cubic-bezier(0.09, 0.79, 0.34, 0.99);
 }
-@keyframes ani2 {
-    0% {top: 5vh; width: 20vw;}
-    100% {top: -5vh; width: 15vw;}
-}
+/* #cont1_2 img.show {
+    opacity: 1; 
+    transition: all 1s cubic-bezier(0.09, 0.79, 0.34, 0.99);
+} */
 #cont1_3 img {
     position: absolute; 
     top: 80vh; left: 0; 
     width: 25vw;
     z-index: -1;
-    animation: ani3 1s 2.5s linear;
+    transition: all 2s cubic-bezier(0,0,0,1);
 }
-@keyframes ani3 {
-    0% {top: 80vh; width: 25vw;}
-    100% {top: 70vh; width: 28vw;}
+#cont1_3 img.ani3_2 {
+    position: absolute; 
+    top: 90vh; left: 0; 
+    width: 21vw;
 }
+/* #cont1_3 img.ani3_2:hover {
+    width: 30vw;
+    transition: all 2s cubic-bezier(0,0,0,1);
+} */
 
 /* cont2 */
 .cont2 {width: 100%; padding-top: 12vw; display: flex;}
@@ -513,30 +534,66 @@ a.btn {
     color: white;
     font-weight: bold; 
     font-size: 1.5vw;
+    transform: scaleY(0);
+    animation: viewP 0.7s ease forwards;
 }
-.header a {
+@keyframes viewP {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
+.header .top a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     border-radius: 10vw; padding: 0.8vw 2vw; 
+    transform: scaleY(0);
+    animation: viewA 0.7s 0.3s ease forwards;
+}
+@keyframes viewA {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .header h1 {
     margin-top: 25vh; line-height: 0.8;
     margin-left: 8vw;
     font-size: 9vw; 
+    transform: scaleY(0);
     font-family: 'Sulphur Point', sans-serif;
+    animation: viewText 0.7s 0.5s ease forwards;
+}
+@keyframes viewText {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .header h1 span {font-weight: 100; font-size: 7.5vw;}
-a.btn {
+.header a.btn {
     position: absolute; 
     padding: 1.3vw 1.5vw; 
-    left: 50%; top: 75%; 
+    left: 50%; top: 80%; 
     font-weight: bold; 
     border-radius: 50%;
 }
-.header img {position: absolute; right: 0; width: 38vw; top: 20vh;}
+.header img {
+    position: absolute; 
+    right: 0; width: 38vw; 
+    top: 20vh; opacity: 0; 
+    animation: main 0.7s 0.7s ease forwards;
+}
+@keyframes main {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 /* content */
 #content {position: relative;}
-#content img {position: absolute; margin-top: -38vh; right: 0; width: 28vw;}
+#content img {
+    position: absolute; 
+    margin-top: -38vh; 
+    right: 0; width: 28vw;
+    transition: all 2s cubic-bezier(0,0,0,1);
+}
+#content img:hover {
+    transition: all 2s cubic-bezier(0,0,0,1);
+    width: 32vw;
+}
 #content img.left {
     position: absolute; 
     margin-top: 220vh; 
@@ -545,7 +602,7 @@ a.btn {
 }
 #content img.right {
     position: absolute; 
-    margin-top: 400vh; 
+    margin-top: 425vh; 
     right: 0; width: 28vw;
 }
 .content1 {display: flex;}
@@ -561,120 +618,275 @@ a.btn {
 .cont_right_tit {margin-left: 6vw;}
 .cont_right_tit p {
     font-family: 'GmarketSansLight'; 
-    padding-top: 56vh; 
-    font-size: 1.3vw;
+    padding-top: 51.8vh; 
+    font-size: 1.5vw;
 }
-.btn {margin-top: 8vh;}
+.content1 .btn {
+    margin-top: 3vh;
+    display: flex; 
+    justify-content: space-between;
+}
 .content1 .btn a {
-    border: 1px solid #0F2622; 
     background-color: #0F2622; 
     border-radius: 0.5vw; 
-    padding: 2% 5.5%; 
-    margin-top: 2%; 
-    margin-left: 5%; 
+    padding: 0.9vw 1.8vw; 
+    margin-top: 6vh; 
     font-size: 1.3vw; 
     font-family: 'Poppins', sans-serif;
 }
-.btn a:nth-child(1) {margin-left: 0;}
 
-.content2 {display: flex;}
-.content2 .cont_right {flex: 0 0 50%;}
-.content2 .cont_left {flex: 0 0 50%;}
-.content2 .cont_right img {position: absolute; right: 0; top: 55vh; width: 38vw;}
-.content2 .cont_left h3 {margin-top: 20%; font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; color:#0F2622;}
-.content2 .cont_left_tit {margin-top: 12%;}
-.content2 .cont_left_tit p {font-family: 'GmarketSansLight'; font-size: 1.3rem;}
-.content2 .cont_left_tit .btn {margin-top: 5%;}
-.content2 .cont_left_tit a {padding: 1.2% 2.5%; font-size: 1.3rem; font-family: 'Poppins', sans-serif;border: 1px solid #0F2622; background-color: #0F2622; border-radius: 5px; margin-left: 3%;}
-.btn a:nth-child(1) {margin-left: 0;}
+.content2 {display: flex; position: relative;}
+.content2 .cont_right {flex: 0 0 60%;}
+.content2 .cont_left {flex: 0 0 40%;}
+.content2 .cont_right img {
+    position: absolute; 
+    right: 0; top: 55vh; 
+    width: 40vw;
+}
+.content2 .cont_left h3 {
+    margin-top: 30vh; 
+    font-family: 'Sulphur Point', sans-serif; 
+    font-size: 7vw; 
+    font-weight: bold; 
+    color:#0F2622;
+}
+.content2 .cont_left_tit {margin-top: 15.8vh;}
+.content2 .cont_left_tit p {
+    font-family: 'GmarketSansLight'; 
+    font-size: 1.5vw;
+}
+.content2 .cont_left_tit .btn {
+    margin-top: 10vh; 
+    display: flex; 
+    justify-content: space-between;
+}
+.content2 .cont_left_tit a {
+    padding: 0.9vw 1.8vw;  
+    font-size: 1.3vw; 
+    font-family: 'Poppins', sans-serif;
+    background-color: #0F2622; 
+    border-radius: 0.5vw; 
+}
 
 .content3 {display: flex;}
-.content3 .cont_left {flex: 1 1 50%;}
-.content3 .cont_left img {left: 0; margin-top: 65%; width: 80%;}
-.content3  .cont_right {flex: 1 1 50%;}
+.content3 .cont_left {flex: 1 1 60%;}
+.content3 .cont_left img {left: 0; margin-top: 56vh; width: 40vw;}
+.content3  .cont_right {flex: 1 1 40%;}
 .content3 .cont_right h3 {
     font-family: 'Sulphur Point', sans-serif; 
     font-size: 7vw; font-weight: bold; 
-    text-align: right; padding-top: 22vh; 
+    text-align: right; padding-top: 27vh; 
     color:#0F2622;
 }
-.content3 .cont_right_tit {margin-left: 9%;}
-.content3 .cont_right_tit p {font-family: 'GmarketSansLight'; padding-top: 46.5%; font-size: 1.3rem;}
-.content3 .btn {margin-top: 8%;}
-.content3 .btn a {border: 1px solid #0F2622; background-color: #0F2622; border-radius: 5px; padding: 2% 5.5%; margin-top: 2%; margin-left: 3%; font-family: 'Poppins', sans-serif; font-size: 1.3rem;}
-.content3 .btn a:nth-child(1) {margin-left: 0;}
+.content3 .cont_right_tit {margin-left: -3vw;}
+.content3 .cont_right_tit p {
+    font-family: 'GmarketSansLight'; 
+    padding-top: 35.5vh; 
+    font-size: 1.5vw;
+}
+.content3 .btn {margin-top: 10vh; margin-left: 11vw;}
+.content3 .btn a {
+    background-color: #0F2622; 
+    border-radius: 0.5vw; 
+    padding: 0.9vw 1.8vw; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.3vw;
+    margin-left: 2vw;
+}
 
 .content4 {display: flex; position: relative;}
-.content4 .cont_right {flex: 1 1 50%;}
-.content4 .cont_left {flex: 1 1 50%; margin-left: -100%;}
-.content4 .cont_right img {position: absolute; right: 0; top: 50%; width: 45%;}
-.content4 .cont_left h3 {margin-top: 20%; font-family: 'Sulphur Point', sans-serif; font-size: 6rem; font-weight: bold; color:#0F2622;}
-.content4 .cont_left_tit {margin-top: 31%;}
-.content4 .cont_left_tit p {font-family: 'GmarketSansLight'; font-size: 1.3rem;}
-.content4 .cont_left_tit .btn {margin-top: 5%;}
-.content4 .cont_left_tit a {padding: 1.2% 2.5%; font-size: 1.3rem; font-family: 'Poppins', sans-serif;border: 1px solid #0F2622; background-color: #0F2622; border-radius: 5px; margin-left: 3%;}
-.btn a:nth-child(1) {margin-left: 0;}
+.content4 .cont_right {flex: 0 0 50%;}
+.content4 .cont_left {flex: 0 0 50%;}
+.content4 .cont_right img {
+    position: absolute; 
+    right: 0; top: 55vh; 
+    width: 38vw;
+}
+.content4 .cont_left h3 {
+    margin-top: 30vh; 
+    font-family: 'Sulphur Point', sans-serif; 
+    font-size: 6.9vw; 
+    font-weight: bold; 
+    color:#0F2622;
+}
+.content4 .cont_left_tit {margin-top: 43.5vh;}
+.content4 .cont_left_tit p {
+    font-family: 'GmarketSansLight'; 
+    font-size: 1.5vw;
+    margin-right: 6vw;
+}
+.content4 .cont_left_tit .btn {
+    margin-top: 10vh; 
+}
+.content4 .cont_left_tit a {
+    padding: 0.9vw 1.8vw;  
+    font-size: 1.3vw; 
+    font-family: 'Poppins', sans-serif;
+    background-color: #0F2622; 
+    border-radius: 0.5vw; 
+    margin-left: 2vw;
+}
+.content4 .cont_left_tit a:first-child {margin-left: 0;}
 
 /* footer */
-.site_footer {position: relative; background-image: url(../img/s_footer.png); background-size: cover; height: 750px; margin-top: 30%;}
-.site_footer img {position: absolute; left: 0; width: 35%; bottom: 0%;}
-.site_footer h1 {color: #fff; text-align: right; font-size: 7.5rem; padding-top: 25%; font-family: 'Sulphur Point', sans-serif; line-height: 1;}
-.site_footer a {background-image: linear-gradient(105deg, rgb(193, 33, 47), rgb(241, 104, 53)); position: absolute; padding: 1rem 1.2rem; right: 0%; bottom: 10%; font-weight: bold; border-radius: 50%;}
-.site_footer ul {display: flex; color: #fff; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold; margin-top: 10%;}
-.site_footer ul li {margin-left: 6%;}
+.site_footer {
+    position: relative; 
+    background-image: url(../img/s_footer.png); 
+    background-size: cover; 
+    width: 100%; height: 100vh; 
+    margin-top: 30%; z-index: -2;}
+.site_footer img {
+    position: absolute; 
+    left: 0; width: 32vw; 
+    bottom: 0%; z-index: -1;
+}
+.site_footer h1 {
+    color: #fff; 
+    text-align: right; 
+    font-size: 8vw; 
+    padding-top: 40vh; 
+    font-family: 'Sulphur Point', sans-serif; 
+    line-height: 1;
+}
+.site_footer a {
+    background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
+    position: absolute; 
+    border-radius: 10vw;
+    padding: 1.4vw 1.6vw;
+    right: 8vw; bottom: 10vh; 
+    font-weight: bold; 
+}
+.site_footer ul {
+    display: flex; color: #fff; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.3vw; 
+    font-weight: bold; 
+    margin-top: 20vh;
+}
+.site_footer ul li {margin-left: 6vw;}
 .site_footer ul li:first-child {margin-left: 0%;}
-.site_footer ul li:last-child {font-size: 1.1rem; margin-top: 0.4%;}
+.site_footer ul li:last-child {font-size: 1vw; margin-top: 0.4vh;}
 
 /* script
 /* header */
-/* .script_header {
+.script_header {
     width: 100%; 
-    height: 100vh; 
+    height: 110vh; 
     color: #fff; 
     padding-top: 2vw; 
     background: url(../img/header3.png); 
     background-size: cover;
 }
-.script_header .top {position: relative; display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif;}
-.script_header p {color: white; margin-right: 79%; font-weight: bold; font-size: 1.5vw;}
-.script_header a {
+.script_header .top {
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    font-family: 'Poppins', sans-serif;
+}
+.script_header p {
+    color: white;
+    font-weight: bold; 
+    font-size: 1.5vw;
+    transform: scaleY(0);
+    animation: viewP 0.7s ease forwards;
+}
+@keyframes viewP {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
+.script_header .top a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     border-radius: 10vw; padding: 0.8vw 2vw; 
+    transform: scaleY(0);
+    animation: viewA 0.7s 0.3s ease forwards;
+}
+@keyframes viewA {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .script_header h1 {
     margin-top: 25vh; line-height: 0.8;
     margin-left: 8vw;
     font-size: 9vw; 
+    transform: scaleY(0);
     font-family: 'Sulphur Point', sans-serif;
+    animation: viewText 0.7s 0.5s ease forwards;
+}
+@keyframes viewText {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .script_header h1 span {font-weight: 100; font-size: 7.5vw;}
 a.btn {
     position: absolute; 
     padding: 1.3vw 1.5vw; 
-    left: 50%; top: 80%; 
+    left: 50%; top: 75%; 
     font-weight: bold; 
     border-radius: 50%;
 }
-.script_header img {position: absolute; right: 3%; width: 40%; top: 20%;} */
+.script_header img {
+    position: absolute; 
+    right: 0; width: 38vw; 
+    top: 20vh; opacity: 0; 
+    animation: main 0.7s 0.7s ease forwards;
+}
+@keyframes main {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 /* cont1 */
-/* .ani img.ani1 {position: absolute; right: 0; width: 30%; margin-top: -25%;}
-.ani img.ani2 {position: absolute; left: 0; width: 30%; margin-top: 120%; width: 26%;}
-.script_cont1 {display: flex; justify-content: space-between;}
+.ani img.ani1 {
+    position: absolute; 
+    margin-top: -70vh; 
+    right: 0; width: 28vw;
+    transition: all 2s cubic-bezier(0,0,0,1);
+}
+.ani img.ani1:hover {
+    transition: all 2s cubic-bezier(0,0,0,1);
+    width: 32vw;
+}
+.ani img.ani2 {
+    position: absolute; 
+    left: 0; width: 30vw; 
+    margin-top: 120vh;
+    z-index: -1;
+}
+.script_cont1 {display: flex; justify-content: space-between; margin-top: 25vh;}
 .script_cont1 .left {flex: 1 1 35%;}
-.script_cont1 .left h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183;}
-.script_cont1 .left p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 36%;}
-.script_cont1 .left a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;}
-.script_cont1 .left .btn {margin-top: 12%; display: flex; justify-content: space-between;}
-.script_cont1 .right {flex: 1 1 60%; margin-left: 10%;}
-.script_cont1 .right iframe {border-radius: 1rem; margin-top: 4%;}
+.script_cont1 .left h2 {
+    font-family: 'Sulphur Point', sans-serif; 
+    font-size: 7vw; 
+    font-weight: bold; 
+    color: #323183;
+}
+.script_cont1 .left p {
+    font-family: 'GmarketSansLight'; 
+    font-size: 1.5vw;
+     margin-top: 22vh;
+    }
+.script_cont1 .left a {
+    font-family: 'GmarketSansLight'; 
+    background-color: #323183; 
+    padding: 1vw 2vw; 
+    border-radius: 0.5vw; 
+    font-size: 1.3vw; 
+    font-weight: bold;
+}
+.script_cont1 .left .btn {
+    margin-top: 8vh; 
+    display: flex; 
+    justify-content: space-between;
+}
+.script_cont1 .right {flex: 1 1 60%; margin-left: 10vw;}
+.script_cont1 .right iframe {border-radius: 1vw; margin-top: 4.5vh;}
 .script_cont1 .right ul {margin-top: 2%;}
 .script_cont1 .right ul li {float: left; margin-left: 2%; border: 1px solid #000; border-radius: 50%; padding: .2% 1.5%; font-family: 'Sulphur Point', sans-serif; font-size: 1.3rem; font-weight: bold;}
 .script_cont1 .right ul li:first-child {margin-left: 0;}
-.script_cont1 .right ul li.active {background-color: #323183; color: #fff;} */
+.script_cont1 .right ul li.active {background-color: #323183; color: #fff;}
 
 /* cont2 */
-/* .script_cont2 {display: flex; justify-content: space-between; margin-top: 20%;}
+.script_cont2 {display: flex; justify-content: space-between; margin-top: 20%;}
 .script_cont2 .left {flex: 1 1 60%;}
 .script_cont2 .left iframe {border-radius: 1rem; margin-top: 4%;}
 .script_cont2 .left ul {margin-top: 2%;}
@@ -685,10 +897,10 @@ a.btn {
 .script_cont2 .right h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183; text-align: right;}
 .script_cont2 .right p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 43%;}
 .script_cont2 .right .btn {margin-top: 12%; display: flex; justify-content: space-between;}
-.script_cont2 .right .btn a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;} */
+.script_cont2 .right .btn a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;}
 
 /* cont3 */
-/* .script_cont3 {display: flex; justify-content: space-between; margin-top: 20%;}
+ .script_cont3 {display: flex; justify-content: space-between; margin-top: 20%;}
 .script_cont3 .left {flex: 1 1 35%;}
 .script_cont3 .left h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183;}
 .script_cont3 .left p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 40%;}
@@ -698,11 +910,11 @@ a.btn {
 .script_cont3 .right iframe {border-radius: 1rem; margin-top: 4%;}
 .script_cont3 .right ul {margin-top: 2%;}
 .script_cont3 .right ul li {float: left; margin-left: 2%; border: 1px solid #000; border-radius: 50%; padding: .2% 1.5%; font-family: 'Sulphur Point', sans-serif; font-size: 1.3rem; font-weight: bold;}
-.script_cont3 .right ul li:first-child {margin-left: 0;}
+.script_cont3 .right ul li:first-child {margin-left: 0;} */
 .script_cont3 .right ul li.active {background-color: #323183; color: #fff;} */
 
 /* cont4 */
-/* .script_cont4 {display: flex; justify-content: space-between; margin-top: 20%;}
+.script_cont4 {display: flex; justify-content: space-between; margin-top: 20%;}
 .script_cont4 .left {flex: 1 1 60%;}
 .script_cont4 .left iframe {border-radius: 1rem; margin-top: 4%;}
 .script_cont4 .left ul {margin-top: 2%;}
@@ -713,23 +925,23 @@ a.btn {
 .script_cont4 .right h2 {font-family: 'Sulphur Point', sans-serif; font-size: 7rem; font-weight: bold; color: #323183; text-align: right;}
 .script_cont4 .right p {font-family: 'GmarketSansLight'; font-size: 1.4rem; margin-top: 38%;}
 .script_cont4 .right .btn {margin-top: 12%; display: flex; justify-content: space-between;}
-.script_cont4 .right .btn a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;} */
+.script_cont4 .right .btn a {font-family: 'GmarketSansLight'; background-color: #323183; padding: 4% 11%; border-radius: 0.5rem; font-size: 1rem; font-weight: bold;}
 
 /* footer */
-/* .script_footer {position: relative; background-image: url(../img/c_footer.png); background-size: cover; height: 750px; margin-top: 30%;}
+.script_footer {position: relative; background-image: url(../img/c_footer.png); background-size: cover; height: 750px; margin-top: 30%;}
 .script_footer img {position: absolute; left: 0; width: 35%; bottom: 0%;}
 .script_footer h1 {color: #fff; text-align: right; font-size: 7.5rem; padding-top: 25%; font-family: 'Sulphur Point', sans-serif; line-height: 1;}
 .script_footer a {background-image: linear-gradient(105deg, rgb(193, 33, 47), rgb(241, 104, 53)); position: absolute; padding: 1rem 1.2rem; right: 0%; bottom: 10%; font-weight: bold; border-radius: 50%;}
 .script_footer ul {display: flex; color: #fff; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold; margin-top: 10%;}
 .script_footer ul li {margin-left: 6%;}
 .script_footer ul li:first-child {margin-left: 0%;}
-.script_footer ul li:last-child {font-size: 1.1rem; margin-top: 0.4%;} */
+.script_footer ul li:last-child {font-size: 1.1rem; margin-top: 0.4%;}
 
 /* animation
 /* header */
-/* .ani_header {
+.ani_header {
     width: 100%; 
-    height: 100vh; 
+    height: 110vh; 
     color: #fff; 
     padding-top: 2vw; 
     background: url(../img/header4.png); 
@@ -737,14 +949,20 @@ a.btn {
 }
 .ani_header .top {
     position: relative; 
-    display: flex; justify-content: space-between; 
+    display: flex; 
+    justify-content: space-between; 
     font-family: 'Poppins', sans-serif;
 }
 .ani_header p {
-    color: white; 
-    margin-right: 79%; 
+    color: white;
     font-weight: bold; 
     font-size: 1.5vw;
+    transform: scaleY(0);
+    animation: viewP 0.7s ease forwards;
+}
+@keyframes viewP {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .ani_header a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
@@ -768,7 +986,7 @@ a.btn {
     position: absolute; 
     right: 0%; width: 27%; 
     top: 23%;
-} */
+}
 
 /* content */
 /* .ani_content1 h2 {
@@ -924,14 +1142,29 @@ a.btn {
 /* header */
 /* .d_header {
     width: 100%; 
-    height: 100vh; 
+    height: 110vh; 
     color: #fff; 
     padding-top: 2vw; 
     background: url(../img/header5.png); 
     background-size: cover;
 }
-.d_header .top {position: relative; display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif;}
-.d_header p {color: white; margin-right: 79%; font-weight: bold; font-size: 1.5vw;}
+.d_header .top {
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    font-family: 'Poppins', sans-serif;
+}
+.d_header p {
+    color: white;
+    font-weight: bold; 
+    font-size: 1.5vw;
+    transform: scaleY(0);
+    animation: viewP 0.7s ease forwards;
+}
+@keyframes viewP {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
 .d_header a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     border-radius: 10vw; padding: 0.8vw 2vw; 
@@ -989,9 +1222,31 @@ a.btn {
 
 /* react
 /* header */
-/* .r_header {width: 100%; height: 765px; color: #fff; padding-top: 2%; background: url(../img/header6.png); background-size: cover;}
-.r_header .top {position: relative; display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif;}
-.r_header p {color: white; margin-right: 79%; font-weight: bold; font-size: 1.5vw;}
+/* .r_header {
+    width: 100%; 
+    height: 110vh; 
+    color: #fff; 
+    padding-top: 2vw; 
+    background: url(../img/header6.png); 
+    background-size: cover;
+}
+.r_header .top {
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    font-family: 'Poppins', sans-serif;
+}
+.r_header p {
+    color: white;
+    font-weight: bold; 
+    font-size: 1.5vw;
+    transform: scaleY(0);
+    animation: viewP 0.7s ease forwards;
+}
+@keyframes viewP {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
 .r_header a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     border-radius: 10vw; padding: 0.8vw 2vw; 
@@ -1044,8 +1299,23 @@ a.btn {
     background: url(../img/header7.png); 
     background-size: cover;
 }
-.v_header .top {position: relative; display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif;}
-.v_header p {color: white; margin-right: 79%; font-weight: bold; font-size: 1.5vw;}
+.v_header .top {
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    font-family: 'Poppins', sans-serif;
+}
+.v_header p {
+    color: white;
+    font-weight: bold; 
+    font-size: 1.5vw;
+    transform: scaleY(0);
+    animation: viewP 0.7s ease forwards;
+}
+@keyframes viewP {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
 .v_header a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     border-radius: 10vw; padding: 0.8vw 2vw; 

@@ -10,6 +10,8 @@
 
 </head>
 <body>
+    <div class="scroll">0</div>
+
     <div id="wrap">
         <div class="index_header">
             <div class="container">
@@ -27,10 +29,11 @@
                 <img src="img/ani1.png" alt="">
             </div>
             <div id="cont1_2">
-                <img src="img/ani2.png" alt="">
+                <img src="img/ani2.svg" alt="">
             </div>
             <div id="cont1_3">
-                <img src="img/ani3.png" alt="">
+                <img src="img/ani3_1.png" alt="">
+                <img class="ani3_2" src="img/ani3_2.png" alt="">
             </div>
             <div class="container">
                 <div class="cont1">
@@ -231,7 +234,18 @@
         <!-- //footer -->
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop() + $(window).height();
+            $(".scroll").text(scrollTop);
+
+            if(scrollTop > $("#cont1_2").offset().top){
+                $("#cont1_2").addClass("show");
+            } else {
+                $("#cont1_2").removeClass("show");
+            }
+        });
     </script>
 </body>
 </html>
