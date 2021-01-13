@@ -1108,15 +1108,27 @@ a.btn {
     0% {transform: scaleY(0);}
     100% {transform: scaleY(1);}
 }
-.ani_header a {
+.ani_header .top a {
     background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53)); 
     border-radius: 10vw; padding: 0.8vw 2vw; 
+    transform: scaleY(0);
+    animation: viewA 0.7s 0.3s ease forwards;
+}
+@keyframes viewA {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .ani_header h1 {
     margin-top: 25vh; line-height: 0.8;
-    margin-left: 8vw;
+    margin-left: 4vw;
     font-size: 9vw; 
+    transform: scaleY(0);
     font-family: 'Sulphur Point';
+    animation: viewText 0.7s 0.5s ease forwards;
+}
+@keyframes viewText {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
 }
 .ani_header h1 span {font-weight: 100; font-size: 7.5vw;}
 a.btn {
@@ -1128,8 +1140,13 @@ a.btn {
 }
 .ani_header img {
     position: absolute; 
-    right: 0%; width: 27%; 
-    top: 23%;
+    right: 0; width: 28vw; 
+    top: 20vh; opacity: 0; 
+    animation: main 0.7s 0.7s ease forwards;
+}
+@keyframes main {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 /* content */
