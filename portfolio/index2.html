@@ -239,12 +239,6 @@
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop() + $(window).height();
             $(".scroll").text(scrollTop);
-
-            if(scrollTop > $("#cont1_2").offset().top){
-                $("#cont1_2").addClass("show");
-            } else {
-                $("#cont1_2").removeClass("show");
-            }
         });
     </script>
 </body>
