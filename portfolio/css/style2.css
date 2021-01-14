@@ -193,7 +193,7 @@ a.btn {
 .cont3_1 .left {
     background-image: url(../img/bg1.png);
     background-size: cover; 
-    width: 100%; height: 40vw; 
+    width: 100%; height: 100%; 
     flex: 1 1 50%;  
     display: flex; 
     position: relative;
@@ -230,11 +230,11 @@ a.btn {
 .cont3_1 .right {
     background-image: url(../img/bg2.png); 
     background-size: cover; 
-    width: 100%; height: 40vw; 
+    width: 100%; height: 100%; 
     flex: 1 1 50%;  
     display: flex; 
     position: relative;
-    margin-top: 1.95%;
+    margin-top: 2.1%;
 }
 .cont3_1 .right .tit_left {padding-left: 5vw; flex: 1 1 30%;}
 .cont3_1 .right .tit_left h3 {
@@ -270,13 +270,13 @@ a.btn {
 .cont3_2 {
     display: flex; 
     width: 100%; height: 80vh;
-    margin-top: -2.4vw; color: #fff; 
+    margin-top: -3%; color: #fff; 
     font-family: 'Poppins';
 }
 .cont3_2 .left {
     background-image: url(../img/bg3.png); 
     background-size: cover; 
-    width: 100%; height: 40vw; 
+    width: 100%; height: 100%; 
     flex: 1 1 50%;  
     display: flex; 
     position: relative;
@@ -314,11 +314,11 @@ a.btn {
 .cont3_2 .right {
     background-image: url(../img/bg4.png); 
     background-size: cover; 
-    width: 100%; height: 40vw; 
+    width: 100%; height: 100%; 
     flex: 1 1 50%;  
     display: flex; 
     position: relative;
-    margin-top: 1.95%;
+    margin-top: 2.1%;
 }
 .cont3_2 .right .tit_left {padding-left: 5vw; flex: 1 1 30%;}
 .cont3_2 .right .tit_left h3 {font-size: 3vw; 
@@ -353,13 +353,13 @@ a.btn {
 .cont3_3 {
     display: flex; 
     width: 100%; height: 80vh;
-    margin-top: -2.4vw; color: #fff; 
+    margin-top: -3%; color: #fff; 
     font-family: 'Poppins';
 }
 .cont3_3 .left {
     background-image: url(../img/bg5.png); 
     background-size: cover; 
-    width: 100%; height: 40vw; 
+    width: 100%; height: 100%; 
     flex: 1 1 50%;  
     display: flex; 
     position: relative;
@@ -398,11 +398,11 @@ a.btn {
     background-image: url(../img/bg6.png); 
     background-size: cover;
     width: 100%; 
-    height: 40vw; 
+    height: 100%; 
     flex: 1 1 50%;  
     display: flex; 
     position: relative;
-    margin-top: 1.95%;
+    margin-top: 2.1%;
 }
 .cont3_3 .right .tit_left {padding-left: 5vw; flex: 1 1 30%;}
 .cont3_3 .right .tit_left h3 {font-size: 3vw; 
@@ -432,16 +432,16 @@ a.btn {
     position: absolute;
     top: 24vw; font-weight: bold;
 }
-#ani img {position: absolute; right: 0; bottom: -100vh; width: 35%; z-index: -999;}
+#ani img {position: absolute; right: 0; bottom: -80vh; width: 35%; z-index: -999;}
 
 /* cont4 */
+#cont4 {margin-top: 15vw;}
 #cont4 h2 {
     font-size: 7vw; 
     font-family: 'Sulphur Point'; 
     font-weight: bold; 
     line-height: 0.9; 
     letter-spacing: -0.1vw; 
-    margin-top: 15vw; 
 }
 .cont4 {width: 100%; display: flex; flex-wrap: wrap;}
 .cont4 .left {flex:1 1 20%; line-height: 1.3; margin-top: 8vw;}
@@ -1844,3 +1844,8 @@ a.btn {
 .v_footer ul li {margin-left: 6vw;}
 .v_footer ul li:first-child {margin-left: 0%;}
 .v_footer ul li:last-child {font-size: 1vw; margin-top: 0.4vh;}
+
+/* 미디어쿼리 */
+@media ( max-width: 1280px ) {
+    .container {width: 90%;}
+  }
