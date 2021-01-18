@@ -141,10 +141,6 @@ a.btn {
     opacity: 1; 
     transition: all 1s cubic-bezier(0.09, 0.79, 0.34, 0.99);
 }
-/* #cont1_2 img.show {
-    opacity: 1; 
-    transition: all 1s cubic-bezier(0.09, 0.79, 0.34, 0.99);
-} */
 #cont1_3 img {
     position: absolute; 
     top: 80vh; left: 0; 
@@ -157,10 +153,6 @@ a.btn {
     top: 90vh; left: 0; 
     width: 21vw;
 }
-/* #cont1_3 img.ani3_2:hover {
-    width: 30vw;
-    transition: all 2s cubic-bezier(0,0,0,1);
-} */
 
 /* cont2 */
 .cont2 {width: 100%; padding-top: 12vw; display: flex;}
