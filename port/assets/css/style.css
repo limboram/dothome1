@@ -489,3 +489,18 @@ img.ani_3:hover {
   border-radius: 5%;
 }
 
+.sec6 {
+  position: relative;
+  overflow: hidden;
+}
+.sec6 img {
+  width: 100%;
+}
+.sec6 h2 {
+  position: absolute;
+  font-family: 'GmarketSansMedium';
+  font-size: 6vw;
+  color: #fff;
+  top: 55%;
+  white-space: nowrap;
+}
