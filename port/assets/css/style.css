@@ -21,7 +21,7 @@
   background: #1b1d25;
 }
 #section2 {position: relative;}
-#section3 {}
+#section3 {position: relative;}
 #section4 {height: 3000px;}
 #section5 {}
 #section6 {}
@@ -353,7 +353,7 @@ img.ani_1:hover {
   transition: all 2s cubic-bezier(0,0,0,1);
 }
 .sec2 {
-  margin-top: 10%;
+  padding-top: 10%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -380,7 +380,8 @@ img.ani_1:hover {
 }
 img.ani_2 {
   position: absolute;
-  left: 0; top: 30%;
+  left: 0; top: 25%;
+  width: 25%;
 }
 
 /* sec3 */
@@ -430,6 +431,16 @@ img.ani_2 {
 .sec3 ul li img.icon8 {
   width: 10%;
   margin-left: 8%;
+}
+img.ani_3 {
+  position: absolute;
+  width: 20%;
+  left: 0; top: 10%;
+  transition: all 2s cubic-bezier(0,0,0,1);
+}
+img.ani_3:hover {
+  width: 25%;
+  transition: all 2s cubic-bezier(0,0,0,1);
 }
 
 /* sec4 */
