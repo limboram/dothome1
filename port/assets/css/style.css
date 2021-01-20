@@ -378,6 +378,10 @@ img.ani_1:hover {
   margin-left: 50%;
   margin-top: 5%;
 }
+img.ani_2 {
+  position: absolute;
+  left: 0; top: 30%;
+}
 
 /* sec3 */
 .sec3 {
