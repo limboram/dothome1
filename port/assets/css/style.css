@@ -345,6 +345,49 @@
   }
 }
 
+/* animation */
+.surface-wrap {
+  position: absolute;
+  left: -300px; top: 10%;
+  width: 700px; 
+  height: 700px;
+  overflow: hidden;
+  animation: rotate 10s alternate;
+}
+.surface-wrap.s2 {
+  left: auto;
+  right: 0px; top: -30%;
+}
+
+.surface-wrap .surface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 600px;
+  background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53));
+  animation: surface 10s ease-in-out infinite alternate, rotateZ 20000ms linear infinite, move 20000ms linear infinite;
+}
+.surface-wrap.s2 .surface {
+  left: 300px;
+}
+
+@keyframes surface {
+  0%   {border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;}
+  25%  {border-radius: 45% 35% 51% 49% / 49% 52% 48% 51%;}
+  50%  {border-radius: 62% 58% 28% 72% / 65% 34% 66% 35%;}
+  75%  {border-radius: 34% 66% 63% 37% / 77% 38% 62% 23%;}
+  100% {border-radius: 24% 76% 72% 28% / 53% 68% 32% 47%;}
+}
+@keyframes rotateZ {
+  0% {transform: rotateZ(0deg);}
+  100% {transform: rotateZ(360deg);}
+}
+@keyframes move {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(5px);}
+}
+
 /* sec2 */
 .sec2 {
   padding-top: 10%;
