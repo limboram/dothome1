@@ -22,9 +22,9 @@
 }
 #section2 {position: relative;}
 #section3 {position: relative;}
-#section4 {}
-#section5 {}
-#section6 {}
+#section4 {position: relative; height: 1000px; background: #1b1d25;}
+#section5 {position: relative;}
+#section6 {position: relative;}
 
 
 /* ccontainer */
@@ -36,7 +36,6 @@
 
 /* header */
 #header {
-  background: rgba(27,29,37,0.2);
   position: fixed;
   left: 0; top: 0;
   width: 100%; 
@@ -116,6 +115,11 @@
   position: absolute;
   left: 0; bottom: 0;
   width: 100%;
+}
+.wave-wrap.wave3 {
+  bottom: auto;
+  top: 0;
+  transform: rotate(180deg);
 }
 .waves {
   position:relative;
@@ -420,24 +424,16 @@
 
 /* sec4 */
 .sec4 {
-  margin-top: 10%;
-}
-.sec4 h2 {
-  text-align: center;
-  font-size: 10vw;
-  color: #1b1d25;
-  font-family: 'Sulphur Point';
-  font-weight: bold;
+  position: relative;
+  margin-top: 20%;
 }
 
 /* sec5 */
-.sec5 {
-  margin-top: 10%;
-}
 .sec5 h2 {
   font-family: 'Sulphur Point';
   font-size: 6vw;
   font-weight: bold;
+  padding-top: 20%;
 }
 .sec5 .text {
   display: flex;
@@ -492,7 +488,7 @@
   width: 600px;
   background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53));
   overflow: hidden;
-  animation: surface 13000ms ease-in-out infinite alternate, rotateZ 20000ms linear infinite, move 20000ms linear infinite;
+  animation: surface 10ms ease-in-out infinite alternate, rotateZ 20ms linear infinite, move 20ms linear infinite;
 }
 
 @keyframes surface {
