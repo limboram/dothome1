@@ -30,6 +30,9 @@
 #section9 {background: #FF7E8F; padding-bottom: 10%; padding-top: 5%;}
 #section10 {position: relative;}
 #section11 {}
+#section12 {position: relative; margin-top: 5%;}
+#section13 {background: linear-gradient( #E65833, #C4252F); padding: 10% 0;}
+#section14 {position: relative;}
 
 
 /* ccontainer */
@@ -127,6 +130,11 @@
   transform: rotate(180deg);
 }
 .wave-wrap.wave6 {
+  bottom: auto;
+  top: 0;
+  transform: rotate(180deg);
+}
+.wave-wrap.wave8 {
   bottom: auto;
   top: 0;
   transform: rotate(180deg);
@@ -769,7 +777,7 @@
 }
 
 /* sec11 */
-/* .sec11 h2 {
+.sec11 h2 {
   font-family: 'Sulphur Point';
   font-size: 6vw;
   font-weight: bold;
@@ -800,18 +808,12 @@
   width: 20vw;
   border-radius: 5%;
 }
-.sec11 {
-  position: relative;
-  overflow: hidden;
-} */
-/* .sec11 img {
-  width: 100%;
-}
-.sec11 h2 {
-  position: absolute;
+
+/* sec13 */
+.sec13 Marquee {
   font-family: 'GmarketSansMedium';
   font-size: 6vw;
   color: #fff;
-  top: 55%;
   white-space: nowrap;
-} */
+  overflow: hidden;
+}
