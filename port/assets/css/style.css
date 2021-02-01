@@ -539,14 +539,11 @@
   transition: all .8s ease .2s;
   box-shadow: 0 0 40px rgba(164, 235, 223, 0.6);
 }
-
 .wave-btn__text {
   position: relative;
   color: whitesmoke;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  font-family: sans-serif;
-  position: relative;
+  letter-spacing: 0.7vw;
+  font-weight: bold;
   z-index: 10;
 }
 .wave-btn__waves {
@@ -624,6 +621,9 @@
   font-weight: 200;
   font-size: 1vw;
 }
+.sec7 .left ul li span {
+  font-family: 'GmarketSansLight';
+}
 .wrapper2 .wave-btn {
   display: flex;
   justify-content: center;
@@ -648,10 +648,8 @@
 .wrapper2 .wave-btn__text {
   position: relative;
   color: whitesmoke;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  font-family: sans-serif;
-  position: relative;
+  letter-spacing: 0.7vw;
+  font-weight: bold;
   z-index: 10;
 }
 .wrapper2 .wave-btn__waves {
@@ -728,7 +726,10 @@
 .sec9 .left ul {
   font-weight: 200;
   font-size: 1vw;
+}.sec9 .left ul li span {
+  font-family: 'GmarketSansLight';
 }
+
 .wrapper3 .wave-btn {
   display: flex;
   justify-content: center;
@@ -753,10 +754,8 @@
 .wrapper3 .wave-btn__text {
   position: relative;
   color: whitesmoke;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  font-family: sans-serif;
-  position: relative;
+  letter-spacing: 0.7vw;
+  font-weight: bold;
   z-index: 10;
 }
 .wrapper3 .wave-btn__waves {
@@ -833,6 +832,9 @@
   font-weight: 200;
   font-size: 1vw;
 }
+.sec11 .left ul li span {
+  font-family: 'GmarketSansLight';
+}
 .wrapper4 .wave-btn {
   display: flex;
   justify-content: center;
@@ -857,9 +859,8 @@
 .wrapper4 .wave-btn__text {
   position: relative;
   color: whitesmoke;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  position: relative;
+  letter-spacing: 0.7vw;
+  font-weight: bold;
   z-index: 10;
 }
 .wrapper4 .wave-btn__waves {
@@ -937,6 +938,9 @@
   font-weight: 200;
   font-size: 1vw;
 }
+.sec13 .left ul li span {
+  font-family: 'GmarketSansLight';
+}
 .wrapper5 .wave-btn {
   display: flex;
   justify-content: center;
@@ -961,9 +965,8 @@
 .wrapper5 .wave-btn__text {
   position: relative;
   color: whitesmoke;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  position: relative;
+  letter-spacing: 0.7vw;
+  font-weight: bold;
   z-index: 10;
 }
 .wrapper5 .wave-btn__waves {
