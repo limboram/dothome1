@@ -1130,30 +1130,57 @@ footer {
 #site-section1 {
   background: #0F2622;
 }
+#site-section1 a {
+  position: fixed;
+  border-radius: 1px solid ;
+  background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53));
+  right: 5%;
+  bottom: 5%;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 40px;
+  z-index: 1;
+}
 
 /* site-sec2 */
-.site-sec2 {
-  margin-top: 10%;
+/* .site-sec2 {
+  padding-top: 10%;
 }
 .site-sec2 h2 {
-  font-size: 6vw;
-  font-family: 'Poppins';
+  font-size: 4vw;
+  font-family: 'GmarketSansMedium';
   font-weight: bold;
+  text-align: center;
+  color: #0F2622;
 }
 .site-wrap {
   display: flex;
+  justify-content: space-between;
   margin-top: 5%;
 }
 .site-wrap .left {
-  flex: 1 1 50%;
+  flex: 0 0 52%;
 }
 .site-wrap .left img {
-  width: 100%;
+  width: 90%;
 }
 .site-wrap .right {
-  flex: 1 1 50%;
+  flex: 0 0 43%;
+  border: 3px solid #0F2622;
+  border-radius: 10px;
+  padding: 4%;
+}
+.site-wrap .right h3 {
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 2%;
+  color: #0F2622;
 }
 .site-wrap .right p {
   font-family: 'GmarketSansLight';
-
-}
+  font-size: 20px;
+  padding-top: 5%;
+} */
