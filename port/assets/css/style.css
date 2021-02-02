@@ -1144,43 +1144,67 @@ footer {
 }
 
 /* site-sec2 */
-/* .site-sec2 {
+#site-section2 {height: 1000px;}
+.site-sec2 {
   padding-top: 10%;
 }
-.site-sec2 h2 {
+.site-sec2 .title {
+  display: flex;
+  justify-content: space-between;
+}
+.site-sec2 .title h2 {
   font-size: 4vw;
-  font-family: 'GmarketSansMedium';
+  font-family: 'Poppins';
   font-weight: bold;
-  text-align: center;
   color: #0F2622;
 }
-.site-wrap {
+.site-sec2 .title p {
+  font-size: 4vw;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: #0F2622;
+  text-align: right;
+}
+.site-sec2 .contents {
+  background: #0F2622;
   display: flex;
   justify-content: space-between;
   margin-top: 5%;
+  border-radius: 30px;
 }
-.site-wrap .left {
-  flex: 0 0 52%;
+.site-sec2 .contents .left {
+  flex: 0 0 55%;
 }
-.site-wrap .left img {
-  width: 90%;
-}
-.site-wrap .right {
-  flex: 0 0 43%;
-  border: 3px solid #0F2622;
-  border-radius: 10px;
-  padding: 4%;
-}
-.site-wrap .right h3 {
-  font-family: 'Poppins';
-  font-weight: bold;
-  font-size: 40px;
-  text-align: center;
-  padding-top: 2%;
-  color: #0F2622;
-}
-.site-wrap .right p {
+.site-sec2 .contents .left p {
+  color: #fff;
+  padding: 13% 5%;
   font-family: 'GmarketSansLight';
-  font-size: 20px;
-  padding-top: 5%;
-} */
+  font-size: 18px;
+}
+.site-sec2 .contents .left .button {
+  display: flex;
+  margin-top: -5%;
+}
+.site-sec2 .contents .left .wrapper6 {
+  padding-left: 5%;
+}
+.wrapper6 .wave-btn {
+  width: 200px;
+  height: 50px;
+}
+.wrapper6 .wave-btn__text {
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+.site-sec2 .contents .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #ccc;
+  border-radius: 60px 30px 30px 0;
+  background: #fff;
+}
+.site-sec2 .contents .right img {
+  width: 80%;
+  height: 100%;
+}
