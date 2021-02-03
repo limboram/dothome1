@@ -1130,7 +1130,7 @@ footer {
 #site-section1 {
   background: #0F2622;
 }
-#site-section1 a {
+/* #site-section1 a {
   position: fixed;
   border-radius: 1px solid ;
   background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53));
@@ -1141,11 +1141,56 @@ footer {
   color: #fff;
   border-radius: 40px;
   z-index: 1;
-}
+} */
 
 /* site-sec2 */
-#site-section2 {height: 1000px;}
-.site-sec2 {
+#section02 {padding: 20% 0;}
+.sec02 h2 {
+  position: relative;
+  font-size: 6vw;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: #0F2622;
+}
+.sec02 h2::before {
+  position: absolute;
+  content: '01';
+  left: -13%; top: -25vw;
+  font-size: 40vw;
+  opacity: .1;
+}
+.sec02 .box {
+  position: relative;
+  width: 100%; height: 650px;
+  background: #0F2622;
+  border-radius: 30px;
+}
+.sec02 .box p {
+  padding: 5% 55% 5% 5%;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'GmarketSansLight';
+}
+.sec02 .box .view {
+  position: absolute;
+  width: 50%; height: calc(100% - 6px);
+  margin: 3px;
+  left: 0; top: 0;
+  background: #fff;
+  border-radius: 27px;
+  transition: all 0.5s;
+  padding: 3%;
+}
+.sec02 .box:hover .view {
+  left: 50%;
+  transition: all 0.5s;
+}
+.sec02 .box .view img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .site-sec2 {
   padding-top: 10%;
 }
 .site-sec2 .title {
@@ -1173,17 +1218,17 @@ footer {
   border-radius: 30px;
 }
 .site-sec2 .contents .left {
-  flex: 0 0 55%;
+  flex: 0 0 47%;
 }
 .site-sec2 .contents .left p {
   color: #fff;
-  padding: 13% 5%;
+  padding: 27% 6% 10%;
   font-family: 'GmarketSansLight';
   font-size: 18px;
+  line-height: 1.6;
 }
 .site-sec2 .contents .left .button {
   display: flex;
-  margin-top: -5%;
 }
 .site-sec2 .contents .left .wrapper6 {
   padding-left: 5%;
@@ -1203,8 +1248,141 @@ footer {
   border: solid 1px #ccc;
   border-radius: 60px 30px 30px 0;
   background: #fff;
+  padding: 3%;
 }
 .site-sec2 .contents .right img {
   width: 80%;
   height: 100%;
+} */
+
+/* site-sec3 */
+/* .site-sec3 {
+  padding-top: 10%;
 }
+.site-sec3 .title {
+  display: flex;
+  justify-content: space-between;
+}
+.site-sec3 .title h2 {
+  font-size: 4vw;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: #0F2622;
+}
+.site-sec3 .title p {
+  font-size: 4vw;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: #0F2622;
+  text-align: right;
+}
+.site-sec3 .contents {
+  background: #0F2622;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  border-radius: 30px;
+}
+.site-sec3 .contents .left {
+  flex: 0 0 47%;
+}
+.site-sec3 .contents .left p {
+  color: #fff;
+  padding: 27% 6% 10%;
+  font-family: 'GmarketSansLight';
+  font-size: 18px;
+  line-height: 1.6;
+}
+.site-sec3 .contents .left .button {
+  display: flex;
+}
+.site-sec3 .contents .left .wrapper6 {
+  padding-left: 5%;
+}
+.wrapper6 .wave-btn {
+  width: 200px;
+  height: 50px;
+}
+.wrapper6 .wave-btn__text {
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+.site-sec3 .contents .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #ccc;
+  border-radius: 60px 30px 30px 0;
+  background: #fff;
+  padding: 3%;
+}
+.site-sec3 .contents .right img {
+  width: 80%;
+  height: 100%;
+} */
+
+/* site-sec4 */
+/* .site-sec4 {
+  padding-top: 10%;
+}
+.site-sec4 .title {
+  display: flex;
+  justify-content: space-between;
+}
+.site-sec4 .title h2 {
+  font-size: 4vw;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: #0F2622;
+}
+.site-sec4 .title p {
+  font-size: 4vw;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: #0F2622;
+  text-align: right;
+}
+.site-sec4 .contents {
+  background: #0F2622;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  border-radius: 30px;
+}
+.site-sec4 .contents .left {
+  flex: 0 0 47%;
+}
+.site-sec4 .contents .left p {
+  color: #fff;
+  padding: 27% 6% 10%;
+  font-family: 'GmarketSansLight';
+  font-size: 18px;
+  line-height: 1.6;
+}
+.site-sec4 .contents .left .button {
+  display: flex;
+}
+.site-sec4 .contents .left .wrapper6 {
+  padding-left: 5%;
+}
+.wrapper6 .wave-btn {
+  width: 200px;
+  height: 50px;
+}
+.wrapper6 .wave-btn__text {
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+.site-sec4 .contents .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #ccc;
+  border-radius: 60px 30px 30px 0;
+  background: #fff;
+  padding: 3%;
+}
+.site-sec4 .contents .right img {
+  width: 80%;
+  height: 100%;
+} */
