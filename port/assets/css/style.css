@@ -1216,9 +1216,6 @@ footer {
   font-size: 40vw;
   opacity: .1;
 }
-::before {
-  left: 50.6%;
-}
 .sec03 .box {
   display: flex;
   position: relative;
@@ -1302,7 +1299,7 @@ footer {
 .sec04 h2::before {
   position: absolute;
   content: '03';
-  left: -13%; top: -25vw;
+  left: -10%; top: -25vw;
   font-size: 40vw;
   opacity: .1;
 }
@@ -1380,6 +1377,7 @@ footer {
 /* site-sec5 */
 #section05 {padding: 20% 0;}
 .sec05 h2 {
+  text-align: right;
   position: relative;
   font-size: 6vw;
   font-family: 'Poppins';
@@ -1388,10 +1386,14 @@ footer {
 }
 .sec05 h2::before {
   position: absolute;
-  content: '03';
-  left: -13%; top: -25vw;
+  content: '04';
+  right: 0;
+  top: -25vw;
   font-size: 40vw;
   opacity: .1;
+}
+::before {
+  left: 45.5%;
 }
 .sec05 .box {
   display: flex;
@@ -1426,11 +1428,20 @@ footer {
 .sec05 .left {
   flex: 0 0 50%;
 }
-.sec05 .box .left p {
-  padding: 37% 10% 0% 10%;
+.sec05 .left h3 {
+  padding: 4% 10% 0% 10%;
+  font-size: 25px;
   color: #fff;
-  font-size: 20px;
   font-family: 'GmarketSansLight';
+}
+.sec05 .box .left p {
+  margin: 2% 10% 0% 10%;
+  padding: 3%;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'GmarketSansLight';
+  border: 1px solid #fff;
+  border-radius: 20px;
 }
 .sec05 .box .view {
   position: absolute;
