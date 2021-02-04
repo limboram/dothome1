@@ -20,16 +20,6 @@
 }
 
 /* layout */
-/* ::-webkit-scrollbar{
-  width: 10px;
-}
-::-webkit-scrollbar-track{
-  background-color: #fff;
-}
-::-webkit-scrollbar-thumb{
-  background-color: #000;
-} */
-
 #contents {background: #fff;}
 #section1 {
   height: 100vh;
@@ -1481,10 +1471,13 @@ footer {
 #section0001 {
   background: #FFB720;
 }
-.sec0002 {padding-top: 10%;}
+.sec0002 {
+  padding-top: 10%; 
+  font-family: 'Poppins';
+  font-weight: 500;
+}
 .sec0002 h2 {
   font-size: 6vw; 
-  font-family: 'Poppins';
   font-weight: bold;
   color: #FFB720;
 }
@@ -1498,52 +1491,59 @@ footer {
   flex: 0 0 32%;
 }
 .ani1 a {
-    color: #000; 
-    background-color: #ffb82092; 
-    border-radius: 50px; 
-    padding: 1vw 2vw; 
-    font-size: 1.3vw; 
-    margin-left: 14vw;
+  color: #000; 
+  background-color: #ffb82092; 
+  border-radius: 50px; 
+  padding: 4% 8%; 
+  font-size: 20px; 
+  margin-left: 57%;
 }
 .ani1 iframe {
-    flex: 0 0 32%; 
-    border-radius: 2vw; 
-    margin-top: 6vh;
-    width: 25vw; height: 80vh;
+  flex: 0 0 32%; 
+  border-radius: 30px; 
+  margin-top: 13%;
 }
 .ani2 {
-    flex: 0 0 32%; 
-    margin-top: 10vh;
+  flex: 0 0 32%; 
+  margin-top: 6%;
 }
 .ani2 a {
-    color: #000; 
-    background-color: #ffb82092; 
-    border-radius: 50px; 
-    padding: 1vw 2vw; 
-    font-size: 1.3vw; 
-    margin-left: 14vw;
+  color: #000; 
+  background-color: #ffb82092; 
+  border-radius: 50px; 
+  padding: 4% 8%;
+  font-size: 20px; 
+  margin-left: 57%;
 }
 .ani2 iframe {
-    flex: 0 0 32%; 
-    border-radius: 2vw; 
-    margin-top: 6vh;
-    width: 25vw; height: 80vh;
+  flex: 0 0 32%; 
+  border-radius: 30px; 
+  margin-top: 13%;
 }
 .ani3 {
-    flex: 0 0 32%; 
-    margin-top: 20vh;
+  flex: 0 0 32%; 
+  margin-top: 12%;
 }
 .ani3 a {
-    color: #000; 
-    background-color: #ffb82092; 
-    border-radius: 50px; 
-    padding: 1vw 2vw; 
-    font-size: 1.3vw; 
-    margin-left: 14vw;
+  color: #000; 
+  background-color: #ffb82092; 
+  border-radius: 50px; 
+  padding: 4% 8%;
+  font-size: 20px; 
+  margin-left: 57%;
 }
 .ani3 iframe {
-    flex: 0 0 32%; 
-    border-radius: 2vw; 
-    margin-top: 6vh;
-    width: 25vw; height: 80vh;
+  flex: 0 0 32%; 
+  border-radius: 30px; 
+  margin-top: 13%;
+}
+.view2 {
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+}
+.view3 {
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
 }
