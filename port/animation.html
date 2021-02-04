@@ -19,7 +19,7 @@
     </header>
 
     <div id="contents">
-        <section id="section001">
+        <section id="section0001">
             <div class="container">
                 <div class="sec1">
                     <h1>
@@ -148,9 +148,9 @@
         </section>
         <!-- //section -->
 
-        <section id="section002">
+        <section id="section0002">
             <div class="container">
-                <div class="sec002">
+                <div class="sec0002">
                     <h2>CSS ANIMATION</h2>
                     <div class="view1">
                         <div class="ani1">
@@ -169,5 +169,17 @@
                 </div>
             </div>
         </section>
+        
+        <!-- script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(window).scroll(function(){
+                let scrollTop = $(window).scrollTop();
+
+                if( scrollTop > $("#section02").offset().top ){
+                    $("#header h1").css("color","black");
+                }
+            });
+        </script>
 </body>
 </html>

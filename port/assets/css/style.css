@@ -1473,16 +1473,16 @@ footer {
 }
 
 /* script section1 */
-#section0001 {
+#section001 {
   background: #323183;
 }
 
 /* animation section1 */
-#section001 {
+#section0001 {
   background: #FFB720;
 }
-.sec002 {padding-top: 10%;}
-.sec002 h2 {
+.sec0002 {padding-top: 10%;}
+.sec0002 h2 {
   font-size: 6vw; 
   font-family: 'Poppins';
   font-weight: bold;

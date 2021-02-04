@@ -20,7 +20,7 @@
     </header>
 
     <div id="contents">
-        <section id="section0001">
+        <section id="section001">
             <div class="container">
                 <div class="sec1">
                     <h1>
@@ -148,5 +148,25 @@
             </div>
         </section>
         <!-- //section -->
+
+        <section id="section002">
+            <div class="container">
+                <div class="sec0002">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(window).scroll(function(){
+                let scrollTop = $(window).scrollTop();
+
+                if( scrollTop > $("#section002").offset().top ){
+                    $("#header h1").css("color","black");
+                }
+            });
+        </script>
 </body>
 </html>
