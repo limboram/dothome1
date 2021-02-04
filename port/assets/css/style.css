@@ -1467,7 +1467,7 @@ footer {
   background: #323183;
 }
 
-/* animation section1 */
+/* animation section2 */
 #section0001 {
   background: #FFB720;
 }
@@ -1546,4 +1546,16 @@ footer {
   display: flex; 
   justify-content: space-between; 
   flex-wrap: wrap;
+}
+
+/* animation section3 */
+.sec0003 {
+  padding-top: 10%; 
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+.sec0003 h2 {
+  font-size: 6vw; 
+  font-weight: bold;
+  color: #FFB720;
 }
