@@ -1400,33 +1400,33 @@ footer {
   background: #0F2622;
   border-radius: 30px;
 }
-.sec05 .left {
+.sec05 .right {
   flex: 0 0 50%;
 }
-.sec05 .box .left p {
-  padding: 31% 10% 10% 10%;
+.sec05 .box .right p {
+  padding: 27% 10% 10% 10%;
   color: #fff;
   font-size: 25px;
   font-family: 'GmarketSansLight';
 }
-.sec05 .box .left .btn {
+.sec05 .box .right .btn {
   padding: 05% 10% 5% 10%;
 }
-.sec05 .box .left a {
+.sec05 .box .right a {
   border: 1px solid #fff;
   padding: 15px 30px;
   border-radius: 10px;
   color: #fff;
   font-size: 20px;
 }
-.sec05 .box .left a:hover {
+.sec05 .box .right a:hover {
   background: rgb(14, 66, 57);
   transition: all 0.5s;
 }
-.sec05 .right {
+.sec05 .left {
   flex: 0 0 50%;
 }
-.sec05 .box .right p {
+.sec05 .box .left p {
   padding: 37% 10% 0% 10%;
   color: #fff;
   font-size: 20px;
@@ -1436,14 +1436,14 @@ footer {
   position: absolute;
   width: 50%; height: calc(100% - 4px);
   margin: 2px;
-  left: 0; top: 0;
+  right: 0; top: 0;
   background: #fff;
   border-radius: 27px;
   transition: all 0.5s;
   padding: 3%;
 }
 .sec05 .box:hover .view {
-  left: calc(50% - 4px);
+  right: calc(50% - 4px);
   transition: all 0.5s;
 }
 .sec05 .box .view img {
