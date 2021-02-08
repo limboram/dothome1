@@ -1098,18 +1098,6 @@ footer {
 #site-section1 {
   background: #0F2622;
 }
-/* #site-section1 a {
-  position: fixed;
-  border-radius: 1px solid ;
-  background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53));
-  right: 5%;
-  bottom: 5%;
-  padding: 10px 15px;
-  font-size: 20px;
-  color: #fff;
-  border-radius: 40px;
-  z-index: 1;
-} */
 
 /* site-sec2 */
 #section02 {padding-top: 20%;}
@@ -1375,7 +1363,11 @@ footer {
 }
 
 /* site-sec5 */
-#section05 {padding: 20% 0;}
+#section05 {
+  padding-top: 20%;
+  padding-bottom: 18%;
+}
+.sec05 {position: relative;}
 .sec05 h2 {
   text-align: right;
   position: relative;
@@ -1461,6 +1453,20 @@ footer {
   width: 100%;
   height: 100%;
 }
+.sec05 a.index {
+  position: absolute;
+  border-radius: 1px solid ;
+  background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53));
+  right: 0%;
+  bottom: -25%;
+  padding: 10px 18px;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 40px;
+  z-index: 1;
+  font-family: 'Poppins';
+  font-weight: bold;
+}
 
 /* script section1 */
 #section001 {
@@ -1499,6 +1505,11 @@ footer {
   padding: 4% 8%; 
   font-size: 20px; 
   margin-left: 57%;
+  transition: all 0.3s;
+}
+.ani1 a:hover {
+  background: #ffb820;
+  transition: all 0.3s;
 }
 .ani1 iframe {
   flex: 0 0 32%; 
@@ -1516,6 +1527,11 @@ footer {
   padding: 4% 8%;
   font-size: 20px; 
   margin-left: 57%;
+  transition: all 0.3s;
+}
+.ani2 a:hover {
+  background: #ffb820;
+  transition: all 0.3s;
 }
 .ani2 iframe {
   flex: 0 0 32%; 
@@ -1533,6 +1549,11 @@ footer {
   padding: 4% 8%;
   font-size: 20px; 
   margin-left: 57%;
+  transition: all 0.3s;
+}
+.ani3 a:hover {
+  background: #ffb820;
+  transition: all 0.3s;
 }
 .ani3 iframe {
   flex: 0 0 32%; 
@@ -1572,6 +1593,11 @@ footer {
   border-radius: 50px; 
   padding: 4% 8%;
   font-size: 20px;
+  transition: all 0.3s;
+}
+.ani4 a:hover {
+  background: #ffb820;
+  transition: all 0.3s;
 }
 .animation-wrap .ani4 iframe {
   margin-top: 13%;
@@ -1580,16 +1606,31 @@ footer {
 
 /* animation section4 */
 .sec0004 {
+  position: relative;
   padding-top: 10%; 
   font-family: 'Poppins';
   font-weight: 500;
-  padding-bottom: 15%;
+  padding-bottom: 20%;
 }
 .sec0004 h2 {
   font-size: 6vw; 
   font-weight: bold;
   color: #FFB720;
   text-align: right;
+}
+.sec0004 a.index {
+  position: absolute;
+  border-radius: 1px solid ;
+  background-image: linear-gradient(to top, rgb(193, 33, 47), rgb(241, 104, 53));
+  right: 0%;
+  bottom: 6.6%;
+  padding: 10px 18px;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 40px;
+  z-index: 1;
+  font-family: 'Poppins';
+  font-weight: bold;
 }
 
 /* react section1 */
