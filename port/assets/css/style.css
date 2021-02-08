@@ -1578,6 +1578,20 @@ footer {
   border-radius: 30px;
 }
 
+/* animation section4 */
+.sec0004 {
+  padding-top: 10%; 
+  font-family: 'Poppins';
+  font-weight: 500;
+  padding-bottom: 15%;
+}
+.sec0004 h2 {
+  font-size: 6vw; 
+  font-weight: bold;
+  color: #FFB720;
+  text-align: right;
+}
+
 /* react section1 */
 #sec00001 {background: #45AADE;}
 
