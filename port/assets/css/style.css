@@ -1467,10 +1467,12 @@ footer {
   background: #323183;
 }
 
-/* animation section2 */
+/* animation section1 */
 #section0001 {
   background: #FFB720;
 }
+
+/* animation section2 */
 .sec0002 {
   padding-top: 10%; 
   font-family: 'Poppins';
@@ -1559,3 +1561,14 @@ footer {
   font-weight: bold;
   color: #FFB720;
 }
+
+/* react section1 */
+#sec00001 {background: #45AADE;}
+
+/* react section2*/
+
+
+/* vue section1 */
+#sec000001 {background: #FF7E8F;}
+
+/* vue section2 */

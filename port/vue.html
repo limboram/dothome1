@@ -2,12 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="limboram">
-    <meta name="description" content="포트폴리오 애니메이션 이팩트부분입니다.">
-    <meta name="keywords" content="포트폴리오, 애니메이션, 애니메이션 페이지">
-    <title>ANIMATION</title>
-
+    <meta name="description" content="포트폴리오 뷰부분입니다.">
+    <meta name="keywords" content="포트폴리오, 뷰코딩, 사이트만들기">
+    <title>VUE</title>
+    
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -19,24 +20,26 @@
         background-color: #fff;
         }
         ::-webkit-scrollbar-thumb{
-        background-color: #FFB720;
+        background-color: #FF7E8F;
         }
     </style>
 </head>
 <body>
+    
     <header id="header">
         <h1>PORTFOLIO</h1>
         <a href="#">Contant</a>
     </header>
 
     <div id="contents">
-        <section id="section0001">
+        <section id="sec000001">
             <div class="container">
                 <div class="sec1">
                     <h1>
-                        <strong>ANIMATION</strong>
-                        <em>EFFECT</em>
+                        <strong>VUE</strong>
+                        <em>CODING</em>
                     </h1>
+                    <!-- <a href="index.html">◁</a> -->
                 </div>
             </div>
            
@@ -158,83 +161,5 @@
             </div>
         </section>
         <!-- //section -->
-
-        <section id="section0002">
-            <div class="container">
-                <div class="sec0002">
-                    <h2>CSS ANIMATION</h2>
-                    <div class="view1">
-                        <div class="ani1">
-                            <a href="https://codepen.io/limboram/pen/MWjgvxY">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation01.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                        <div class="ani2">
-                            <a href="https://codepen.io/limboram/pen/LYZrJoJ">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation07.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                        <div class="ani3">
-                            <a href="https://codepen.io/limboram/pen/bGeOEWo">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation08.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                    </div>
-                    <div class="view2">
-                        <div class="ani1">
-                            <a href="https://codepen.io/limboram/pen/mdrbMLp">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation04.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                        <div class="ani2">
-                            <a href="https://codepen.io/limboram/pen/mdEQLrO">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation05.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                        <div class="ani3">
-                            <a href="https://codepen.io/limboram/pen/RwRJeWX">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation06.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                    </div>
-                    <div class="view3">
-                        <div class="ani1">
-                            <a href="https://codepen.io/limboram/pen/jOrXRvx">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation10.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                        <div class="ani2">
-                            <a href="https://codepen.io/limboram/pen/jOrXqNX">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation09.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                        <div class="ani3">
-                            <a href="https://codepen.io/limboram/pen/XWjbVVx">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation11.html" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //section -->
-
-        <section id="section0003">
-            <div class="container">
-                <div class="sec0003">
-                    <h2>SVG ANIMATION</h2>
-                    <div class="animation-wrap">
-                        <div class="ani4">
-                            <a href="https://codepen.io/limboram/pen/MWjwvqq">CODE VIEW</a>
-                            <iframe src="https://limboram.github.io/dothome1/effect/portfolio/animation02.html" frameborder="0" scrolling="no"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //section -->
-        
-        <!-- script -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            $(window).scroll(function(){
-                let scrollTop = $(window).scrollTop();
-
-                if( scrollTop > $("#section0002").offset().top ){
-                    $("#header h1").css("color","black");
-                }
-            });
-        </script>
 </body>
 </html>
