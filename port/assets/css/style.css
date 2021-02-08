@@ -1637,7 +1637,84 @@ footer {
 #sec00001 {background: #45AADE;}
 
 /* react section2*/
-
+.sec00002 h2 {
+  position: relative;
+  font-size: 6vw;
+  font-family: 'Poppins';
+  font-weight: bold;
+  color: #45AADE;
+  padding-top: 10%;
+}
+.sec00002 .box {
+  display: flex;
+  position: relative;
+  width: 100%; height: 650px;
+  background: #45AADE;
+  border-radius: 30px;
+}
+.sec00002 .box .left {
+  flex: 0 0 50%;
+}
+.sec00002 .box .left p {
+  padding: 25% 10% 10% 10%;
+  color: #fff;
+  font-size: 25px;
+  font-family: 'GmarketSansLight';
+}
+.sec00002 .box .left .btn {
+  padding: 0% 10% 5% 10%;
+}
+.sec00002 .box .left a {
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 5%;
+}
+.sec00002 .box .left a:first-child {
+  margin-left: 0;
+}
+.sec00002 .box .left a:hover {
+  background: rgb(14, 66, 57);
+  transition: all 0.5s;
+}
+.sec00002 .box .right {
+  flex: 0 0 50%;
+}
+.sec00002 .box .right h3 {
+  padding: 5% 10% 0% 10%;
+  font-size: 25px;
+  color: #fff;
+  font-family: 'GmarketSansLight';
+}
+.sec00002 .box .right p {
+  margin: 2% 10% 0% 10%;
+  padding: 3%;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'GmarketSansLight';
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+.sec00002 .box .view {
+  position: absolute;
+  width: 50%; height: calc(100% - 4px);
+  margin: 2px;
+  left: 0; top: 0;
+  background: #fff;
+  border-radius: 27px;
+  transition: all 0.5s;
+  padding: 3%;
+}
+.sec00002 .box:hover .view {
+  left: calc(50% - 3px);
+  transition: all 0.5s;
+}
+.sec00002 .box .view img {
+  width: 100%;
+  height: 100%;
+}
 
 /* vue section1 */
 #sec000001 {background: #FF7E8F;}
