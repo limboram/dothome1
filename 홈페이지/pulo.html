@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <style>
+        body {overflow: hidden;}
         * {margin: 0 auto;}
         ul, li, a, input, label, dl, dd, dt {list-style: none; color: black; text-decoration: none;}
         /* video {opacity: 0.7; z-index: 1; height: 100vh; width: 100%;} */
@@ -30,7 +31,10 @@
         .int-txt {margin-top: 18px;}
         .int-txt li {font-size: 11px; margin-left: -40px;}
         .int-txt li::before {content: '·'; left: 0; top: 40px;}
-        video {position: absolute; width: 100%; height: 100vh; z-index: 10; top: 0;}
+        video {position: absolute; min-width: 100vw; min-height: 100vh; z-index: 10; top: 0;}
+        video::-webkit-scrollbar {
+            display: none !important; /* Chrome, Safari, Opera*/
+        }
     </style>
 </head>
 <body>
@@ -73,7 +77,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function($){
-            $('video').fadeOut(2000);
+            $('video').fadeOut(5000);
         });
     </script>
     <script src="http://pulo.kr/js/wrest.js"></script>
