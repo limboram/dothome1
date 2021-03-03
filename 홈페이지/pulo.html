@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0 auto;}
+        ul, li, a, input, label, dl, dd, dt {list-style: none; color: black; text-decoration: none;}
+        /* video {opacity: 0.7; z-index: 1; height: 100vh; width: 100%;} */
+        .info h1 {width: 100%;}
+        .info h1 a img {width: 12%; display: flex; align-items: center; justify-content: center; margin-top: 12%; margin-left: 39%;}
+        .info h2 {margin-top: 15px; font-weight: normal; font-size: 30px; color: gray;  margin-left: 39%;}
+        .info h2 span {font-weight: bold; color: black;}
+        .box {position: relative; border: 1px solid darkgray; margin: 1% 39%; border-radius: 10px; padding: 35px 20px;}
+        /* .box .int_login dt {width: 100px;} */
+        .int_login dt .btn_large {width: 100%; height: 40px;}
+        dd label {position: absolute; left: 0; top: 0; width: 1px; height: 1px; font-size: 0;}
+        dd input.frm_input {padding: 8px; width: 94.5%; margin-bottom: 6px;}
+        dd input.frm_input:hover {border-color: black; border-radius: 3px;}
+        .btn_large.wset {margin: 10px 0 7px; background-color: #386192; font-weight: bold; color: white;}
+        .marb20 {margin-bottom: 40px;}
+        #login_auto_login {margin-top: 2px;}
+        .fs11 {position: relative; font-size: 13px;}
+        .fs11::after {content: ''; border-bottom: 1px dashed darkgray; width: 385px; height: 1px; position: absolute; left: -20px; top: 40px;}
+        .int_btn {font-size: 12px;}
+        .int_btn a {border: 1px solid darkgray; padding: 3px 5px;}
+        .int-txt {margin-top: 18px;}
+        .int-txt li {font-size: 11px; margin-left: -40px;}
+        .int-txt li::before {content: '·'; left: 0; top: 40px;}
+        video {position: absolute; width: 100%; height: 100vh; z-index: 10; top: 0;}
+    </style>
+</head>
+<body>
+    <video src="https://junghyunnn.github.io/dothome1/test/img/test1.mp4" autoplay loop playsinline muted></video>
+    <!-- <div id="loading">로딩 중</div> -->
+    <div class="info">
+        <h1>
+            <a href="http://pulo.kr">
+                <img src="img/PULO_logo.png" alt="로고">
+            </a>
+        </h1>
+        <h2>MEMBER <span>LOGIN</span></h2>
+        <div class="box">
+            <dl class="int_login">
+                <dd>
+                    <label for="login_id" class="sound_only">회원아이디</label>
+                    <input type="text" name="mb_id" id="login_id" class="frm_input" maxLength="20" placeholder="아이디">					
+                </dd>
+                <dd>
+                    <label for="login_pw" class="sound_only">비밀번호</label>
+                    <input type="password" name="mb_password" id="login_pw" class="frm_input" maxLength="20" placeholder="비밀번호">		
+                </dd>
+                <dt><input type="submit" value="로그인" class="btn_large wset"></dt>
+            </dl>
+            <p class="marb20">
+                <input type="checkbox" name="auto_login" id="login_auto_login"> <label for="login_auto_login" class="fs11">자동로그인</label>
+            </p>
+            <div class="int_btn">
+                <a href="http://pulo.kr/bbs/register.php" class="btn_lsmall grey">회원가입</a>
+                <a href="http://pulo.kr/bbs/password_lost.php" onclick="win_open(this,'pop_password_lost','500','400','no');return false;" class="btn_lsmall bx-white">아이디/비밀번호 찾기</a>
+            </div>
+            <ul class="int-txt">
+                <li>일부 브라우저에서 제공하는 자동 로그인 기능을 사용할 경우 개인정보가 유출될 수 있으니 주의 바랍니다.</li>
+                <li>아이디/비밀번호를 분실하신 경우, 아이디/비밀번호 찾기 또는 상담센터로 문의 바랍니다.</li>
+                <li>상담센터 070-4647-2294(10시00분~18시00분)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function($){
+            $('video').fadeOut(2000);
+        });
+    </script>
+    <script src="http://pulo.kr/js/wrest.js"></script>
+    <!-- <script>
+        $(function(){
+            $("#login_auto_login").click(function(){
+                if (this.checked) {
+                    this.checked = confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?");
+                }
+            });
+        });
+        
+        function flogin_submit(f)
+        {
+            if(!f.mb_id.value){
+                alert('아이디를 입력하세요.');
+                f.mb_id.focus();
+                return false;
+            }
+            if(!f.mb_password.value){
+                alert('비밀번호를 입력하세요.');
+                f.mb_password.focus();
+                return false;
+            }
+        
+            return true;
+        }
+    </script> -->
+</body>
+</html>
