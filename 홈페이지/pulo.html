@@ -7,6 +7,11 @@
     <title>Document</title>
 
     <style>
+        @font-face {
+            font-family: 'HGGGothicssi99g';
+            src: url('css/font/HGGGothicssi99g.woff') format('woff');
+        }
+        body {font-family: 'HGGGothicssi 20g';}
         body {overflow: hidden;}
         * {margin: 0 auto;}
         ul, li, a, input, label, dl, dd, dt {list-style: none; color: black; text-decoration: none;}
@@ -32,9 +37,6 @@
         .int-txt li {font-size: 11px; margin-left: -40px;}
         .int-txt li::before {content: '·'; left: 0; top: 40px;}
         video {position: absolute; min-width: 100vw; min-height: 100vh; z-index: 10; top: 0;}
-        video::-webkit-scrollbar {
-            display: none !important; /* Chrome, Safari, Opera*/
-        }
     </style>
 </head>
 <body>
